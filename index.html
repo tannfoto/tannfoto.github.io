@@ -33,7 +33,7 @@ html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;user-select:
 },
 "actors":{
 "Cara":{"layers":{"head":{"1":"img/cara1.gif"}}},
-"Wolf":{"layers":{"head":{"1":"img/Wolf1.gif"}}}
+"Wolf":{"layers":{"head":{"1":"img/wolf1.gif"}}}
 },
 "audio":{"bgm":{},"se":{},"voice":{}},
 "panelContent":{
@@ -10789,7 +10789,6 @@ const startIndex = String(data.config?.startPassage || "").trim();
 const startLang = core.getResolvedLang?.() || host.defaultLang || "zh-CN";
 host.play(startIndex, startLang);
 }};
-global.VNPackageBootstrap = VNPackageBootstrap;
 VNPackageBootstrap.boot();
 })(window);
 </script>

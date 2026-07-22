@@ -41,24 +41,24 @@ defs: source.defs && typeof source.defs === "object"
 ? (this.cloneData(source.defs) ?? source.defs)
 : Object.create(null)
 };
-console.log("[VNMode] setModesRegistry", this.modesRegistry);
+
 return this.modesRegistry;
 },
 setLayouts(layouts) {
 this.layouts = layouts && typeof layouts === "object"
 ? layouts
 : Object.create(null);
-console.log("[VNPerformance] setLayouts", this.layouts);
+
 },
 setActors(actors) {
 this.actors = actors && typeof actors === "object"
 ? actors
 : Object.create(null);
-console.log("[VNPerformance] setActors", this.actors);
+
 },
 setGameConfig(cfg) {
 this.gameConfig = cfg || {};
-console.log("[VNCore] setGameConfig", this.gameConfig);
+
 return this;
 },
 setAudioRegistry(audioRegistry = {}) {
@@ -73,21 +73,21 @@ setPanelContentRegistry(registry) {
 this.panelContentRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-console.log("[VNAuxiliary] setPanelContentRegistry", this.panelContentRegistry);
+
 return this.panelContentRegistry;
 },
 setShowroomContentRegistry(registry) {
 this.showroomContentRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-console.log("[VNAuxiliary] setShowroomContentRegistry", this.showroomContentRegistry);
+
 return this.showroomContentRegistry;
 },
 setHudContentRegistry(registry) {
 this.hudContentRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-console.log("[VNAuxiliary] setHudContentRegistry", this.hudContentRegistry);
+
 return this.hudContentRegistry;
 },
 setEntryRegistry(registry) {
@@ -96,10 +96,7 @@ this.entryRegistry = normalized || Object.create(null);
 this.ensureGameData?.();
 this.applyEntryRegistryDefaultsToRunData?.();
 this.applyEntryRegistryDefaultsToMetaData?.();
-console.log("[VNGameData] setEntryRegistry", {
-count: Object.keys(this.entryRegistry || {}).length,
-registry: this.entryRegistry
-});
+
 return this.entryRegistry;
 },
 setEventsRegistry(registry) {
@@ -111,7 +108,7 @@ setGraphsRegistry(registry) {
 this.graphsRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-console.log("[VNRoleplay] setGraphsRegistry", this.graphsRegistry);
+
 },
 initializeI18n() {
 const available =
@@ -121,13 +118,7 @@ this.setAvailableLangs?.(available);
 const browserResolved = this.detectBrowserLang?.();
 this.setDefaultLang?.(browserResolved || "zh-CN");
 const resolved = this.resolveCurrentLang?.();
-console.log("[VNRuntime] initializeI18n", {
-available,
-browserLang: this.getBrowserLang?.(),
-defaultLang: this.getDefaultLang?.(),
-userLang: this.getUserLang?.(),
-resolvedLang: resolved
-});
+
 return resolved;
 },
 getResolvedLang() {
@@ -161,7 +152,7 @@ defs: Object.create(null)
 if (!this.modesRegistry.defs || typeof this.modesRegistry.defs !== "object") {
 this.modesRegistry.defs = Object.create(null);
 }
-console.log("[VNMode] getModesRegistry", this.modesRegistry.defs);
+
 return this.modesRegistry;
 },
 normalizeModeDef(key, def = {}) {
@@ -229,7 +220,7 @@ return def;
 setBusy(flag){
 if(!this.cache) {
 this.createCache();
-console.log("create cache");
+
 }
 this.cache.input.busy = !!flag;
 },
@@ -270,14 +261,14 @@ actorsChanged: !prevState || !sameArray(prevState.actors, nextState.actors),
 prevState,
 nextState
 };
-console.log("[VNRenderer] compareRenderState", diff);
+
 return diff;
 },
 commitRenderState(diff = null) {
 if (!diff?.nextState) return;
 this.currentRenderState =
 this.cloneData(diff.nextState) || diff.nextState;
-console.log("[VNRenderer] commitRenderState", this.currentRenderState);
+
 },
 applyModeUiProfile(modeDef) {
 if (!this.root || !modeDef) return false;
@@ -299,13 +290,7 @@ const className = `ui-${shell}`;
 const active = shells.includes(shell);
 this.root.classList.toggle(className, active);
 });
-console.log("[VNRenderer] applyModeUiProfile", {
-modeKey: modeDef.key,
-theme,
-shells,
-rootClassName: this.root.className,
-rootTheme: this.root.dataset.vnTheme
-});
+
 return true;
 },
 preparePassageScene(context) {
@@ -387,7 +372,7 @@ cache.input.pointer=def.input.pointer;
 cache.input.keyboard=def.input.keyboard;
 cache.input.wheel=def.input.wheel;
 cache.profile = def.text;
-console.log("[playPassage] resetStage",current, cache);
+
 const commands = this.normalizeCommands(code.commands || []);
 const actions = this.normalizeActions(code.actions || []);
 this.preparePassageScene?.(code);
@@ -395,7 +380,7 @@ this.runPassageActions?.(actions, "inject");
 this.syncSceneStateToView?.();
 const diff = this.compareRenderState?.(current.main, code) || {};
 this.syncStaticLayers?.(current.main, code, diff);
-console.log("[playPassage] Runtime current", current);
+
 this.runPassageCommands?.(commands, "inject", cache);
 this.resolveNextTarget(current.main.index, cache);
 const word = this.requireWord(index, current.main.lang, story)
@@ -827,7 +812,7 @@ choiceFocusIndex : -1,
 selectionMode : null,
 activeTriggers : null,
 }
-console.log("cache created", this.cache);
+
 return this.cache;
 },
 getCache(){return this.cache;},
@@ -989,7 +974,7 @@ roleplayState: this.createRoleplayState()
 ensureRuntimeState() {
 if (!this.runtime || typeof this.runtime !== "object") {
 this.runtime = this.createRuntimeState();
-console.log("[VNRuntime] create runtime state", this.runtime);
+
 return this.runtime;
 }
 if (!this.runtime.overviewState) {
@@ -1047,7 +1032,7 @@ resetI18nState() {
 const runtime = this.getRuntime?.();
 if (!runtime) return null;
 runtime.i18nState = this.createI18nState();
-console.log("[VNRuntime] resetI18nState", runtime.i18nState);
+
 return runtime.i18nState;
 },
 setAvailableLangs(langs = []) {
@@ -1056,7 +1041,7 @@ if (!state) return [];
 state.availableLangs = Array.isArray(langs)
 ? langs.map(item => String(item || "").trim()).filter(Boolean)
 : [];
-console.log("[VNRuntime] setAvailableLangs", state.availableLangs);
+
 return state.availableLangs;
 },
 getAvailableLangs() {
@@ -1093,17 +1078,14 @@ global.navigator?.languages?.[0] ||
 "";
 const normalized = this.pickSupportedLang?.(raw);
 this.setBrowserLang?.(String(raw || "").trim());
-console.log("[VNRuntime] detectBrowserLang", {
-raw,
-normalized
-});
+
 return normalized;
 },
 setBrowserLang(lang = "") {
 const state = this.getI18nState?.();
 if (!state) return "";
 state.browserLang = String(lang || "").trim();
-console.log("[VNRuntime] setBrowserLang", state.browserLang);
+
 return state.browserLang;
 },
 getBrowserLang() {
@@ -1114,7 +1096,7 @@ const state = this.getI18nState?.();
 if (!state) return "zh-CN";
 const safeLang = this.pickSupportedLang?.(lang || "zh-CN") || "zh-CN";
 state.defaultLang = safeLang;
-console.log("[VNRuntime] setDefaultLang", state.defaultLang);
+
 return state.defaultLang;
 },
 getDefaultLang() {
@@ -1128,7 +1110,7 @@ state.userLang = safeLang && this.hasLanguage?.(safeLang)
 ? safeLang
 : "";
 this.resolveCurrentLang?.();
-console.log("[VNRuntime] setUserLang", state.userLang);
+
 return state.userLang;
 },
 getUserLang() {
@@ -1145,7 +1127,7 @@ const overview = this.getOverviewState?.();
 if (overview) {
 overview.lang = resolved;
 }
-console.log("[VNRuntime] resolveCurrentLang", resolved);
+
 return resolved;
 },
 setPreferredLanguage(lang = "") {
@@ -1215,11 +1197,7 @@ this.currentPassageContext =
 context && typeof context === "object"
 ? (this.cloneData(context) ?? context)
 : null;
-console.log("[CHECK] setCurrentPassageContext snapshot", {
-index: context?.index,
-actions: Array.isArray(context?.actions) ? context.actions.slice() : context?.actions
-});
-console.log("[VNCore] setCurrentPassageContext", this.currentPassageContext);
+
 return this.currentPassageContext;
 },
 getCurrentPassageContext() {
@@ -1231,7 +1209,7 @@ return this.getRuntimeState().overviewState;
 },
 resetOverviewState() {
 this.getRuntimeState().overviewState = this.createOverviewState();
-console.log("[VNRuntime] resetOverviewState", this.getOverviewState());
+
 return this.getOverviewState();
 },
 setCurrentPassageOverview(data = {}) {
@@ -1242,28 +1220,25 @@ data.passageIndex || state.passageIndex || ""
 if (data.lang != null) {
 state.lang = String(data.lang || "").trim() || state.lang || "zh-CN";
 }
-console.log("[VNRuntime] setCurrentPassageOverview", {
-data,
-state
-});
+
 return state;
 },
 setInteractionReady(flag = false) {
 const state = this.getOverviewState();
 state.interactionReady = !!flag;
-console.log("[VNRuntime] setInteractionReady", state.interactionReady);
+
 return state.interactionReady;
 },
 setOverviewBlocked(flag = false) {
 const state = this.getOverviewState();
 state.blocked = !!flag;
-console.log("[VNRuntime] setOverviewBlocked", state.blocked);
+
 return state.blocked;
 },
 setOverviewTransitioning(flag = false) {
 const state = this.getOverviewState();
 state.transitioning = !!flag;
-console.log("[VNRuntime] setOverviewTransitioning", state.transitioning);
+
 return state.transitioning;
 },
 enterEventOverview(eventId = "", returnTarget = "") {
@@ -1271,7 +1246,7 @@ const state = this.getOverviewState();
 state.inEvent = true;
 state.currentEventId = String(eventId || "").trim();
 state.eventReturnTarget = String(returnTarget || "").trim();
-console.log("[VNRuntime] enterEventOverview", state);
+
 return state;
 },
 leaveEventOverview() {
@@ -1279,13 +1254,13 @@ const state = this.getOverviewState();
 state.inEvent = false;
 state.currentEventId = "";
 state.eventReturnTarget = "";
-console.log("[VNRuntime] leaveEventOverview", state);
+
 return state;
 },
 setOverviewGraph(graphId = "") {
 const state = this.getOverviewState();
 state.graphId = String(graphId || "").trim();
-console.log("[VNRuntime] setOverviewGraph", state.graphId);
+
 return state.graphId;
 },
 getPerformanceState() {
@@ -1293,19 +1268,19 @@ return this.getRuntimeState().performanceState;
 },
 resetPerformanceState() {
 this.getRuntimeState().performanceState = this.createPerformanceState();
-console.log("[VNRuntime] resetPerformanceState", this.getPerformanceState());
+
 return this.getPerformanceState();
 },
 setFadeActive(flag = false) {
 const state = this.getPerformanceState();
 state.fade.active = !!flag;
-console.log("[VNRuntime] setFadeActive", state.fade.active);
+
 return state.fade.active;
 },
 setFadeDone(flag = true) {
 const state = this.getPerformanceState();
 state.fade.done = !!flag;
-console.log("[VNRuntime] setFadeDone", state.fade.done);
+
 return state.fade.done;
 },
 getInteractionState() {
@@ -1313,19 +1288,19 @@ return this.getRuntimeState().interactionState;
 },
 resetInteractionState() {
 this.getRuntimeState().interactionState = this.createInteractionState();
-console.log("[VNRuntime] resetInteractionState", this.getInteractionState());
+
 return this.getInteractionState();
 },
 setInteractionGraph(graphId = "") {
 const state = this.getInteractionState();
 state.graphId = String(graphId || "").trim();
-console.log("[VNRuntime] setInteractionGraph", state.graphId);
+
 return state.graphId;
 },
 setInteractionInteractivesSpec(spec = null) {
 const state = this.getInteractionState();
 state.interactivesSpec = spec ?? null;
-console.log("[VNRuntime] setInteractionInteractivesSpec", state.interactivesSpec);
+
 return state.interactivesSpec;
 },
 getMapState() {
@@ -1341,7 +1316,7 @@ state.movement = "free";
 state.speed = 2;
 state.currentNodeId = "";
 state.lockMovement = false;
-console.log("[VNRuntime] resetMapState", state);
+
 return state;
 },
 getInputState() {
@@ -1420,9 +1395,7 @@ this.host?.getCurrentPassageKey?.() ||
 );
 if (runtime.passageIndex !== currentIndex) {
 temp.currentPassageRuntime = this.createCurrentPassageRuntime(currentIndex);
-console.log("[VNRuntime] ensureCurrentPassageRuntime -> recreate", {
-passageIndex: currentIndex
-});
+
 return temp.currentPassageRuntime;
 }
 return runtime;
@@ -1433,7 +1406,7 @@ return this.getCurrentPassageRuntime().activeTriggers || [];
 pushCurrentPassageActiveTrigger(trigger) {
 const runtime = this.getCurrentPassageRuntime();
 runtime.activeTriggers.push(this.cloneData(trigger) ?? trigger);
-console.log("[VNRuntime] pushCurrentPassageActiveTrigger", runtime.activeTriggers);
+
 return true;
 },
 getCurrentPassageCheckpointTitle() {
@@ -1444,7 +1417,7 @@ const runtime = this.ensureCurrentPassageRuntime();
 runtime.checkpointTitle = title != null
 ? String(title).trim() || "Checkpoint"
 : null;
-console.log("[VNRuntime] setCurrentPassageCheckpointTitle", runtime.checkpointTitle);
+
 return runtime.checkpointTitle;
 },
 isInputLocked() {
@@ -1455,7 +1428,7 @@ resetStateMachines() {
 this.resetOverviewState?.();
 this.resetPerformanceState?.();
 this.resetInteractionState?.();
-console.log("[VNRuntime] resetStateMachines");
+
 return true;
 },
 getActorState() {
@@ -1465,7 +1438,7 @@ resetActorState() {
 return this.resetInteractionState();
 },
 setActorScene(sceneId = "") {
-console.log("[VNRuntime][compat] setActorScene noop", sceneId);
+
 return String(sceneId || "");
 },
 setActorGraph(graphId = "") {
@@ -1729,17 +1702,14 @@ if (!def) return;
 output[def.id] = def;
 });
 });
-console.log("[VNGameData] normalizeEntryRegistry", {
-input: source,
-output
-});
+
 return output;
 },
 initializeNewRunData() {
 this.ensureGameData?.();
 this.gameData.run = this.normalizeRunData(this.getDefaultRunData());
 this.applyEntryRegistryDefaultsToRunData?.();
-console.log("[VNGameData] initializeNewRunData", this.gameData.run);
+
 return this.gameData.run;
 },
 getEntryRegistry() {
@@ -1765,7 +1735,7 @@ const next = this.coerceEntryValue?.(def, def.defaultValue);
 this.setValueByPath?.(run, path, next);
 }
 });
-console.log("[VNGameData] applyEntryRegistryDefaultsToRunData", run);
+
 return run;
 },
 resolveEntryId(aliasOrId = "") {
@@ -1884,7 +1854,7 @@ const next = this.coerceEntryValue?.(def, def.defaultValue);
 this.setValueByPath?.(meta, path, next);
 }
 });
-console.log("[VNGameData] applyEntryRegistryDefaultsToMetaData", meta);
+
 return meta;
 },
 setSkillsRegistry(registry) {
@@ -2094,7 +2064,7 @@ current.expanded =
 source.expanded !== undefined
 ? !!source.expanded
 : current.expanded;
-console.log("[VNPerformance] setDisplayBoxState", this.sceneState.displayBox);
+
 return this.sceneState.displayBox;
 },
 showDisplayBox(entryKey = "", amount = undefined) {
@@ -2609,7 +2579,7 @@ return false;
 const resolved = this.resolveEchoSourceToFieldValue?.( source, field );
 cache.payload[field] = resolved;
 cache.profile[field] = { container, effect };
-console.log("[VNRuntime] echo", { raw, value: resolved });
+
 return true;
 },
 resolveTextContainerEl(container = "") {
@@ -2622,10 +2592,7 @@ return null;
 setModeContentHtml(html) {
 if (!this.modeContentEl) return;
 const source = String(html || "").trim();
-console.log("[VNRenderer] setModeContentHtml", {
-html,
-source
-});
+
 if (!source) {
 this.modeContentEl.innerHTML = "";
 this.modeContentEl.style.display = "none";
@@ -2692,9 +2659,7 @@ this.nameboxEl.classList.add("show");
 this.nameboxEl.textContent = "";
 this.nameboxEl.classList.remove("show");
 }
-console.log("[VNText] setSpeaker", {
-speaker: name
-});
+
 },
 renderSpeakerField(speaker = "", container = "speaker", effect = "appear") {
 const safeContainer = String(container || "").trim();
@@ -2828,13 +2793,13 @@ const currentIndex = Number(cache?.pageIndex || 0);
 const nextIndex = currentIndex + 1;
 if (nextIndex >= pages.length) return false;
 cache.pageIndex = nextIndex;
-console.log("[VNText] advanceLocalPage", {nextIndex, payload: cache.payload.pages});
+
 return this.renderPayloadFieldToDom?.( "pages", cache );
 },
 advanceText(options = {}) {
 const { ignoreInputLock = false } = options;
 if (!ignoreInputLock && this.isInputLocked?.()) {
-console.log("[VNText] advanceText blocked by input lock");
+
 return false;
 }
 const cache = this.getCache?.();
@@ -2844,7 +2809,7 @@ this.lockInput?.(160);
 }
 if (this.skipTyping?.()) return true;
 if (this.advanceLocalPage?.(cache)) return true;
-console.log("[VNText] advanceText next passage", cache.nextTurnTo);
+
 this.playPassage?.(cache.nextTurnTo);
 setTimeout(() => {
 }, 200);
@@ -2862,7 +2827,7 @@ const state = this.getTypingState?.();
 state.active = false;
 state.timer = null;
 state.html = "";
-console.log("[VNText] resetTypingState");
+
 },
 buildTypingTokens(html) {
 const container = document.createElement("div");
@@ -2895,7 +2860,7 @@ tokens.push({type: "close", tag});
 }
 };
 Array.from(container.childNodes).forEach(node => walk(node));
-console.log("buildTypingTokens", {tokenCount: tokens.length});
+
 return tokens;
 },
 renderTypingTokens(tokens, count) {
@@ -2937,7 +2902,7 @@ if (!this.getTypingState?.()) return;
 const state = this.getTypingState();
 const finalHtml = String(html || "").trim();
 const tokens = this.buildTypingTokens(finalHtml);
-console.log("startTyping", { finalHtml });
+
 if (!tokens.length) {
 this.textEl.innerHTML = finalHtml;
 this.textEl.classList.add("done");
@@ -2962,7 +2927,7 @@ this.textEl.innerHTML = this.renderTypingTokens(tokens, index);
 if (index >= tokens.length) {
 this.textEl.innerHTML = finalHtml;
 this.textEl.classList.add("done");
-console.log("typing done", {state});
+
 this.resetTypingState();
 setTimeout(() => {
 this.scheduleTextPlaybackAfterTyping?.();
@@ -2976,7 +2941,7 @@ step();
 skipTyping() {
 const state = this.getTypingState?.();
 if (!state?.active) return false;
-console.log("[VNText] skipTyping");
+
 clearTimeout(state.timer);
 if (this.textEl) {
 this.textEl.innerHTML = state.html || "";
@@ -3034,13 +2999,7 @@ text,
 target
 });
 });
-console.log("run cmd linkto", {
-raw,
-ref,
-texts,
-targets,
-choicesAndTargets: cache.payload.choicesAndTargets
-});
+
 return true;
 },
 clearChoices() {
@@ -3058,7 +3017,7 @@ now = Math.max(-1, Math.min(choices.length - 1, now));
 now = -1;
 }
 cache.choiceFocusIndex = now;
-console.log("setChoiceFocus");
+
 this.syncChoiceVisualState?.();
 return now;
 },
@@ -3077,7 +3036,7 @@ next = step >= 0 ? 0 : count - 1;
 next = (current + step + count) % count;
 }
 cache.choiceFocusIndex = next;
-console.log("moveChoiceFocus");
+
 this.syncChoiceVisualState?.();
 return next;
 },
@@ -3094,7 +3053,7 @@ const active = index === selectedIndex;
 el.classList.toggle("selected", active);
 el.setAttribute("aria-selected", active ? "true" : "false");
 });
-console.log("syncChoiceVisualState",selectedIndex);
+
 },
 renderChoicesElement(choices){
 const finalChoices = choices;
@@ -3114,7 +3073,7 @@ this.setChoiceFocus?.(-1);
 });
 this.choicesEl?.appendChild(button);
 });
-console.log("[VNText] renderChoicesElement", finalChoices);
+
 },
 renderChoices(choicesAndTargets = [], container = "branch", effect = "appear") {
 const choices = Array.isArray(choicesAndTargets)
@@ -3170,12 +3129,12 @@ this.recordBranchChoice?.(label, target);
 const triggered =
 this.tryExecuteActiveTriggers?.("branch-confirm") === true;
 if (triggered) {
-console.log("[VNChoice] trigger intercepted branch confirm");
+
 this.lockInput?.(200);
 return true;
 }
 this.lockInput?.(200);
-console.log("[VNChoice] play target", target);
+
 this.playPassage?.(target);
 return true;
 },
@@ -3196,20 +3155,20 @@ clearAutoTimer() {
 const performance = this.getTypingState?.();
 clearTimeout(performance.timer);
 performance.timer = null;
-console.log("[VNText] clearAutoTimer");
+
 },
 isAutoPlaybackEnabled() {
 return !!this.userConfig?.autoPlay;
 },
 enableAutoPlayback() {
 this.updateUserConfig?.({ autoPlay: true });
-console.log("[VNText] enableAutoPlayback");
+
 return true;
 },
 disableAutoPlayback() {
 this.updateUserConfig?.({ autoPlay: false });
 this.clearAutoTimer?.();
-console.log("[VNText] disableAutoPlayback");
+
 return true;
 },
 toggleAutoPlayback() {
@@ -3233,9 +3192,7 @@ return !!this.userConfig?.seenSkipOnly;
 updateCurrentPassageSeenSkipFlag() {
 const textRuntime = this.getTextRuntime();
 textRuntime.currentPassageSeenSkippable = this.isCurrentSectionSeen?.() === true;
-console.log("[VNText] updateCurrentPassageSeenSkipFlag", {
-currentPassageSeenSkippable: textRuntime.currentPassageSeenSkippable
-});
+
 return textRuntime.currentPassageSeenSkippable;
 },
 shouldSkipCurrentStepBySeen() {
@@ -3266,7 +3223,7 @@ return;
 }
 this.advanceText?.({ ignoreInputLock: true });
 }, 120);
-console.log("[VNText] scheduleSeenSkipAdvance");
+
 return true;
 },
 scheduleAutoAdvance() {
@@ -3293,9 +3250,7 @@ return;
 }
 this.advanceText?.({ ignoreInputLock: true });
 }, delayMs);
-console.log("[VNText] scheduleAutoAdvance", {
-delayMs
-});
+
 return true;
 },
 scheduleTextPlaybackAfterTyping() {
@@ -3312,7 +3267,7 @@ stopAllTextPlaybackTimers() {
 const textRuntime = this.getTextRuntime();
 textRuntime.seenSkipActive = false;
 this.clearAutoTimer?.();
-console.log("[VNText] stopAllTextPlaybackTimers");
+
 },
 });
 return core;
@@ -3366,7 +3321,7 @@ amount: 0,
 expanded: false
 }
 };
-console.log("[VNPerformance] resetSceneState", this.sceneState);
+
 },
 resetSceneViewState() {
 this.sceneViewState = {
@@ -3384,7 +3339,7 @@ amount: 0,
 expanded: false
 }
 };
-console.log("[VNPerformance] resetSceneViewState", this.sceneViewState);
+
 },
 buildSceneSnapshot() {
 const state = this.sceneState || {};
@@ -3447,10 +3402,7 @@ this.sceneState.prop = defaults.prop;
 this.sceneState.npc = defaults.npc;
 this.sceneState.camera = { effect: null };
 this.sceneState.actors = Object.create(null);
-console.log("[VNPerformance] applySceneDecl -> switch layout", {
-layout: nextLayout,
-defaults
-});
+
 }
 if (!nextLayout && this.sceneState.layout == null) {
 this.sceneState.layout = null;
@@ -3467,12 +3419,7 @@ this.setStageScene(this.sceneState.layout || "");
 if (this.setStageActorSet) {
 this.setStageActorSet(this.sceneState.actorSet || []);
 }
-console.log("[VNPerformance] applySceneDecl", {
-sceneDecl,
-layout: this.sceneState.layout,
-actorSet: this.sceneState.actorSet,
-sceneState: this.sceneState
-});
+
 return this.sceneState;
 },
 resolveSceneBgUrl() {
@@ -3565,7 +3512,7 @@ url,
 this._bgTokenRef,
 "Background image"
 );
-console.log("[VNPerformance] showBackground", url);
+
 },
 showForeground(url) {
 if (!this.fgA || !this.fgB) return;
@@ -3579,7 +3526,7 @@ url,
 this._fgTokenRef,
 "Foreground image"
 );
-console.log("[VNPerformance] showForeground", url);
+
 },
 createActorElement(actorName) {
 const actorEl = document.createElement("div");
@@ -3596,7 +3543,7 @@ actorEl.appendChild(img);
 this.charLayer?.appendChild(actorEl);
 this.characters = this.characters || Object.create(null);
 this.characters[actorName] = actorEl;
-console.log("[VNPerformance] createActorElement", actorName);
+
 return actorEl;
 },
 getActorLayerTokenKey(actorName, layerName) {
@@ -3661,10 +3608,7 @@ this.updateActorLayerImage?.(actorName, layerName, img, url);
 const visible = (Number.isFinite(opacity) ? opacity : 0) > 0;
 actorEl.classList.toggle("show", visible);
 actorEl.classList.toggle("hide", !visible);
-console.log("[VNPerformance] syncSingleActorToView", {
-actorName,
-actorState
-});
+
 },
 equalActorSnapshot(a, b) {
 if (!a && !b) return true;
@@ -3720,10 +3664,7 @@ this.propEls[name] = el;
 this.npcLayer?.appendChild(el);
 this.npcEls[name] = el;
 }
-console.log("[VNPerformance] createSceneItemElement", {
-type,
-name
-});
+
 return el;
 },
 updateSceneItemImage(type, name, el, url) {
@@ -3788,7 +3729,7 @@ this.sceneState.camera.effect = null;
 this.root.classList.remove("camera-shake");
 }, 350);
 }
-console.log("[VNPerformance] syncCameraEffect", effect);
+
 },
 syncSceneStateToView() {
 if (!this.sceneState) {
@@ -3822,10 +3763,7 @@ this.syncCameraEffect?.(next.cameraEffect);
 }
 this.sceneViewState = next;
 this.renderDisplayBox?.();
-console.log("[VNPerformance] syncSceneStateToView", {
-prev,
-next
-});
+
 }
 });
 return core;
@@ -4004,11 +3942,7 @@ actorState.z = this.resolveActionNumberOrKeep?.(args[3], actorState.z);
 actorState.scaleX = this.resolveActionNumberOrKeep?.(args[4], actorState.scaleX);
 actorState.scaleY = this.resolveActionNumberOrKeep?.(args[5], actorState.scaleY);
 actorState.opacity = this.resolveActionNumberOrKeep?.(args[6], actorState.opacity);
-console.log("[VNAction] controled actor state", {
-raw,
-actorName,
-actorState
-});
+
 return true;
 },
 change(raw = "") {
@@ -4034,13 +3968,7 @@ this.resolveActionValueOrKeep?.(args[3], this.sceneState.prop) ?? this.sceneStat
 this.sceneState.npc = String(
 this.resolveActionValueOrKeep?.(args[4], this.sceneState.npc) ?? this.sceneState.npc
 ).trim() || this.sceneState.npc;
-console.log("[VNAction] changed layout", {
-raw,
-bg: this.sceneState.bg,
-fg: this.sceneState.fg,
-prop: this.sceneState.prop,
-npc: this.sceneState.npc
-});
+
 return true;
 } else if (this.sceneState.actorSet.includes(target)) {
 this.sceneState.actors[target] = this.getActorDefaultState?.(target);
@@ -4057,11 +3985,7 @@ this.resolveActionValueOrKeep?.(args[3], actorState.arms) ?? actorState.arms
 actorState.footwear = String(
 this.resolveActionValueOrKeep?.(args[4], actorState.footwear) ?? actorState.footwear
 ).trim() || actorState.footwear;
-console.log("[VNAction] changed actors", {
-raw,
-target,
-actorState
-});
+
 return true;
 } else {
 console.warn("[VNAction] no match", {
@@ -4083,12 +4007,7 @@ this.playBackgroundMusic?.(bgmId, {
 loop,
 volume
 });
-console.log("[VNAudio] playBgm", {
-raw,
-bgmId,
-loop,
-volume
-});
+
 return true;
 },
 registerDefaultActions() {
@@ -4103,9 +4022,7 @@ return this.getActionRegistry?.();
 }
 });
 core.registerDefaultActions?.();
-console.log("[VNAction] installVNActionModule loaded", {
-actions: core.listActionNames?.()
-});
+
 return core;
 }
 global.installVNActionModule = installVNActionModule;
@@ -4788,7 +4705,7 @@ setHudRegistry(registry) {
 this.hudRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-console.log("[VNAuxiliary] setHudRegistry", this.hudRegistry);
+
 return this.hudRegistry;
 },
 getHudRegistry() {
@@ -5049,9 +4966,7 @@ const container = this.getAuxiliaryContainer?.();
 if (container) {
 container.style.display = flag ? "block" : "";
 }
-console.log("[VNRenderer] setAuxiliaryShellOpen", {
-open: flag
-});
+
 return true;
 },
 syncAuxiliaryOverlayById(activeOverlayId = "") {
@@ -5107,7 +5022,7 @@ setPanelRegistry(registry) {
 this.panelRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-console.log("[VNAuxiliary] setPanelRegistry", this.panelRegistry);
+
 return this.panelRegistry;
 },
 getPanelRegistry() {
@@ -5121,7 +5036,7 @@ setShowroomRegistry(registry) {
 this.showroomRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-console.log("[VNAuxiliary] setShowroomRegistry", this.showroomRegistry);
+
 return this.showroomRegistry;
 },
 getShowroomRegistry() {
@@ -5215,10 +5130,7 @@ closeAction: "return-main-menu"
 }
 }
 };
-console.log("[VNAuxiliary] normalizePanelDef", {
-key,
-normalized
-});
+
 return normalized;
 },
 getPanelDef(key) {
@@ -5235,13 +5147,7 @@ merged.content = content;
 merged.content = null;
 }
 const normalized = this.normalizePanelDef?.(key, merged);
-console.log("[VNAuxiliary] getPanelDef", {
-key,
-feature,
-content,
-merged,
-normalized
-});
+
 return normalized;
 },
 getShowroomDef(key) {
@@ -5317,7 +5223,7 @@ lang: this.getPanelLangEntry?.(safeKey),
 openContext: String(openContext || "ingame").trim() || "ingame",
 meta: meta && typeof meta === "object" ? meta : this.getPanelMeta?.(safeKey)
 };
-console.log("[VNAuxiliary] resolvePanelRenderContext", result);
+
 return result;
 },
 resolveShowroomRenderContext(key, openContext = "menu-route", meta = null) {
@@ -5357,10 +5263,7 @@ const panelKey = String(key || state.activeKey || "");
 if (!panelKey) return {};
 const meta = this.getPanelMeta?.(panelKey);
 Object.assign(meta, patch || {});
-console.log("[VNAuxiliary] setPanelMeta", {
-key: panelKey,
-meta
-});
+
 return meta;
 },
 getPanelContextDef(panelDef, openContext = "ingame") {
@@ -5377,11 +5280,7 @@ openContext: safeContext
 return null;
 }
 const result = contexts[safeContext] || null;
-console.log("[VNAuxiliary] getPanelContextDef", {
-key: panelDef.key,
-openContext: safeContext,
-result
-});
+
 return result;
 },
 openPanel(key, options = {}) {
@@ -5420,11 +5319,7 @@ this.applyAuxiliaryPanelShellState?.(true);
 this.renderActivePanel?.();
 this.syncPanelOverlays?.(panelKey);
 this.renderHud?.();
-console.log("[VNAuxiliary] openPanel", {
-key: panelKey,
-openContext,
-state
-});
+
 return true;
 },
 closePanel() {
@@ -5437,11 +5332,7 @@ panelDef?.onClose?.(this, openContext);
 const closeAction =
 this.getPanelContextDef?.(panelDef, openContext)?.closeAction ||
 "resume-game";
-console.log("[VNAuxiliary] closePanel start", {
-activeKey,
-openContext,
-closeAction
-});
+
 state.open = false;
 state.activeKey = "";
 state.context = "ingame";
@@ -5452,23 +5343,18 @@ this.hideAllPanelOverlays?.();
 this.applyAuxiliaryPanelShellState?.(false);
 this.renderHud?.();
 if (openContext === "menu-route" || closeAction === "return-main-menu") {
-console.log("[VNAuxiliary] closePanel -> returnToMainMenu");
+
 this.returnToMainMenu?.({
 autoSave: false
 });
 }
-console.log("[VNAuxiliary] closePanel done");
+
 return true;
 },
 isPanelEnabledInContext(panelDef, openContext = "ingame") {
 const contextDef = this.getPanelContextDef?.(panelDef, openContext);
 const enabled = !!contextDef && contextDef.enabled !== false;
-console.log("[VNAuxiliary] isPanelEnabledInContext", {
-key: panelDef?.key,
-openContext,
-contextDef,
-enabled
-});
+
 return enabled;
 },
 switchPanelTab(key) {
@@ -5501,10 +5387,7 @@ panelDef.onOpen?.(this, currentContext, { switchOnly: true });
 this.renderActivePanel?.();
 this.syncPanelOverlays?.(panelKey);
 this.renderHud?.();
-console.log("[VNAuxiliary] switchPanelTab", {
-key: panelKey,
-context: currentContext
-});
+
 return true;
 },
 closeAllPanels() {
@@ -5532,10 +5415,7 @@ syncPanelOverlays(activeKey = "") {
 const panelDef = this.getPanelDef?.(activeKey);
 const overlayId = String(panelDef?.overlayId || "").trim();
 this.syncAuxiliaryOverlayById?.(overlayId);
-console.log("[VNAuxiliary] syncPanelOverlays", {
-activeKey,
-overlayId
-});
+
 },
 applyAuxiliaryPanelShellState(open = false) {
 return this.setAuxiliaryShellOpen?.(!!open) || false;
@@ -5560,10 +5440,7 @@ const items = Array.isArray(contentDef?.items) ? contentDef.items : [];
 const max = Math.max(0, items.length - 1);
 const next = Math.max(0, Math.min(max, Number(index) || 0));
 state.selectedIndex = next;
-console.log("[VNAuxiliary] setShowroomSelectedIndex", {
-key: state.activeKey,
-selectedIndex: next
-});
+
 return next;
 },
 moveShowroomSelection(delta = 0) {
@@ -5580,9 +5457,7 @@ state.fullscreen = force;
 } else {
 state.fullscreen = !state.fullscreen;
 }
-console.log("[VNAuxiliary] toggleShowroomFullscreen", {
-fullscreen: state.fullscreen
-});
+
 this.renderActiveShowroom?.();
 return state.fullscreen;
 },
@@ -5596,12 +5471,7 @@ console.warn("[VNAuxiliary] openShowroom aborted: empty key.");
 return false;
 }
 const forceRouteOpen = options.forceRouteOpen === true;
-console.log("[VNAuxiliary] openShowroom start", {
-showroomKey,
-options,
-forceRouteOpen,
-canOpen: this.canOpenShowroomInCurrentContext?.()
-});
+
 if (!forceRouteOpen && !this.canOpenShowroomInCurrentContext?.()) {
 console.warn("[VNAuxiliary] Showroom can only be opened in menu context.", {
 showroomKey
@@ -5631,9 +5501,7 @@ state.selectedIndex = Math.max(0, Number(options.selectedIndex || 0));
 this.applyAuxiliaryPanelShellState?.(true);
 this.renderActiveShowroom?.();
 this.renderHud?.();
-console.log("[VNAuxiliary] openShowroom success", {
-state
-});
+
 return true;
 },
 closeShowroom() {
@@ -5647,7 +5515,7 @@ state.fullscreen = false;
 this.clearActiveShowroom?.();
 this.applyAuxiliaryPanelShellState?.(false);
 this.renderHud?.();
-console.log("[VNAuxiliary] closeShowroom");
+
 return true;
 },
 getShowroomRenderContainer() {
@@ -5859,7 +5727,7 @@ if (!model || model.visible !== true) {
 el.innerHTML = "";
 el.classList.add("hidden");
 el.classList.remove("show", "expanded");
-console.log("[VNPerformance] renderDisplayBox hidden");
+
 return false;
 }
 const kindClass = model.kind
@@ -5880,9 +5748,7 @@ el.innerHTML = `
 el.classList.remove("hidden");
 el.classList.add("show");
 el.classList.toggle("expanded", model.expanded === true);
-console.log("[VNPerformance] renderDisplayBox", {
-model
-});
+
 return true;
 },
 renderPanelTabs() {
@@ -5930,9 +5796,7 @@ e.preventDefault();
 e.stopPropagation();
 const key = String(button.dataset.panelTab || "").trim();
 if (!key) return;
-console.log("[VNAuxiliary] panel tab clicked", {
-key
-});
+
 this.switchPanelTab?.(key);
 });
 });
@@ -6367,9 +6231,7 @@ if (!source.data || typeof source.data !== "object") {
 source.data = {};
 }
 source.data = this.normalizeSnapshotData(source.data, source.passage || "");
-console.log("[VNSnapshot] migrateSnapshot", {
-snapshot: source
-});
+
 return source;
 },
 normalizeSnapshot(snapshot) {
@@ -6471,10 +6333,7 @@ this.textEl?.innerHTML ||
 ""
 );
 const normalized = this.normalizeSnapshot(snapshot);
-console.log("[VNSnapshot] captureSnapshot", {
-meta,
-snapshot: normalized
-});
+
 return normalized;
 },
 normalizeHudRuntimeState(hudRuntimeState) {
@@ -6528,7 +6387,7 @@ const runtime = this.getRuntime ? this.getRuntimeState() : null;
 if (runtime) {
 runtime.overviewState = state;
 }
-console.log("[VNSnapshot] applyRestoredOverviewState", state);
+
 return state;
 },
 applyRestoredPerformanceState(performanceState) {
@@ -6585,13 +6444,13 @@ if (this.setCurrentTextPageCommitted) {
 this.setCurrentTextPageCommitted(true);
 }
 }
-console.log("[VNSnapshot] applyRestoredPerformanceState", state);
+
 return state;
 },
 applyRestoredHudRuntimeState(hudRuntimeState) {
 const state = this.normalizeHudRuntimeState?.(hudRuntimeState);
 this.hudRuntimeState = state;
-console.log("[VNSnapshot] applyRestoredHudRuntimeState", state);
+
 return state;
 },
 applyRestoredInteractionState(interactionState) {
@@ -6600,7 +6459,7 @@ const runtime = this.getRuntime ? this.getRuntimeState() : null;
 if (runtime) {
 runtime.interactionState = state;
 }
-console.log("[VNSnapshot] applyRestoredInteractionState", state);
+
 return state;
 },
 restoreSnapshot(snapshot) {
@@ -6658,10 +6517,7 @@ if (restoring) {
 restoring.pendingSnapshot = this.cloneData(normalized);
 }
 this.resetSceneViewState?.();
-console.log("[VNSnapshot] restoreSnapshot -> playPassage", {
-passage,
-snapshot: normalized
-});
+
 setTimeout(() => {
 this.playPassage(passage);
 }, 0);
@@ -6695,7 +6551,7 @@ if (Number.isInteger(sectionIndex) && sectionIndex >= 0) {
 this.markSectionSeen?.(sectionIndex);
 }
 this.saveCheckpointsToStorage?.();
-console.log("[VNSnapshot] createCheckpoint", snapshot);
+
 return snapshot;
 },
 getLatestCheckpoint() {
@@ -6775,12 +6631,7 @@ this.isAnyPanelOpen?.() &&
 this.canSwitchPanelTabs?.() &&
 this.getPanelOpenContext?.() === "ingame"
 );
-console.log("[VNInput] canSwitchAuxiliaryTabsByHotkey", {
-result,
-panelOpen: this.isAnyPanelOpen?.(),
-tabsEnabled: this.canSwitchPanelTabs?.(),
-openContext: this.getPanelOpenContext?.()
-});
+
 return result;
 },
 getWheelState() {
@@ -6808,12 +6659,7 @@ handleShowroomKeyDown(e) {
 if (!this.canHandleShowroomInput?.()) {
 return false;
 }
-console.log("[VNInput] handleShowroomKeyDown", {
-code: e.code,
-activeShowroom: this.getActiveShowroomKey?.(),
-selectedIndex: this.getShowroomSelectedIndex?.(),
-fullscreen: this.isShowroomFullscreenOpen?.()
-});
+
 switch (e.code) {
 case "Escape":
 e.preventDefault();
@@ -6883,21 +6729,17 @@ return true;
 },
 canAdvanceByProfile() {
 if (this.isAnyPanelOpen?.()) {
-console.log("[VNInput][advance] blocked: panel open");
+
 return false;
 }
 if (this.isInputLocked?.()) {
-console.log("[VNInput][advance] blocked: input locked");
+
 return false;
 }
 if (this.isBusy())return false;
 const profile = this.getResolvedInputProfile?.();
 const result = profile === "advance";
-console.log("[VNInput][advance] canAdvanceByProfile", {
-profile,
-result,
-performance: this.getPerformanceState?.()
-});
+
 return result;
 },
 canAcceptChoiceByProfile() {
@@ -7048,10 +6890,7 @@ if (unlock) {
 input.locked = false;
 this.cache.input.locked = false;
 }
-console.log("[VNInput] resetInputState", {
-options,
-input
-});
+
 },
 routePanelPointerDown(target, pointerId = null) {
 const input = this.getInputState?.();
@@ -7074,15 +6913,12 @@ return true;
 routeChoicePointerDown(target, pointerId = null) {
 const input = this.getInputState?.();
 if (!this.canAcceptChoiceByProfile?.()) {
-console.log("[VNInput][choice] pointer blocked");
+
 return true;
 }
 if (this.isBranchChoiceTarget?.(target)) {
 const index = this.getBranchChoiceIndexFromTarget?.(target);
-console.log("[VNInput][choice] pointer down", {
-profile: this.getResolvedInputProfile?.(),
-index
-});
+
 if (index >= 0) {
 input.pointerDownValid = true;
 input.activePointerId = pointerId;
@@ -7105,10 +6941,7 @@ return true;
 },
 routeModePointerDown(target, pointerId = null) {
 const pointerProfile = this.getResolvedPointerProfile?.();
-console.log("[VNInput] routeModePointerDown", {
-pointerProfile,
-target
-});
+
 switch (pointerProfile) {
 case "advance":
 return this.routeAdvancePointerDown?.(target, pointerId);
@@ -7223,35 +7056,26 @@ return true;
 }
 const index = this.getBranchChoiceIndexFromTarget?.(target);
 if (index !== action.index) return true;
-console.log("[VNInput][choice] pointer up", {
-index
-});
+
 this.advanceChoiceTarget?.(index);
 return true;
 }
 if (action.type === "text-advance") {
 if (!this.isSequenceAdvanceTarget?.(target)) return true;
-console.log("[VNInput][advance] pointer up -> advanceText");
+
 this.advanceText?.();
 return true;
 }
 if (action.type === "map-confirm") {
 if (!this.isSequenceAdvanceTarget?.(target)) return true;
-console.log("[VNInput][map] pointer up -> confirmCurrentMapNode");
+
 this.confirmCurrentMapNode?.();
 return true;
 }
 return false;
 },
 handlePointerDown(e) {
-console.log("[VNInput] handlePointerDown", {
-pointerType: e.pointerType,
-button: e.button,
-target: e.target,
-profile: this.getResolvedPointerProfile?.(),
-panelOpen: this.isAnyPanelOpen?.(),
-locked: this.isInputLocked?.()
-});
+
 if (!this.isPrimaryPointer?.(e)) {
 this.clearPointerIntent?.();
 return;
@@ -7270,14 +7094,7 @@ return;
 this.routeModePointerDown?.(target, pointerId);
 },
 handlePointerUp(e) {
-console.log("[VNInput] handlePointerUp", {
-pointerType: e.pointerType,
-button: e.button,
-target: e.target,
-profile: this.getResolvedPointerProfile?.(),
-panelOpen: this.isAnyPanelOpen?.(),
-locked: this.isInputLocked?.()
-});
+
 const input = this.getInputState?.();
 if (!input?.pointerDownValid) return;
 const target = e.target;
@@ -7347,12 +7164,7 @@ routePanelKeyDown(e) {
 if (!this.isAnyPanelOpen?.()) {
 return false;
 }
-console.log("[VNInput] routePanelKeyDown", {
-code: e.code,
-activePanel: this.getActivePanelKey?.(),
-context: this.getPanelOpenContext?.(),
-tabsEnabled: this.canSwitchPanelTabs?.()
-});
+
 if (e.code === "Escape" || e.code === "KeyE") {
 e.preventDefault();
 this.closePanel?.();
@@ -7361,17 +7173,11 @@ return true;
 const shortcutMap = this.getAuxiliaryPanelShortcutMap?.() || {};
 const targetPanelKey = shortcutMap[e.code];
 if (targetPanelKey) {
-console.log("[VNInput] routePanelKeyDown digit target", {
-code: e.code,
-targetPanelKey
-});
+
 if (this.canSwitchAuxiliaryTabsByHotkey?.()) {
 e.preventDefault();
 const switched = this.switchPanelTab?.(targetPanelKey);
-console.log("[VNInput] switchPanelTab result", {
-targetPanelKey,
-switched
-});
+
 return true;
 }
 e.preventDefault();
@@ -7433,10 +7239,7 @@ routeAdvanceKeyDown(e) {
 const input = this.getInputState?.();
 if (!this.canAdvanceByProfile?.()) return false;
 if (e.code !== "Space" && e.code !== "Enter") return false;
-console.log("[VNInput][advance] keydown", {
-code: e.code,
-repeat: e.repeat
-});
+
 if (e.repeat) {
 e.preventDefault();
 return true;
@@ -7449,11 +7252,7 @@ routeAdvanceKeyUp(e) {
 const input = this.getInputState?.();
 if (!this.canAdvanceByProfile?.()) return false;
 if (e.code !== "Space" && e.code !== "Enter") return false;
-console.log("[VNInput][advance] keyup", {
-code: e.code,
-pressed: !!input.keyPressed[e.code],
-profile: this.getResolvedInputProfile?.()
-});
+
 e.preventDefault();
 if (!input.keyPressed[e.code]) {
 return true;
@@ -7488,11 +7287,7 @@ routeChoiceKeyUp(e) {
 if (!this.canAcceptChoiceByProfile?.()) return false;
 const input = this.getInputState?.();
 const selectedIndex = this.getCache?.()?.choiceFocusIndex ?? -1;
-console.log("[VNInput][choice] keyup", {
-code: e.code,
-selectedIndex,
-profile: this.getResolvedInputProfile?.()
-});
+
 if (e.code === "ArrowUp" || e.code === "ArrowLeft") {
 e.preventDefault();
 return true;
@@ -7515,11 +7310,7 @@ return true;
 routeMapKeyDown(e) {
 const input = this.getInputState?.();
 if (!this.canAcceptMapByProfile?.()) return false;
-console.log("[VNInput][map] keydown", {
-code: e.code,
-profile: this.getResolvedInputProfile?.(),
-mapState: this.getMapState?.()
-});
+
 input.keyPressed[e.code] = true;
 switch (e.code) {
 case "ArrowLeft":
@@ -7572,20 +7363,13 @@ if (!e.repeat) input.keyPressed[e.code] = true;
 return true;
 }
 return false;
-console.log("[VNInput][menu] keydown", {
-code: e.code,
-target: e.target
-});
+
 return false;
 },
 routeMenuKeyUp(e) {
 const input = this.getInputState?.();
 const selectedIndex = this.getCache?.()?.choiceFocusIndex ?? -1;
-console.log("[VNInput][menu] keyup", {
-code: e.code,
-selectedIndex,
-profile: this.getResolvedInputProfile?.()
-});
+
 if (e.code === "ArrowUp" || e.code === "ArrowLeft") {
 e.preventDefault();
 return true;
@@ -7606,25 +7390,17 @@ this.advanceChoiceTarget?.(selectedIndex);
 return true;
 },
 handleKeyDown(e) {
-console.log("[VNInput] handleKeyDown", {
-code: e.code,
-target: e.target,
-inputProfile: this.getResolvedInputProfile?.(),
-keyboardProfile: this.getResolvedKeyboardProfile?.(),
-panelOpen: this.isAnyPanelOpen?.(),
-showroomOpen: this.isShowroomOpen?.(),
-locked: this.isInputLocked?.()
-});
+
 if (this.routeGlobalHotkeyDown?.(e)) {
-console.log("[VNInput] handleKeyDown consumed by global hotkey");
+
 return;
 }
 if (this.routePanelKeyDown?.(e)) {
-console.log("[VNInput] handleKeyDown consumed by panel");
+
 return;
 }
 if (this.handleShowroomKeyDown?.(e)) {
-console.log("[VNInput] handleKeyDown consumed by showroom");
+
 return;
 }
 const keyboardProfile = this.getResolvedKeyboardProfile?.();
@@ -7647,33 +7423,26 @@ break;
 }
 },
 handleKeyUp(e) {
-console.log("[VNInput] handleKeyUp", {
-code: e.code,
-target: e.target,
-inputProfile: this.getResolvedInputProfile?.(),
-keyboardProfile: this.getResolvedKeyboardProfile?.(),
-panelOpen: this.isAnyPanelOpen?.(),
-locked: this.isInputLocked?.()
-});
+
 if (this.routeGlobalHotkeyUp?.(e)) {
-console.log("[VNInput] handleKeyUp consumed by global hotkey");
+
 return;
 }
 if (this.routePanelKeyUp?.(e)) {
-console.log("[VNInput] handleKeyUp consumed by panel");
+
 return;
 }
 const keyboardProfile = this.getResolvedKeyboardProfile?.();
 switch (keyboardProfile) {
 case "advance":
 if (this.routeAdvanceKeyUp?.(e)) {
-console.log("[VNInput] handleKeyUp consumed by advance route");
+
 return;
 }
 break;
 case "choice":
 if (this.routeChoiceKeyUp?.(e)) {
-console.log("[VNInput] handleKeyUp consumed by choice route");
+
 return;
 }
 break;
@@ -7681,7 +7450,7 @@ case "map":
 break;
 case "menu":
 if (this.routeMenuKeyUp?.(e)) {
-console.log("[VNInput] handleKeyUp consumed by menu route");
+
 return;
 }
 break;
@@ -7778,10 +7547,7 @@ return false;
 },
 routeModeWheel(e) {
 const wheelProfile = this.getResolvedWheelProfile?.();
-console.log("[VNInput] routeModeWheel", {
-wheelProfile,
-deltaY: e.deltaY
-});
+
 switch (wheelProfile) {
 case "advance":
 return this.routeAdvanceWheel?.(e);
@@ -8061,11 +7827,7 @@ this.saveAutoSnapshot?.(autoSaveTitle);
 this.closeAllPanels?.();
 this.stopAllTextPlaybackTimers?.();
 this.playPassage?.(target);
-console.log("[VNStorage] returnToMainMenu", {
-target,
-autoSave,
-autoSaveTitle
-});
+
 return true;
 },
 restoreStateVariables(data) {
@@ -8110,12 +7872,7 @@ typeof this.captureSnapshot === "function" &&
 typeof this.normalizeSnapshot === "function" &&
 typeof this.restoreSnapshot === "function"
 );
-console.log("[VNStorage] canUseSnapshotModule", {
-result,
-hasCaptureSnapshot: typeof this.captureSnapshot === "function",
-hasNormalizeSnapshot: typeof this.normalizeSnapshot === "function",
-hasRestoreSnapshot: typeof this.restoreSnapshot === "function"
-});
+
 return result;
 },
 getDefaultUserConfig() {
@@ -8171,7 +7928,7 @@ localStorage.setItem(
 this.getUserConfigStorageKey?.(),
 JSON.stringify(this.normalizeUserConfig?.(this.userConfig))
 );
-console.log("[VNStorage] saveUserConfig", this.userConfig);
+
 return true;
 } catch (e) {
 console.warn("[VNStorage] Failed to save user config.", e);
@@ -8183,7 +7940,7 @@ this.userConfig = this.normalizeUserConfig?.(this.userConfig);
 if (this.audio?.bgm?.el) {
 this.audio.bgm.el.volume = this.userConfig.bgmVolume;
 }
-console.log("[VNStorage] applyUserConfig", this.userConfig);
+
 return this.userConfig;
 },
 updateUserConfig(patch = {}) {
@@ -8227,9 +7984,7 @@ return false;
 }
 const seenMap = this.getSeenSectionMap?.();
 seenMap[String(sectionIndex)] = true;
-console.log("[VNStorage] markSectionSeen", {
-sectionIndex
-});
+
 return true;
 },
 isSectionSeen(sectionIndex) {
@@ -8246,7 +8001,7 @@ return this.isSectionSeen?.(sectionIndex);
 clearBacklog() {
 const storage = this.ensureStorageState?.();
 storage.backlogEntries = [];
-console.log("[VNStorage] clearBacklog");
+
 },
 getBacklogEntries() {
 return this.ensureStorageState?.().backlogEntries;
@@ -8259,7 +8014,7 @@ const max = Number(200);
 if (storage.backlogEntries.length > max) {
 storage.backlogEntries.splice(0, storage.backlogEntries.length - max);
 }
-console.log("[VNStorage] pushBacklogEntry", entry);
+
 },
 recordBacklog(htmlString) {
 if (!htmlString || !String(htmlString).trim()) return;
@@ -8325,7 +8080,7 @@ localStorage.setItem(
 this.getCheckpointStorageKey?.(),
 JSON.stringify(data)
 );
-console.log("[VNStorage] saveCheckpointsToStorage", data);
+
 return true;
 } catch (e) {
 console.warn("[VNStorage] Failed to save checkpoints to localStorage.", e);
@@ -8344,7 +8099,7 @@ const data = JSON.parse(raw);
 storage.checkpoints = Array.isArray(data)
 ? data.map(item => this.normalizeSnapshot?.(item)).filter(Boolean)
 : [];
-console.log("[VNStorage] loadCheckpointsFromStorage", storage.checkpoints);
+
 return storage.checkpoints;
 } catch (e) {
 console.warn("[VNStorage] Failed to load checkpoints from localStorage.", e);
@@ -8371,16 +8126,14 @@ return false;
 }
 list.splice(index, 1);
 this.saveCheckpointsToStorage?.();
-console.log("[VNStorage] removeCheckpointById", {
-id
-});
+
 return true;
 },
 clearCheckpoints() {
 const storage = this.ensureStorageState?.();
 storage.checkpoints = [];
 this.saveCheckpointsToStorage?.();
-console.log("[VNStorage] clearCheckpoints");
+
 },
 restoreCheckpoint(id) {
 const checkpoint = this.findCheckpointById?.(id);
@@ -8412,7 +8165,7 @@ localStorage.setItem(
 this.getAutoSaveStorageKey?.(),
 JSON.stringify(snapshot)
 );
-console.log("[VNStorage] saveAutoSnapshot", snapshot);
+
 return snapshot;
 } catch (e) {
 console.warn("[VNStorage] Failed to save auto snapshot.", e);
@@ -8441,7 +8194,7 @@ return this.restoreSnapshot?.(snapshot) || false;
 clearAutoSnapshot() {
 try {
 localStorage.removeItem(this.getAutoSaveStorageKey?.());
-console.log("[VNStorage] clearAutoSnapshot");
+
 return true;
 } catch (e) {
 console.warn("[VNStorage] Failed to clear auto snapshot.", e);
@@ -8463,7 +8216,7 @@ const data = JSON.parse(raw);
 storage.saveSlots = Array.isArray(data)
 ? data.map(item => this.normalizeSnapshot?.(item)).filter(Boolean)
 : [];
-console.log("[VNStorage] loadSaveSlotsFromStorage", storage.saveSlots);
+
 return storage.saveSlots;
 } catch (e) {
 console.warn("[VNStorage] Failed to load save slots from localStorage.", e);
@@ -8479,7 +8232,7 @@ localStorage.setItem(
 this.getSaveSlotStorageKey?.(),
 JSON.stringify(data)
 );
-console.log("[VNStorage] saveSaveSlotsToStorage", data);
+
 return true;
 } catch (e) {
 console.warn("[VNStorage] Failed to save save slots to localStorage.", e);
@@ -8545,10 +8298,7 @@ storage.saveSlots[existingIndex] = snapshot;
 storage.saveSlots.push(snapshot);
 }
 this.saveSaveSlotsToStorage?.();
-console.log("[VNStorage] saveToSlot", {
-slotIndex,
-snapshot
-});
+
 return true;
 },
 loadFromSlot(index) {
@@ -8566,10 +8316,7 @@ if (!entry) {
 console.warn(`[VNStorage] Save slot is empty: ${slotIndex}`);
 return false;
 }
-console.log("[VNStorage] loadFromSlot", {
-slotIndex,
-entry
-});
+
 return this.restoreSnapshot?.(entry) || false;
 },
 clearSlot(index) {
@@ -8587,9 +8334,7 @@ const before = storage.saveSlots.length;
 storage.saveSlots = storage.saveSlots.filter(entry => entry?.slotIndex !== slotIndex);
 if (storage.saveSlots.length !== before) {
 this.saveSaveSlotsToStorage?.();
-console.log("[VNStorage] clearSlot", {
-slotIndex
-});
+
 return true;
 }
 return false;
@@ -8623,7 +8368,7 @@ const safeDiff = diff || {};
 const layers = modeDef?.layers || {};
 if (layers.graph) {
 if (safeDiff.initial || safeDiff.graphChanged || safeDiff.modeChanged || safeDiff.layersChanged) {
-console.log("[VNRenderer] syncStaticLayers graph", safeContext.graph);
+
 this.setInteractionGraph?.(safeContext.graph || "");
 this.setOverviewGraph?.(safeContext.graph || "");
 if (safeContext.graph) {
@@ -8642,7 +8387,7 @@ this.setOverviewGraph?.("");
 }
 if (layers.interactives) {
 if (safeDiff.initial || safeDiff.interactivesChanged || safeDiff.modeChanged || safeDiff.layersChanged) {
-console.log("[VNRenderer] syncStaticLayers interactives", safeContext.interactives);
+
 this.setInteractionInteractivesSpec?.(safeContext.interactives || null);
 }
 } else {
@@ -8803,34 +8548,22 @@ tryExecuteActiveTriggers(stage = "") {
 const triggers = this.getCurrentPassageActiveTriggers?.() || [];
 if (!triggers.length) return false;
 const currentPassage = this.host?.getCurrentPassageName?.() || "";
-console.log("[VNTrigger] tryExecuteActiveTriggers", {
-stage,
-triggers,
-currentPassage
-});
+
 for (const command of triggers) {
 const eventId = String(command?.eventId || "").trim();
 const weight = Number(command?.weight ?? 1);
 if (!eventId) continue;
 if (!this.canStartEvent?.(eventId)) {
-console.log("[VNTrigger] blocked by canStartEvent", eventId);
+
 continue;
 }
 const hit = this.rollTriggerWeight?.(weight);
-console.log("[VNTrigger] roll", {
-stage,
-eventId,
-weight,
-hit
-});
+
 if (!hit) continue;
 const started = this.startEvent?.(eventId, {
 returnTarget: currentPassage
 });
-console.log("[VNTrigger] startEvent result", {
-eventId,
-started
-});
+
 if (started) {
 return true;
 }
@@ -8936,9 +8669,7 @@ state.y = Math.max(0, Math.min(100, Number(state.y || 0)));
 },
 moveMapPlayer(dx = 0, dy = 0) {
 const state = this.getMapState?.();
-console.log("[VNMap] moveMapPlayer", {
-dx, dy, state
-});
+
 if (!state || !state.active || state.lockMovement) return false;
 const movement = String(state.movement || "free");
 const input = this.getInputState?.();
@@ -9033,11 +8764,7 @@ currentNode.hint ||
 "按 Enter 或 Space 进入";
 }
 }
-console.log("[VNRenderer] renderMapOverlay", {
-active,
-mapState: state,
-overlay
-});
+
 },
 getCurrentMapNode() {
 const state = this.getMapState?.();
@@ -9047,11 +8774,7 @@ return overlay.nodes.find(node => node.id === state.currentNodeId) || null;
 },
 confirmCurrentMapNode() {
 const node = this.getCurrentMapNode?.();
-console.log("[VNMap] confirmCurrentMapNode", {
-node,
-mapState: this.getMapState?.(),
-currentPassage: this.host?.getCurrentPassageName?.()
-});
+
 if (!node) return false;
 return this.activateMapNode?.(node) || false;
 },
@@ -9077,11 +8800,7 @@ return overlay.nodes.find(node => this.isPointInsideMapNode(x, y, node)) || null
 activateMapNode(node) {
 const state = this.getMapState?.();
 if (!state || !node || !node.id) return false;
-console.log("[VNMap] activateMapNode start", {
-node,
-state,
-hostPassage: this.host?.getCurrentPassageName?.()
-});
+
 state.lockMovement = true;
 const finish = () => {
 setTimeout(() => {
@@ -9094,11 +8813,7 @@ currentState.lockMovement = false;
 const targetType = String(node.targetType || "passage").toLowerCase();
 const target = String(node.target || "").trim();
 const currentPassage = this.host?.getCurrentPassageName?.() || "";
-console.log("[VNMap] activateMapNode target", {
-targetType,
-target,
-currentPassage
-});
+
 if (!target) {
 finish();
 return false;
@@ -9108,7 +8823,7 @@ const started = this.startEvent?.(target, {
 returnTarget: currentPassage,
 preserveScene: !!node.preserveScene
 });
-console.log("[VNMap] activateMapNode event result", started);
+
 finish();
 return !!started;
 }
@@ -9118,7 +8833,7 @@ targetType === "passage" ||
 targetType === "menu"
 ) {
 if (this.hasPassage?.(target)) {
-console.log("[VNMap] activateMapNode playPassage", target);
+
 this.playPassage(target);
 finish();
 return true;
@@ -9193,11 +8908,7 @@ const trueBranch = Array.isArray(branch.true) ? branch.true : [];
 const falseBranch = Array.isArray(branch.false) ? branch.false : [];
 const passed = !!this.evaluateSimpleCondition?.(test);
 const selected = passed ? trueBranch : falseBranch;
-console.log("[VNCommand] expandConditionalCommandObject", {
-test,
-passed,
-selected
-});
+
 return selected;
 },
 expandCommands(commands = []) {
@@ -9370,11 +9081,7 @@ checkpoint(raw = "") {
 const args = this.splitCommandArgs?.(raw) || [];
 const title = this.resolveTextReference?.(args[0], "Checkpoint") || "Checkpoint";
 this.setCurrentPassageCheckpointTitle?.(title);
-console.log("[VNRuntime] checkpoint", {
-raw,
-source,
-title
-});
+
 return true;
 },
 display(raw = "") {
@@ -9382,9 +9089,7 @@ const args = this.splitCommandArgs?.(raw) || [];
 const first = String(args[0] || "").trim();
 if (!first || first === "hide" || first === "none") {
 this.hideDisplayBox?.();
-console.log("[VNRuntime] display hide", {
-raw
-});
+
 return true;
 }
 const entryId = this.resolveEntryId?.(first) || first;
@@ -9410,13 +9115,7 @@ amount = Number.isFinite(parsed)
 }
 if (channel === "box") {
 this.showDisplayBox?.(entryId, amount);
-console.log("[VNRuntime] display -> box", {
-raw,
-entryKey: first,
-resolvedEntryId: entryId,
-amount,
-channel
-});
+
 return true;
 }
 console.warn("[VNRuntime] display unsupported channel", {
@@ -9467,7 +9166,7 @@ console.warn("[VNPrint]", payload);
 return true;
 }
 if (level === "log") {
-console.log("[VNPrint]", payload);
+
 return true;}
 return false;
 }
@@ -9480,7 +9179,7 @@ console.warn("[VNRuntime] turnto missing target", { raw });
 return false;
 }
 cache.nextTurnTo = target;
-console.log("run cmd: turnto",{raw, target});
+
 return true;
 },
 obtain(raw = "") {
@@ -9491,11 +9190,7 @@ console.warn("[VNGameData] obtain missing expression", { raw });
 return false;
 }
 const result = this.applyObtainExpression?.(expression);
-console.log("[VNGameData] obtain", {
-raw,
-expression,
-result
-});
+
 return result !== false;
 },
 assign(raw = "") {
@@ -9518,13 +9213,7 @@ return false;
 }
 const value = this.parseLiteralValue?.(second);
 const next = this.setEntryValue?.(entryId, value);
-console.log("[VNGameData] assign", {
-raw,
-entryKey: first,
-resolvedEntryId: entryId,
-value,
-current: next
-});
+
 return true;
 },
 time(raw = "") {
@@ -9536,20 +9225,13 @@ return false;
 }
 if (first === "advance") {
 const next = this.advanceTime?.();
-console.log("[VNGameData] time advance", {
-raw,
-next
-});
+
 return true;
 }
 const allowedSlots = ["morning", "noon", "afternoon", "evening", "night"];
 if (allowedSlots.includes(first)) {
 const next = this.advanceTime?.(first);
-console.log("[VNGameData] time set slot", {
-raw,
-slot: first,
-next
-});
+
 return true;
 }
 console.warn("[VNGameData] time unsupported argument", {
@@ -9567,34 +9249,20 @@ console.warn("[VNRoleplay] encounter missing eventId", { raw });
 return false;
 }
 if (!this.canStartEvent?.(eventId)) {
-console.log("[VNRoleplay] encounter skipped: cannot start", {
-raw,
-eventId
-});
+
 return false;
 }
 const weight = this.evaluateNumericExpression?.(weightExpr, { weight: 1 }) ?? 1;
 const hit = this.rollTriggerWeight?.(weight);
 if (!hit) {
-console.log("[VNRoleplay] encounter miss", {
-raw,
-weightExpr,
-weight,
-eventId
-});
+
 return false;
 }
 const currentIndex = this.getCurrentPassageContext?.()?.index || "";
 const started = this.startEvent?.(eventId, {
 returnTarget: currentIndex
 });
-console.log("[VNRoleplay] encounter", {
-raw,
-weightExpr,
-weight,
-eventId,
-started
-});
+
 return started === true;
 },
 trigger(raw = "") {
@@ -9611,11 +9279,7 @@ raw,
 weightExpr,
 eventId
 });
-console.log("[VNRoleplay] trigger", {
-raw,
-weightExpr,
-eventId
-});
+
 return true;
 },
 registerDefaultCommands() {
@@ -9664,11 +9328,7 @@ return this.getCommandRegistry?.();
 }
 });
 core.registerDefaultCommands?.();
-console.log("[VNCommand] command registry loaded", core.listCommandNames?.());
-console.log("[VNCommand] normalizeCommands exists", typeof core.normalizeCommands);
-console.log("[VNCommand] installVNCommandModule loaded", {
-commands: core.listCommandNames?.()
-});
+
 return core;
 }
 global.installVNCommandModule = installVNCommandModule;
@@ -9788,7 +9448,7 @@ core.nameboxEl = root.querySelector("#vn-namebox");
 core.textEl = root.querySelector("#vn-text");
 core.choicesEl = root.querySelector("#vn-choices");
 core.modeContentEl = root.querySelector("#vn-mode-content");
-console.log("[Bootstrap] ensureRoot done", core.root );
+
 },
 createStory(baseBundle, langBundle) {
 const EMPTY = Object.freeze([]);

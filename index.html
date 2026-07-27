@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>游戏标题</title>
+  <title>鸣响吧！青风</title>
 <style id="vn-inline-css">
 html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;user-select:none}
 #vn-root{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden;display:block}
@@ -315,18 +315,17 @@ body[data-vn-mode="e"] #vn-mode-content{display:none !important}
 </style>
 </head>
 <body>
-
   <script id="config" type="application/json">
-{"title":"\u6E38\u620F\u6807\u9898","start":"1","gameConfig":{"firstSequencePassage":"100","mainMenuPassage":"1"},"packageName":"","debugMode":"0"}
+{"title":"\u9E23\u54CD\u5427\uFF01\u9752\u98CE","start":"1","gameConfig":{"firstSequencePassage":"100","mainMenuPassage":"1"},"packageName":"","debugMode":"0"}
   </script>
   <script id="registry" type="application/json">
 {"modes":{"version":1,"defs":{"m":{"name":"menu","layers":{"scene":true,"graph":false,"interactives":false,"actors":false,"dialogueBox":false,"choices":true,"hud":false,"modeContent":false},"text":{"choicesAndTargets":{"effect":"appear","container":"branch"}},"ui":{"shells":["choices"],"theme":"menu"},"input":{"profile":"choice","pointer":"ui-only","keyboard":"menu","wheel":"menu"},"policy":{"showHud":false,"allowBacklogWheelOpen":false,"autoPlayback":false,"seenSkip":false}},"s":{"name":"sequence","layers":{"scene":true,"graph":false,"interactives":false,"actors":true,"dialogueBox":true,"choices":false,"hud":true,"modeContent":false},"text":{"speaker":{"effect":"appear","container":"speaker"},"pages":{"effect":"type","container":"dialogue"}},"ui":{"shells":["dialogue","hud","displayBox"],"theme":"sequence"},"input":{"profile":"advance","pointer":"advance","keyboard":"advance","wheel":"advance"},"policy":{"showHud":true,"allowBacklogWheelOpen":true,"autoPlayback":true,"seenSkip":true}},"c":{"name":"cg","layers":{"scene":true,"graph":false,"interactives":false,"actors":true,"dialogueBox":true,"choices":false,"hud":true,"modeContent":false},"text":{"pages":{"effect":"fade","container":"line"}},"ui":{"shells":["dialogue","hud","displayBox"],"theme":"cg"},"input":{"profile":"advance","pointer":"advance","keyboard":"advance","wheel":"advance"},"policy":{"showHud":true,"allowBacklogWheelOpen":false,"autoPlayback":false,"seenSkip":false}},"b":{"name":"branch","layers":{"scene":true,"graph":false,"interactives":false,"actors":true,"dialogueBox":false,"choices":true,"hud":true,"modeContent":false},"text":{"choicesAndTargets":{"effect":"appear","container":"branch"}},"ui":{"shells":["choices","hud"],"theme":"branch"},"input":{"profile":"choice","pointer":"choice","keyboard":"choice","wheel":"backlog-only"},"policy":{"showHud":true,"allowBacklogWheelOpen":true,"autoPlayback":false,"seenSkip":false}},"e":{"name":"event","layers":{"scene":true,"graph":false,"interactives":false,"actors":true,"dialogueBox":true,"choices":true,"hud":false,"modeContent":false},"text":{"pages":{"effect":"appear","container":"card"}},"ui":{"shells":["dialogue","choices"],"theme":"event"},"input":{"profile":"choice","pointer":"choice","keyboard":"choice","wheel":"none"},"policy":{"showHud":false,"allowBacklogWheelOpen":false,"autoPlayback":false,"seenSkip":false}},"t":{"name":"map","layers":{"scene":true,"graph":true,"interactives":true,"actors":false,"dialogueBox":false,"choices":false,"hud":false,"modeContent":false},"text":{"choicesAndTargets":{"effect":"appear","container":"hint"},"ui":{"shells":["map-hint"],"theme":"map"},"input":{"profile":"map","pointer":"map","keyboard":"map","wheel":"map"},"policy":{"showHud":false,"allowBacklogWheelOpen":false,"autoPlayback":false,"seenSkip":false}}}}},"layouts":{"title":{"bg":{"1":"img/title.jpg"}},"classroom":{"bg":{"1":"img/classroom.jpg","2":"img/classroom2.png"},"fg":{"1":"img/classroom3.png"},"prop":{"1":"img/classroom4.png"},"npc":{"1":"img/classroom5.png"}},"street":{"bg":"img/bg/street.jpg","fg":""},"road":{"bg":{"1":"img/road.jpg"},"fg":{"1":"img/fg1.png"}},"school_gate":{"bg":"img/bg/school_gate.jpg","fg":""},"playground":{"bg":{"1":"img/playground.png","2":"img/playground2.png"},"fg":{"1":"img/playground3.png"},"prop":{"1":"img/playground4.png"},"npc":{"1":"img/playground5.png"}}},"actors":{"Teacher":{"layers":{"head":{"1":"img/Teacher.png"},"outfit":{"1":"img/Teacher2.png"},"arms":{"1":"img/Teacher3.png"},"footwear":{"1":"img/Teacher4.png"}}},"Alice":{"layers":{"head":{"1":"img/Alice.png","2":"images/chars/alice/head_2.png"},"outfit":{"1":"img/Alice2.png"},"arms":{"1":"img/Alice3.png"},"footwear":{"1":"img/Alice4.png"}}},"Cara":{"layers":{"head":{"1":"img/cara1.gif"}}},"Wolf":{"layers":{"head":{"1":"img/wolf1.gif"}}}},"audio":{"bgm":{},"se":{},"voice":{}},"panelContent":{"backlog":{"enabled":true,"index":"20","contexts":{"ingame":{"enabled":true,"tabEnabled":true,"closeAction":"resume-game"},"menu-route":{"enabled":false}}},"checkpoint":{"enabled":true,"index":"22","contexts":{"ingame":{"enabled":true,"tabEnabled":true,"closeAction":"resume-game"},"menu-route":{"enabled":false}}},"saveSlot":{"enabled":true,"index":"21","slotCount":12,"contexts":{"ingame":{"enabled":true,"tabEnabled":true,"closeAction":"resume-game"},"menu-route":{"enabled":true,"tabEnabled":false,"closeAction":"return-main-menu"}},"modes":["save","load"]},"config":{"enabled":true,"index":"23","contexts":{"ingame":{"enabled":true,"tabEnabled":true,"closeAction":"resume-game"},"menu-route":{"enabled":true,"tabEnabled":false,"closeAction":"return-main-menu"}},"showReset":true},"profile":{"enabled":true,"index":"24","contexts":{"ingame":{"enabled":true,"tabEnabled":true,"closeAction":"resume-game"},"menu-route":{"enabled":true,"tabEnabled":false,"closeAction":"return-main-menu"}},"tabs":["overview","skills","inventory"]}},"showroomContent":{"gallery":{"enabled":true,"index":"30","items":[{"id":"200","asset":"200","unlockVar":"200_seen"},{"id":"201","asset":"201","unlockVar":"201_seen"}]}},"hudContent":{"day":{"enabled":true,"index":"40","position":"1"},"time":{"enabled":true,"index":"40","position":"3"},"money":{"enabled":true,"index":"40","position":"4"},"menuButton":{"enabled":true,"index":"40","position":"5"},"profileButton":{"enabled":true,"index":"40","position":"6"},"configButton":{"enabled":true,"index":"40","position":"7"},"autoButton":{"enabled":true,"index":"40","position":"8"}},"entry":{"resource":{"money":{"label":"Money","defaultValue":0,"aliases":["money"],"order":100,"index":"40"}},"stat":{"hp":{"label":"HP","defaultValue":0},"sanity":{"label":"Sanity","defaultValue":0}},"affection":{"Alice":{"label":"Alice","defaultValue":0},"Teacher":{"label":"Teacher","defaultValue":0}},"flag":{"seenPrologue":{"label":"Seen Prologue","defaultValue":false}},"skill":{"skill_persuasion":{"id":"skill_persuasion","label":"Persuasion","defaultValue":0,"order":10}},"doodle":{"doodle_1":{"id":"wolf_1","icon":"img/npc1.gif","order":20},"doodle_2":{"id":"cara_1","icon":"img/npc2.gif","order":22}},"item":{"item_key":{"id":"item_key","label":"Dorm Key","defaultValue":0,"order":20}}},"events":{"event_find_coin":{"id":"event_find_coin","passage":"event_100","repeatable":true,"preserveScene":true,"returnTarget":null}},"graphs":{"school_gate":{"id":"school_gate","movement":"horizontal","playerStart":{"x":20,"y":55},"nodes":[{"id":"to_sequence","x":80,"y":55,"w":10,"h":20,"targetType":"sequence","target":"100","label":"\u8FDB\u5165\u6559\u5BA4","hint":"\u6309 Enter \u8FDB\u5165\u5267\u60C5"},{"id":"to_event","x":48,"y":55,"w":8,"h":16,"targetType":"event","target":"event_find_coin","label":"\u95EA\u5149\u70B9","hint":"\u6309 Enter \u8C03\u67E5","preserveScene":true}]}}}
   </script>
   <script id="base-bundle" type="application/json">
-{"meta":{"name":"\u6E38\u620F\u6807\u9898","startPassage":"1"},"passages":{"1":{"mode":"m","scene":"title","commands":["linkto(dialogue, 100, 23)"],"actions":["change(title,1,0,0,1)","\ncontrol(Cara,,,,,,0)","\ncontrol(Wolf,,,,,,0)",""]},"20":{"mode":"m","scene":"","commands":["openAux(panel, backlog)"]},"21":{"mode":"m","scene":"","commands":["openAux(panel, saveSlot)"]},"22":{"mode":"m","scene":"","commands":["openAux(panel, checkpoint)"]},"23":{"mode":"m","scene":"","commands":["openAux(panel, config)"]},"24":{"mode":"m","scene":"","commands":["openAux(panel, profile)"]},"30":{"mode":"m","scene":"","commands":["openAux(showroom, gallery)"]},"31":{"mode":"m","scene":"","commands":["openAux(showroom, music)"]},"31":{"mode":"m","scene":"","commands":["openAux(showroom, animation)"]},"40":{"mode":"m","scene":""},"100":{"mode":"s","scene":"classroom","actors":["Wolf"]},"101":{"mode":"s","scene":""},"102":{"mode":"c","scene":"road"},"103":{"mode":"s","scene":"road"},"104":{"mode":"s","scene":"","commands":["obtain(money += 100)"],"actions":["control(Wolf,20,5,,,,1)",""]},"105":{"mode":"s","scene":"","actions":["control(Wolf,10,5,,,,1)",""]},"106":{"mode":"s","scene":"","actions":["control(Wolf,20,5,,,,1)",""]},"107":{"mode":"s","scene":""},"108":{"mode":"s","scene":"","commands":["obtain(money = 0)"]},"109":{"mode":"s","scene":""},"110":{"mode":"s","scene":"","actions":["control(Wolf,40,5,,,,1)",""]},"111":{"mode":"s","scene":""},"112":{"mode":"s","scene":""},"113":{"mode":"s","scene":""},"114":{"mode":"s","scene":""},"115":{"mode":"s","scene":""},"116":{"mode":"s","scene":""},"117":{"mode":"s","scene":""},"118":{"mode":"s","scene":""},"119":{"mode":"s","scene":"","actions":["control(Wolf,40,15,,,,1)",""]},"120":{"mode":"s","scene":""},"121":{"mode":"s","scene":""},"122":{"mode":"s","scene":""},"123":{"mode":"s","scene":""},"124":{"mode":"s","scene":""},"125":{"mode":"s","scene":""},"126":{"mode":"s","scene":""},"127":{"mode":"s","scene":""},"128":{"mode":"s","scene":""},"129":{"mode":"s","scene":""},"130":{"mode":"s","scene":"","actions":["control(Wolf,30,15,,,,1)",""]},"131":{"mode":"s","scene":""},"132":{"mode":"s","scene":""},"133":{"mode":"s","scene":""},"134":{"mode":"s","scene":""},"135":{"mode":"s","scene":""},"136":{"mode":"s","scene":""},"137":{"mode":"s","scene":"","actions":["control(Wolf,60,15,,,,1)",""]},"138":{"mode":"s","scene":""},"139":{"mode":"s","scene":""},"140":{"mode":"s","scene":""},"141":{"mode":"s","scene":""},"142":{"mode":"s","scene":""},"143":{"mode":"s","scene":""},"144":{"mode":"s","scene":""},"145":{"mode":"s","scene":""},"146":{"mode":"s","scene":""},"147":{"mode":"s","scene":""},"148":{"mode":"s","scene":""},"149":{"mode":"s","scene":""},"150":{"mode":"s","scene":"","actions":["control(Wolf,50,20,,,,1)",""]},"151":{"mode":"s","scene":""},"152":{"mode":"s","scene":""},"153":{"mode":"s","scene":""},"154":{"mode":"s","scene":""},"155":{"mode":"s","scene":""},"156":{"mode":"s","scene":""},"157":{"mode":"s","scene":""},"158":{"mode":"s","scene":""},"159":{"mode":"s","scene":"road","commands":["display(doodle_wolf_1, expand)"]},"160":{"mode":"s","scene":"","commands":["display(hide)"]},"161":{"mode":"s","scene":""},"162":{"mode":"s","scene":""},"163":{"mode":"s","scene":""},"164":{"mode":"s","scene":""},"165":{"mode":"s","scene":""},"166":{"mode":"s","scene":""},"167":{"mode":"s","scene":""},"168":{"mode":"s","scene":""},"169":{"mode":"s","scene":""},"170":{"mode":"s","scene":""},"171":{"mode":"s","scene":""},"172":{"mode":"s","scene":""},"173":{"mode":"s","scene":""},"174":{"mode":"s","scene":""},"175":{"mode":"s","scene":""},"176":{"mode":"s","scene":""},"177":{"mode":"s","scene":""},"178":{"mode":"s","scene":""},"179":{"mode":"s","scene":""},"180":{"mode":"s","scene":""},"181":{"mode":"s","scene":""},"182":{"mode":"s","scene":""},"183":{"mode":"s","scene":""},"184":{"mode":"s","scene":""},"185":{"mode":"s","scene":""},"186":{"mode":"s","scene":""},"187":{"mode":"s","scene":""},"188":{"mode":"s","scene":""},"189":{"mode":"s","scene":""},"190":{"mode":"s","scene":""},"191":{"mode":"s","scene":""},"192":{"mode":"s","scene":""},"193":{"mode":"s","scene":""},"194":{"mode":"s","scene":""},"195":{"mode":"s","scene":""},"196":{"mode":"s","scene":""},"197":{"mode":"s","scene":""},"198":{"mode":"s","scene":""},"199":{"mode":"s","scene":""},"200":{"mode":"s","scene":""},"201":{"mode":"s","scene":""},"202":{"mode":"s","scene":""},"203":{"mode":"s","scene":""},"204":{"mode":"s","scene":""},"205":{"mode":"s","scene":"","actions":["control(Wolf,60,20,,,,1)",""]},"206":{"mode":"s","scene":""},"207":{"mode":"s","scene":"","actions":["control(Wolf,70,20,,,,1)",""]},"208":{"mode":"s","scene":""},"209":{"mode":"s","scene":""},"210":{"mode":"s","scene":""},"211":{"mode":"s","scene":""},"212":{"mode":"s","scene":""},"213":{"mode":"s","scene":""},"214":{"mode":"s","scene":""},"215":{"mode":"s","scene":""},"216":{"mode":"s","scene":""},"217":{"mode":"s","scene":""},"218":{"mode":"s","scene":""},"219":{"mode":"s","scene":""},"220":{"mode":"s","scene":""},"221":{"mode":"s","scene":""},"222":{"mode":"s","scene":""},"223":{"mode":"s","scene":""},"224":{"mode":"s","scene":""},"225":{"mode":"s","scene":"road","actors":["Wolf","Cara"],"actions":["control(Wolf,70,20,,,,1)",""]},"226":{"mode":"s","scene":""},"227":{"mode":"s","scene":"","actions":["control(Cara,90,18,,,,1)",""]},"228":{"mode":"s","scene":""},"229":{"mode":"s","scene":"","actions":["control(Cara,70,18,,,,1)","\ncontrol(Wolf,40,20,,,,1)",""]},"230":{"mode":"s","scene":""},"231":{"mode":"s","scene":""},"232":{"mode":"s","scene":""},"233":{"mode":"s","scene":""},"234":{"mode":"s","scene":""},"235":{"mode":"s","scene":""},"236":{"mode":"s","scene":""},"237":{"mode":"s","scene":""},"238":{"mode":"s","scene":"","commands":["display(doodle_cara_1, expand)"]},"239":{"mode":"s","scene":"","commands":["display(hide)"]},"240":{"mode":"s","scene":""},"241":{"mode":"s","scene":""},"242":{"mode":"s","scene":""},"243":{"mode":"s","scene":""},"244":{"mode":"s","scene":""},"245":{"mode":"s","scene":""},"246":{"mode":"s","scene":""},"247":{"mode":"s","scene":""},"248":{"mode":"s","scene":""},"249":{"mode":"s","scene":""},"250":{"mode":"s","scene":""},"251":{"mode":"s","scene":""},"252":{"mode":"s","scene":""},"253":{"mode":"s","scene":""},"254":{"mode":"s","scene":""},"255":{"mode":"s","scene":""},"256":{"mode":"s","scene":""},"257":{"mode":"s","scene":""},"258":{"mode":"s","scene":""},"259":{"mode":"s","scene":""},"260":{"mode":"s","scene":""},"261":{"mode":"s","scene":""},"262":{"mode":"b","scene":"","commands":["linkto(dialogue, 264, 265)"]},"264":{"mode":"s","scene":""},"265":{"mode":"s","scene":""},"266":{"mode":"s","scene":""},"267":{"mode":"s","scene":""},"268":{"mode":"s","scene":""},"269":{"mode":"s","scene":""},"270":{"mode":"s","scene":""},"271":{"mode":"s","scene":""},"272":{"mode":"s","scene":"","commands":["turnto(1)"]}}}
+{"meta":{"name":"\u9E23\u54CD\u5427\uFF01\u9752\u98CE","startPassage":"1"},"passages":{"1":{"mode":"m","scene":"title","commands":["linkto(dialogue, 100, 23)"],"actions":["change(title,1,0,0,1)","\ncontrol(Cara,,,,,,0)","\ncontrol(Wolf,,,,,,0)",""]},"20":{"mode":"m","scene":"","commands":["openAux(panel, backlog)"]},"21":{"mode":"m","scene":"","commands":["openAux(panel, saveSlot)"]},"22":{"mode":"m","scene":"","commands":["openAux(panel, checkpoint)"]},"23":{"mode":"m","scene":"","commands":["openAux(panel, config)"]},"24":{"mode":"m","scene":"","commands":["openAux(panel, profile)"]},"30":{"mode":"m","scene":"","commands":["openAux(showroom, gallery)"]},"31":{"mode":"m","scene":"","commands":["openAux(showroom, music)"]},"31":{"mode":"m","scene":"","commands":["openAux(showroom, animation)"]},"40":{"mode":"m","scene":""},"100":{"mode":"s","scene":"classroom","actors":["Wolf"]},"101":{"mode":"s","scene":""},"102":{"mode":"c","scene":"road"},"103":{"mode":"s","scene":"road"},"104":{"mode":"s","scene":"","commands":["obtain(money += 100)"],"actions":["control(Wolf,20,5,,,,1)",""]},"105":{"mode":"s","scene":"","actions":["control(Wolf,10,5,,,,1)",""]},"106":{"mode":"s","scene":"","actions":["control(Wolf,20,5,,,,1)",""]},"107":{"mode":"s","scene":""},"108":{"mode":"s","scene":"","commands":["obtain(money = 0)"]},"109":{"mode":"s","scene":""},"110":{"mode":"s","scene":"","actions":["control(Wolf,40,5,,,,1)",""]},"111":{"mode":"s","scene":""},"112":{"mode":"s","scene":""},"113":{"mode":"s","scene":""},"114":{"mode":"s","scene":""},"115":{"mode":"s","scene":""},"116":{"mode":"s","scene":""},"117":{"mode":"s","scene":""},"118":{"mode":"s","scene":""},"119":{"mode":"s","scene":"","actions":["control(Wolf,40,15,,,,1)",""]},"120":{"mode":"s","scene":""},"121":{"mode":"s","scene":""},"122":{"mode":"s","scene":""},"123":{"mode":"s","scene":""},"124":{"mode":"s","scene":""},"125":{"mode":"s","scene":""},"126":{"mode":"s","scene":""},"127":{"mode":"s","scene":""},"128":{"mode":"s","scene":""},"129":{"mode":"s","scene":""},"130":{"mode":"s","scene":"","actions":["control(Wolf,30,15,,,,1)",""]},"131":{"mode":"s","scene":""},"132":{"mode":"s","scene":""},"133":{"mode":"s","scene":""},"134":{"mode":"s","scene":""},"135":{"mode":"s","scene":""},"136":{"mode":"s","scene":""},"137":{"mode":"s","scene":"","actions":["control(Wolf,60,15,,,,1)",""]},"138":{"mode":"s","scene":""},"139":{"mode":"s","scene":""},"140":{"mode":"s","scene":""},"141":{"mode":"s","scene":""},"142":{"mode":"s","scene":""},"143":{"mode":"s","scene":""},"144":{"mode":"s","scene":""},"145":{"mode":"s","scene":""},"146":{"mode":"s","scene":""},"147":{"mode":"s","scene":""},"148":{"mode":"s","scene":""},"149":{"mode":"s","scene":""},"150":{"mode":"s","scene":"","actions":["control(Wolf,50,20,,,,1)",""]},"151":{"mode":"s","scene":""},"152":{"mode":"s","scene":""},"153":{"mode":"s","scene":""},"154":{"mode":"s","scene":""},"155":{"mode":"s","scene":""},"156":{"mode":"s","scene":""},"157":{"mode":"s","scene":""},"158":{"mode":"s","scene":""},"159":{"mode":"s","scene":"road","commands":["display(doodle_wolf_1, expand)"]},"160":{"mode":"s","scene":"","commands":["display(hide)"]},"161":{"mode":"s","scene":""},"162":{"mode":"s","scene":""},"163":{"mode":"s","scene":""},"164":{"mode":"s","scene":""},"165":{"mode":"s","scene":""},"166":{"mode":"s","scene":""},"167":{"mode":"s","scene":""},"168":{"mode":"s","scene":""},"169":{"mode":"s","scene":""},"170":{"mode":"s","scene":""},"171":{"mode":"s","scene":""},"172":{"mode":"s","scene":""},"173":{"mode":"s","scene":""},"174":{"mode":"s","scene":""},"175":{"mode":"s","scene":""},"176":{"mode":"s","scene":""},"177":{"mode":"s","scene":""},"178":{"mode":"s","scene":""},"179":{"mode":"s","scene":""},"180":{"mode":"s","scene":""},"181":{"mode":"s","scene":""},"182":{"mode":"s","scene":""},"183":{"mode":"s","scene":""},"184":{"mode":"s","scene":""},"185":{"mode":"s","scene":""},"186":{"mode":"s","scene":""},"187":{"mode":"s","scene":""},"188":{"mode":"s","scene":""},"189":{"mode":"s","scene":""},"190":{"mode":"s","scene":""},"191":{"mode":"s","scene":""},"192":{"mode":"s","scene":""},"193":{"mode":"s","scene":""},"194":{"mode":"s","scene":""},"195":{"mode":"s","scene":""},"196":{"mode":"s","scene":""},"197":{"mode":"s","scene":""},"198":{"mode":"s","scene":""},"199":{"mode":"s","scene":""},"200":{"mode":"s","scene":""},"201":{"mode":"s","scene":""},"202":{"mode":"s","scene":""},"203":{"mode":"s","scene":""},"204":{"mode":"s","scene":""},"205":{"mode":"s","scene":"","actions":["control(Wolf,60,20,,,,1)",""]},"206":{"mode":"s","scene":""},"207":{"mode":"s","scene":"","actions":["control(Wolf,70,20,,,,1)",""]},"208":{"mode":"s","scene":""},"209":{"mode":"s","scene":""},"210":{"mode":"s","scene":""},"211":{"mode":"s","scene":""},"212":{"mode":"s","scene":""},"213":{"mode":"s","scene":""},"214":{"mode":"s","scene":""},"215":{"mode":"s","scene":""},"216":{"mode":"s","scene":""},"217":{"mode":"s","scene":""},"218":{"mode":"s","scene":""},"219":{"mode":"s","scene":""},"220":{"mode":"s","scene":""},"221":{"mode":"s","scene":""},"222":{"mode":"s","scene":""},"223":{"mode":"s","scene":""},"224":{"mode":"s","scene":""},"225":{"mode":"s","scene":"road","actors":["Wolf","Cara"],"actions":["control(Wolf,70,20,,,,1)",""]},"226":{"mode":"s","scene":""},"227":{"mode":"s","scene":"","actions":["control(Cara,90,18,,,,1)",""]},"228":{"mode":"s","scene":""},"229":{"mode":"s","scene":"","actions":["control(Cara,70,18,,,,1)","\ncontrol(Wolf,40,20,,,,1)",""]},"230":{"mode":"s","scene":""},"231":{"mode":"s","scene":""},"232":{"mode":"s","scene":""},"233":{"mode":"s","scene":""},"234":{"mode":"s","scene":""},"235":{"mode":"s","scene":""},"236":{"mode":"s","scene":""},"237":{"mode":"s","scene":""},"238":{"mode":"s","scene":"","commands":["display(doodle_cara_1, expand)"]},"239":{"mode":"s","scene":"","commands":["display(hide)"]},"240":{"mode":"s","scene":""},"241":{"mode":"s","scene":""},"242":{"mode":"s","scene":""},"243":{"mode":"s","scene":""},"244":{"mode":"s","scene":""},"245":{"mode":"s","scene":""},"246":{"mode":"s","scene":""},"247":{"mode":"s","scene":""},"248":{"mode":"s","scene":""},"249":{"mode":"s","scene":""},"250":{"mode":"s","scene":""},"251":{"mode":"s","scene":""},"252":{"mode":"s","scene":""},"253":{"mode":"s","scene":""},"254":{"mode":"s","scene":""},"255":{"mode":"s","scene":""},"256":{"mode":"s","scene":""},"257":{"mode":"s","scene":""},"258":{"mode":"s","scene":""},"259":{"mode":"s","scene":""},"260":{"mode":"s","scene":""},"261":{"mode":"s","scene":""},"262":{"mode":"b","scene":"","commands":["linkto(dialogue, 264, 265)"]},"264":{"mode":"s","scene":""},"265":{"mode":"s","scene":""},"266":{"mode":"s","scene":""},"267":{"mode":"s","scene":""},"268":{"mode":"s","scene":""},"269":{"mode":"s","scene":""},"270":{"mode":"s","scene":""},"271":{"mode":"s","scene":""},"272":{"mode":"s","scene":"","commands":["turnto(1)"]}}}
   </script>
   <script id="lang-bundle" type="application/json">
-{"zh-CN":{"1":{"speaker":"\u5F00\u59CB\u83DC\u5355","dialogue":["\u5F00\u59CB\u6E38\u620F","\u6E38\u620F\u8BBE\u7F6E"]},"20":{"speaker":"\u5386\u53F2\u8BB0\u5F55","dialogue":["\u5173\u95ED","\u6682\u65E0\u8BB0\u5F55"]},"21":{"speaker":"\u6E38\u620F\u5B58\u6863","dialogue":["\u5173\u95ED","\u7A7A\u69FD\u4F4D","\u4FDD\u5B58","\u8BFB\u53D6","\u5220\u9664"]},"22":{"speaker":"\u5B58\u6863\u70B9","dialogue":["\u5173\u95ED","\u6682\u65E0\u5B58\u6863\u70B9","\u8BFB\u53D6","\u5220\u9664","\u6E05\u7A7A"]},"23":{"speaker":"\u8BBE\u7F6E","dialogue":["\u5173\u95ED","\u6253\u5B57\u95F4\u9694","BGM \u97F3\u91CF","SE \u97F3\u91CF","\u4EC5\u8DF3\u8FC7\u5DF2\u8BFB","\u81EA\u52A8\u7FFB\u9875","\u7FFB\u9875\u7F13\u51B2","\u6062\u590D\u9ED8\u8BA4","\u8BED\u8A00\u9009\u62E9","\u8DDF\u968F\u7CFB\u7EDF"]},"24":{"speaker":"\u8D44\u6599","dialogue":["\u5173\u95ED","\u6982\u89C8","\u6280\u80FD","\u6301\u6709\u7269","\u6682\u65E0\u6570\u636E"]},"30":{"speaker":"\u56FE\u96C6","dialogue":["\u5173\u95ED","\u6682\u65E0\u5185\u5BB9","\u672A\u89E3\u9501","\u8FD4\u56DE"]},"31":{},"31":{},"40":{"speaker":"\u72B6\u6001\u680F","dialogue":["\u5173\u95ED","\u5929\u6570","","\u65F6\u95F4","\u91D1\u94B1","\u8FD4\u56DE\u83DC\u5355","","\u8BBE\u7F6E","\u81EA\u52A8\u64AD\u653E","\u5F00\u542F","\u6682\u505C"]},"100":{"dialogue":["\u5982\u679C\uFF0C\u80FD\u8BA9\u5E73\u9762\u7684\u53D8\u6210\u7ACB\u4F53\u7684\u662F\u2026\u2026\n\u620F\u6CD5\u2026\u2026","\u80FD\u8BA9\u9759\u6B62\u7684\u53D8\u6210\u8FD0\u52A8\u7684\u662F\u2026\u2026\n\u9B54\u6CD5\u2026\u2026","\u90A3\u4E48\uFF0C\u80FD\u8BA9\u77AC\u95F4\u53D8\u6210\u6C38\u6052\u7684\uFF0C\u662F\u4EC0\u4E48\uFF1F\n","\u4F5B\u2026\u2026\u6CD5\u2026\u2026\uFF1F\n","\u50CF\u6211\u8FD9\u79CD\u6574\u5929\u5728\u5F62\u800C\u4E0A\u5B66\u548C\u65E0\u6CD5\u8BC1\u4F2A\u7684\u8FB9\u7F18\u6253\u8F6C\u7684\u4EBA\uFF0C\u5076\u5C14\u4E5F\u4F1A\u5F00\u59CB\u671F\u5F85\u4E00\u70B9\u8BF4\u4E0D\u6E05\u7684\u5947\u8FF9\u3002\n"]},"101":{"speaker":"\u8001\u5E08","dialogue":["\u4ECA\u5929\u7684\u8BFE\u5C31\u8BB2\u5230\u8FD9\u91CC\uFF0C\u5927\u5BB6\u628A\u4E0A\u6B21\u5E03\u7F6E\u7684\u4F5C\u4E1A\u4EA4\u7ED9\u52A9\u6559\u3002\u4E0B\u8BFE\uFF01\n"]},"102":{"dialogue":["\u8FC7\u4E86\u4E00\u4F1A\u2026\u2026"]},"103":{"dialogue":["\u6700\u96BE\u71AC\u7684\u5927\u5B66\u7269\u7406\u7EC8\u4E8E\u4E0B\u8BFE\u4E86\uFF0C\u63A5\u7740\u8BA9\u4EBA\u7A92\u606F\u7684\u662F\u5348\u540E\u7684\u70ED\u6D6A\u3002\n\u7A97\u5916\u9633\u5149\u767D\u5F97\u53D1\u4EAE\uFF0C\u77F3\u677F\u8DEF\u88AB\u6652\u5F97\u53D1\u70EB\uFF0C\u53EF\u60DC\u4E86\u6CA1\u6709\u8BFE\u7684\u4E0B\u5348\u3002","\u5929\u6865\u8FB9\u4EBA\u6765\u4EBA\u5F80\uFF0C\u51E0\u4E4E\u628A\u90A3\u6643\u773C\u7684\u81EA\u52A8\u552E\u8D27\u673A\u6DF9\u6CA1\u4E86\u3002\n","\u82B1\u8C22\u4E86\u7684\u82E6\u695D\u6811\u5728\u6559\u5B66\u697C\u4E0B\u6295\u4E0B\u7A00\u758F\u7684\u5F71\u5B50\uFF0C\u6321\u4E0D\u4F4F\u5348\u540E\u70BD\u70ED\u7684\u9633\u5149\u3002\n"]},"104":{"dialogue":["\u6211\u4E00\u773C\u5C31\u770B\u89C1\u4E86\uFF0C\u4E00\u4E2A\u719F\u6089\u7684\u8EAB\u5F71\u6B63\u4F4E\u5934\u770B\u624B\u673A\uFF0C\u50CF\u5728\u7B49\u4EC0\u4E48\u3002\n\u65C1\u8FB9\u6709\u4E24\u4E2A\u5C0F\u5B69\u5B50\u4E3E\u7740\u51B0\u68D2\u4ECE\u4ED6\u9762\u524D\u8DD1\u8FC7\u53BB\uFF0C\u5DEE\u70B9\u649E\u5230\u4ED6\u3002"]},"105":{"dialogue":["\u4ED6\u53EA\u5FAE\u5FAE\u4FA7\u4E86\u4E0B\u8EAB\u5C31\u8BA9\u5F00\u4E86\u3002\n"]},"106":{"dialogue":["\u52A8\u4F5C\u5E72\u51C0\uFF0C\u5B89\u9759\u5F97\u50CF\u6C34\u6D41\u7ED5\u8FC7\u77F3\u5934\u3002\n\u6211\u751A\u81F3\u6CA1\u591A\u60F3\uFF0C\u624B\u5DF2\u7ECF\u5148\u628A\u76F8\u673A\u7AEF\u8D77\u6765\u4E86\u2026\u2026"]},"107":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u7AD9\u5728\u90A3\u91CC\u522B\u52A8\u3002\n"]},"108":{"dialogue":["\u7136\u540E\u6211\u5C31\u542C\u5230\u90A3\u4E2A\u4EBA\u62AC\u5934\u5BF9\u6211\u90A3\u4E48\u8BF4\u3002\n","\u90A3\u4E00\u4E0B\u53EF\u771F\u5413\u6211\u4E00\u8DF3\u3002\u4E0D\u662F\u56E0\u4E3A\u88AB\u53D1\u73B0\uFF0C\u800C\u662F\u56E0\u4E3A\u2014\u2014\n\u8FD9\u5BB6\u4F19\u7684\u773C\u795E\uFF0C\u600E\u4E48\u8BF4\u5462\uFF0C\u50CF\u662F\u80FD\u76F4\u63A5\u4ECE\u955C\u5934\u5916\u9762\u53CD\u8FC7\u6765\u770B\u7A7F\u6211\u4E00\u6837\u3002"]},"109":{"speaker":"\u80DC\u4ED4","dialogue":["\u8BF6\u2014\u2014\u4E3A\u4EC0\u4E48\uFF1F\n\u6211\u8FD9\u4E2A\u59FF\u52BF\u4E0D\u662F\u5F88\u5E05\u5417\uFF1F"]},"110":{"speaker":"\u5C0F\u6797","dialogue":["\u5F88\u8822\u3002\n"]},"111":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u8FD9\u5BB6\u4F19\uFF0C\u5E73\u65F6\u8BF4\u8BDD\u90FD\u662F\u8FD9\u6837\u5417\uFF1F\n"]},"112":{"dialogue":["\u6211\u8FD8\u4E3E\u7740\u76F8\u673A\uFF0C\u671D\u4E0D\u8FDC\u5904\u90A3\u53EA\u7070\u72D7\u9F87\u4E86\u9F87\u7259\u3002\n","\u6E5B\u84DD\u7684\u5929\u7A7A\u50CF\u6D17\u8FC7\u4E00\u6837\u660E\u4EAE\uFF0C\u9635\u98CE\u4ECE\u6811\u4E0B\u7A7F\u8FC7\uFF0C\u628A\u4ED6\u9888\u4E0B\u504F\u957F\u7684\u6BDB\u5439\u5F97\u5FAE\u5FAE\u62C2\u8D77\u6765\u3002\n","\u9633\u5149\u521A\u597D\u64E6\u8FC7\u4ED6\u80A9\u7EBF\uFF0C\u843D\u5728\u84DD\u7070\u886C\u886B\u7684\u8FB9\u7F18\uFF0C\u4EAE\u5F97\u50CF\u5200\u950B\u3002\n","\u800C\u4ED6\u8BF4\u5B8C\u90A3\u53E5\u201C\u5F88\u8822\u201D\u4EE5\u540E\uFF0C\u5C31\u7AD9\u5728\u90A3\u91CC\uFF0C\u8FDE\u8868\u60C5\u90FD\u6CA1\u591A\u52A8\u4E00\u4E0B\uFF0C\u50CF\u662F\u6839\u672C\u4E0D\u89C9\u5F97\u81EA\u5DF1\u8BB2\u4E86\u4EC0\u4E48\u8FC7\u5206\u7684\u8BDD\u3002\n"]},"113":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u518D\u7ED9\u4F60\u4E00\u6B21\u7EC4\u7EC7\u8BED\u8A00\u7684\u673A\u4F1A\u54E6\uFF5E\n"]},"114":{"dialogue":["\u6211\u51B2\u4ED6\u6643\u4E86\u6643\u76F8\u673A\u3002\n"]},"115":{"speaker":"\u80DC\u4ED4","dialogue":["\u8FD9\u53EF\u662F\u6211\u4ECA\u5929\u7B2C\u4E00\u6B21\u8BA4\u771F\u60F3\u7ED9\u522B\u4EBA\u62CD\u7167\u5462\u3002\n"]},"116":{"speaker":"\u5C0F\u6797","dialogue":["\u5077\u62CD\u53EF\u4E0D\u662F\u597D\u4E60\u60EF\u3002\n"]},"117":{"dialogue":["\u6211\u5F53\u7136\u4E0D\u53EF\u80FD\u627F\u8BA4\u81EA\u5DF1\u88AB\u5413\u5230\uFF0C\u4E8E\u662F\u7ACB\u523B\u7B11\u4E86\u7B11\u3002\n"]},"118":{"speaker":"\u80DC\u4ED4","dialogue":["\u600E\u4E48\u80FD\u53EB\u5077\u62CD\u5462\uFF1F\u8FD9\u53EB\u7075\u611F\u964D\u4E34\u3002\n"]},"119":{"dialogue":["\u4ED6\u770B\u4E86\u6211\u4E00\u4F1A\u513F\uFF0C\u8D70\u4E86\u8FC7\u6765\u3002\n"]},"120":{"speaker":"\u5C0F\u6797","dialogue":["\u62CD\u5F97\u600E\u4E48\u6837\uFF1F\n"]},"121":{"speaker":"\u80DC\u4ED4","dialogue":["\u55EF\u2026\u2026\n"]},"122":{"dialogue":["\u6211\u4F4E\u5934\u770B\u4E86\u4E00\u773C\u6210\u7247\u3002\n"]},"123":{"speaker":"\u80DC\u4ED4","dialogue":["\u50CF\u8DEF\u8FB9\u7B49\u4EBA\u7684\u5E05\u54E5\u3002\n"]},"124":{"speaker":"\u5C0F\u6797","dialogue":["\u5220\u4E86\u3002\n"]},"125":{"speaker":"\u80DC\u4ED4","dialogue":["\u4E3A\u4EC0\u4E48\uFF01\n"]},"126":{"speaker":"\u5C0F\u6797","dialogue":["\u56E0\u4E3A\u4F60\u628A\u6211\u62CD\u5F97\u50CF\u8DEF\u8FB9\u7B49\u4EBA\u7684\u5E05\u54E5\u3002\n"]},"127":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u672C\u6765\u5C31\u662F\u554A\u3002\n"]},"128":{"speaker":"\u5C0F\u6797","dialogue":["\u6211\u4E0D\u662F\u5728\u7B49\u4EBA\u3002\n"]},"129":{"speaker":"\u80DC\u4ED4","dialogue":["\u90A3\u4F60\u662F\u5728\u7B49\u4EC0\u4E48\uFF1F\n"]},"130":{"speaker":"\u5C0F\u6797","dialogue":["\u5149\u7EBF\u5728\u53D8\u3002\n"]},"131":{"dialogue":["\u5C0F\u6797\u770B\u5411\u5929\u6865\u5916\u4FA7\u3002\n"]},"132":{"speaker":"\u5C0F\u6797","dialogue":["\u521A\u521A\u6BD4\u73B0\u5728\u597D\u4E00\u70B9\u3002\n"]},"133":{"dialogue":["\u6211\u5F53\u65F6\u8FD8\u4EE5\u4E3A\u4ED6\u53C8\u5728\u8BF4\u4EC0\u4E48\u542C\u8D77\u6765\u5F88\u5389\u5BB3\u3001\u5176\u5B9E\u6839\u672C\u6CA1\u6CD5\u9A8C\u8BC1\u7684\u8BDD\u3002\n","\u7ED3\u679C\u6CA1\u8FC7\u591A\u4E45\uFF0C\u592A\u9633\u5C31\u5306\u5FD9\u8EB2\u8FDB\u4E86\u9AD8\u7A7A\u7684\u8584\u4E91\uFF0C\u539F\u672C\u659C\u659C\u843D\u5728\u680F\u6746\u4E0A\u7684\u4E00\u675F\u4EAE\u5149\u4E5F\u6DE1\u4E86\u4E0B\u53BB\u3002\n","\u8FD9\u5BB6\u4F19\u5C31\u662F\u8FD9\u6837\u3002\n","\u660E\u660E\u770B\u8D77\u6765\u51B7\u51B7\u6DE1\u6DE1\u7684\uFF0C\u504F\u504F\u5076\u5C14\u53C8\u4F1A\u4E00\u672C\u6B63\u7ECF\u5730\u8BF4\u51FA\u8BA9\u4EBA\u63A5\u4E0D\u4F4F\u7684\u8BDD\uFF0C\n\u5BB3\u4EBA\u5B8C\u5168\u5206\u4E0D\u6E05\u4ED6\u5230\u5E95\u662F\u5728\u914D\u5408\u4F60\uFF0C\u8FD8\u662F\u5728\u6349\u5F04\u4F60\u3002","\u4E0D\u8FC7\uFF0C\u6BD4\u8D77\u8FD9\u4E2A\uFF0C\u66F4\u8BA9\u6211\u5728\u610F\u7684\u662F\u2014\u2014\n"]},"134":{"speaker":"\u80DC\u4ED4","dialogue":["\u6240\u4EE5\u5230\u5E95\u54EA\u91CC\u4E0D\u5BF9\uFF1F\n"]},"135":{"dialogue":["\u6211\u7FFB\u51FA\u521A\u624D\u62CD\u7684\u90A3\u5F20\u7167\u7247\u7ED9\u4ED6\u3002\n"]},"136":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u89C9\u5F97\u4F60\u7AD9\u5728\u8FD9\u91CC\u5C31\u5DF2\u7ECF\u5F88\u597D\u770B\u4E86\u554A\u3002\n\u817F\u957F\uFF0C\u8138\u4E5F\u597D\uFF0C\u98CE\u4E00\u5439\u6BDB\u8FD8\u4F1A\u98D8\uFF0C\u600E\u4E48\u62CD\u90FD\u4E0D\u4F1A\u96BE\u770B\u5427\uFF1F"]},"137":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u62CD\u7684\u662F\u6211\uFF0C\u4E0D\u662F\u98CE\uFF0C\u4E5F\u4E0D\u662F\u6865\u3002\n"]},"138":{"speaker":"\u80DC\u4ED4","dialogue":["\u53EF\u662F\u8FD9\u4E9B\u653E\u8FDB\u53BB\u4F1A\u6BD4\u8F83\u6709\u6C14\u6C1B\u561B\u3002\n"]},"139":{"speaker":"\u5C0F\u6797","dialogue":["\u6C14\u6C1B\u592A\u591A\u4E86\uFF0C\u4E3B\u89D2\u5C31\u6CA1\u4E86\u3002\n"]},"140":{"dialogue":["\u5C0F\u6797\u4F38\u624B\u6276\u7740\u6211\u7684\u624B\uFF0C\u58F0\u97F3\u4E5F\u538B\u5F97\u5F88\u4F4E\n"]},"141":{"speaker":"\u5C0F\u6797","dialogue":["\u540E\u9762\u90A3\u5757\u5E7F\u544A\u724C\uFF0C\u6B63\u597D\u4ECE\u6211\u5934\u4E0A\u957F\u51FA\u6765\u4E86\u3002\n"]},"142":{"speaker":"\u80DC\u4ED4","dialogue":["\u2026\u2026\u5657\u3002\n"]},"143":{"dialogue":["\u6211\u76EF\u7740\u5C4F\u5E55\u770B\u4E86\u4E24\u79D2\uFF0C\u7EC8\u4E8E\u6CA1\u5FCD\u4F4F\u7B11\u51FA\u4E86\u58F0\u3002\n"]},"144":{"speaker":"\u80DC\u4ED4","dialogue":["\u771F\u7684\u8BF6\uFF0C\u50CF\u4F60\u8111\u888B\u4E0A\u63D2\u4E86\u6839\u68CD\u5B50\u4E00\u6837\u3002\n"]},"145":{"speaker":"\u5C0F\u6797","dialogue":["\u6240\u4EE5\u4F60\u521A\u521A\u89C9\u5F97\u5F88\u5E05\uFF1F\n"]},"146":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u521A\u521A\u4E3B\u8981\u5728\u770B\u4F60\u672C\u4EBA\u561B\u3002\n"]},"147":{"speaker":"\u5C0F\u6797","dialogue":["\u90A3\u4F60\u73B0\u5728\u8FD8\u7B11\u5F97\u51FA\u6765\uFF1F\n"]},"148":{"dialogue":["\u5B8C\u4E86\uFF0C\u611F\u89C9\u6211\u4E0D\u5E94\u8BE5\u9A6C\u4E0A\u7ED9\u4ED6\u770B\u7684\u3002\n"]},"149":{"speaker":"\u5C0F\u6797","dialogue":["\u62CD\u7167\u7684\u65F6\u5019\u522B\u53EA\u770B\u672C\u4EBA\u3002\n\u753B\u9762\u91CC\u6240\u6709\u4E1C\u897F\uFF0C\u90FD\u4F1A\u4E00\u8D77\u7B97\u5230\u4F60\u5934\u4E0A\u3002"]},"150":{"dialogue":["\u6211\u7728\u4E86\u7728\u773C\uFF0C\u770B\u7740\u773C\u524D\u7684\u4ED6\u3002\n"]},"151":{"speaker":"\u80DC\u4ED4","dialogue":["\u6240\u4EE5\u4F60\u662F\u5F88\u4F1A\u62CD\u7167\u7684\u90A3\u79CD\u4EBA\u5417\uFF1F\n"]},"152":{"speaker":"\u5C0F\u6797","dialogue":["\u4F1A\u4E00\u70B9\u3002\n"]},"153":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F1A\u4E00\u70B9\u7684\u8BDD\uFF0C\u53EF\u4E0D\u4F1A\u4E00\u773C\u770B\u51FA\u5E7F\u544A\u724C\u4ECE\u8111\u888B\u4E0A\u957F\u51FA\u6765\u5427\uFF1F\n"]},"154":{"speaker":"\u5C0F\u6797","dialogue":["\u8FD9\u662F\u5E38\u8BC6\u3002\n"]},"155":{"speaker":"\u80DC\u4ED4","dialogue":["\u771F\u7684\u5417\uFF1F\u90A3\u6211\u53EF\u80FD\u6CA1\u4EC0\u4E48\u5E38\u8BC6\u5462\uFF5E\n"]},"156":{"speaker":"\u5C0F\u6797","dialogue":["\u6211\u77E5\u9053\u3002\n"]},"157":{"speaker":"\u80DC\u4ED4","dialogue":["\u5582\uFF01\u90A3\u4F60\u6765\u62CD\u6211\u3002\n"]},"158":{"speaker":"\u5C0F\u6797","dialogue":["\u2026\u2026\n"]},"159":{"dialogue":["\u4ED6\u6CA1\u6709\u8BF4\u8BDD\uFF0C\u53EA\u662F\u4F38\u624B\u793A\u610F\u6211\u628A\u76F8\u673A\u7ED9\u4ED6\u3002\n","\u6211\u8FDF\u7591\u4E86\u4E00\u79D2\uFF0C\u8FD8\u662F\u9012\u8FC7\u53BB\u4E86\u3002\n"]},"160":{"dialogue":["\u4ED6\u63A5\u76F8\u673A\u7684\u52A8\u4F5C\u5F88\u7A33\uFF0C\u624B\u6307\u4FEE\u957F\uFF0C\u638C\u5FC3\u6709\u5C42\u8584\u8584\u7684\u8327\uFF0C\u5927\u6982\u662F\u7ECF\u5E38\u6446\u5F04\u5668\u6750\u7559\u4E0B\u7684\u3002\n","\u4ED6\u4F4E\u5934\u8C03\u4E86\u4E24\u4E0B\uFF0C\u6211\u6CA1\u7EC6\u770B\uFF0C\u53EA\u77E5\u9053\u4ED6\u6CA1\u6298\u817E\u4EC0\u4E48\u590D\u6742\u4E1C\u897F\uFF0C\u50CF\u662F\u53EA\u662F\u628A\u6700\u987A\u624B\u7684\u8BBE\u7F6E\u786E\u8BA4\u4E86\u4E00\u904D\u3002\n"]},"161":{"speaker":"\u5C0F\u6797","dialogue":["\u7AD9\u8FC7\u53BB\u3002\n"]},"162":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u62CD\u5E05\u4E00\u70B9\u54E6\u3002\n"]},"163":{"speaker":"\u5C0F\u6797","dialogue":["\u770B\u4F60\u914D\u4E0D\u914D\u5408\u3002\n"]},"164":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u53EF\u597D\u914D\u5408\u4E86\uFF5E\n"]},"165":{"dialogue":["\u6211\u5634\u4E0A\u8FD9\u4E48\u8BF4\u7740\uFF0C\u8FD8\u662F\u4E56\u4E56\u7AD9\u5230\u4E86\u680F\u6746\u8FB9\u3002\n","\u6865\u4E0B\u7684\u8F66\u8F86\u521A\u597D\u5F00\u8FC7\uFF0C\u9707\u5F97\u811A\u5E95\u90FD\u5FAE\u5FAE\u53D1\u9EBB\u3002\n\u98CE\u628A\u6211\u80CC\u5FC3\u5439\u5F97\u4E71\u6643\uFF0C\u6211\u53CC\u624B\u62B1\u5728\u80F8\u524D\uFF0C\u62AC\u5934\u770B\u4ED6\u3002"]},"166":{"speaker":"\u80DC\u4ED4","dialogue":["\u8981\u6446\u4EC0\u4E48\u59FF\u52BF\uFF1F\n"]},"167":{"speaker":"\u5C0F\u6797","dialogue":["\u522B\u6446\u3002\n"]},"168":{"speaker":"\u80DC\u4ED4","dialogue":["\u554A\uFF1F\n"]},"169":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u4E00\u6446\u5C31\u5F88\u523B\u610F\u3002\n"]},"170":{"dialogue":["\u2026\u2026\n"]},"171":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u4ECA\u5929\u662F\u4E0D\u662F\u6545\u610F\u6765\u6C14\u6211\u7684\uFF1F\n"]},"172":{"speaker":"\u5C0F\u6797","dialogue":["\u4E0B\u5DF4\u6536\u4E00\u70B9\u3002\u770B\u5DE6\u8FB9\uFF0C\u4E0D\u8981\u770B\u955C\u5934\u3002\n"]},"173":{"speaker":"\u80DC\u4ED4","dialogue":["\u50CF\u8FD9\u6837\uFF1F\n"]},"174":{"speaker":"\u5C0F\u6797","dialogue":["\u55EF\uFF0C\u522B\u52A8\u3002\n"]},"175":{"dialogue":["\u201C\u5494\u5693\u3002\u201D\n","\u4ED6\u62CD\u5B8C\u4E00\u5F20\uFF0C\u6362\u4E86\u4E2A\u4F4D\u7F6E\uFF0C\u53C8\u7A0D\u5FAE\u8E72\u4F4E\u4E86\u4E00\u70B9\u3002\n"]},"176":{"speaker":"\u5C0F\u6797","dialogue":["\u80A9\u653E\u677E\u3002\n"]},"177":{"speaker":"\u80DC\u4ED4","dialogue":["\u54E6\u3002\n"]},"178":{"speaker":"\u5C0F\u6797","dialogue":["\u8033\u6735\u7ACB\u8D77\u6765\u4E00\u70B9\u3002\n"]},"179":{"speaker":"\u80DC\u4ED4","dialogue":["\u8FD9\u6211\u63A7\u5236\u4E0D\u4E86\u5427\uFF01\n"]},"180":{"speaker":"\u5C0F\u6797","dialogue":["\u90A3\u5C31\u60F3\u70B9\u9AD8\u5174\u7684\u4E8B\u3002\n"]},"181":{"speaker":"\u80DC\u4ED4","dialogue":["\u6BD4\u5982\u4ECA\u665A\u98DF\u5802\u52A0\u9910\uFF1F\n"]},"182":{"speaker":"\u5C0F\u6797","dialogue":["\u53EF\u4EE5\u3002\n"]},"183":{"dialogue":["\u6211\u4E00\u4E0B\u7B11\u4E86\u51FA\u6765\u3002\n","\u201C\u5494\u5693\u3002\u201D\n"]},"184":{"speaker":"\u5C0F\u6797","dialogue":["\u597D\u4E86\u3002\n"]},"185":{"dialogue":["\u4ED6\u628A\u76F8\u673A\u9012\u56DE\u6765\u3002\n"]},"186":{"speaker":"\u80DC\u4ED4","dialogue":["\u8FD9\u4E48\u5FEB\uFF1F\n"]},"187":{"dialogue":["\u6211\u770B\u4E86\u770B\u6837\u7247\uFF0C\u4E0B\u4E00\u79D2\u5C31\u6C89\u9ED8\u4E86\u3002\n","\u2026\u2026\n"]},"188":{"speaker":"\u5C0F\u6797","dialogue":["\u50BB\u4E86\u5417\uFF1F\n"]},"189":{"speaker":"\u80DC\u4ED4","dialogue":["\u2026\u2026\u4F60\u662F\u4E0D\u662F\u5077\u5077\u628A\u6211\u6362\u6210\u522B\u4EBA\u62CD\u4E86\uFF1F\n"]},"190":{"speaker":"\u5C0F\u6797","dialogue":["\u600E\u4E48\u53EF\u80FD\u3002\n"]},"191":{"speaker":"\u80DC\u4ED4","dialogue":["\u90A3\u4E3A\u4EC0\u4E48\u770B\u8D77\u6765\u2014\u2014\n"]},"192":{"speaker":"\u80DC\u4ED4","dialogue":["\u4E3A\u4EC0\u4E48\u770B\u8D77\u6765\u8FD9\u4E48\u81EA\u7136\uFF1F\n"]},"193":{"dialogue":["\u6211\u76EF\u7740\u5C4F\u5E55\u91CC\u7684\u81EA\u5DF1\uFF0C\u534A\u5929\u624D\u627E\u51FA\u5408\u9002\u7684\u8BCD\u3002\n","\u90A3\u660E\u660E\u5C31\u662F\u6211\u3002\n\u6BDB\u8FD8\u662F\u90A3\u6837\uFF0C\u8033\u6735\u8FD8\u662F\u90A3\u6837\uFF0C\u8863\u670D\u4E5F\u8FD8\u662F\u65E9\u4E0A\u968F\u4FBF\u5957\u7684\u90A3\u4EF6\u3002","\u53EF\u753B\u9762\u91CC\u7684\u6211\u4E0D\u50CF\u5E73\u65F6\u7167\u955C\u5B50\u65F6\u770B\u5230\u7684\u90A3\u4E2A\u6211\u3002\n","\u867D\u7136\u6211\u8DDF\u4ED6\u521A\u624D\u7AD9\u7684\u662F\u540C\u4E00\u4E2A\u4F4D\u7F6E\uFF0C\u4F46\u4ED6\u62CD\u6211\u7684\u65F6\u5019\u7A0D\u5FAE\u6362\u4E86\u4E2A\u89D2\u5EA6\u3002\n"]},"194":{"speaker":"\u80DC\u4ED4","dialogue":["\u4E3A\u4EC0\u4E48\u4F1A\u8FD9\u6837\uFF1F\n"]},"195":{"speaker":"\u5C0F\u6797","dialogue":["\u56E0\u4E3A\u4F60\u521A\u521A\u4EC0\u4E48\u90FD\u60F3\u62CD\u3002\u7ED3\u679C\u6BCF\u4E2A\u90FD\u53EA\u62CD\u5230\u4E00\u70B9\u70B9\u3002\n"]},"196":{"speaker":"\u80DC\u4ED4","dialogue":["\u8D2A\u5FC3\u4E5F\u4E0D\u884C\u5417\uFF1F\n"]},"197":{"speaker":"\u5C0F\u6797","dialogue":["\u62CD\u7167\u7684\u65F6\u5019\u4E0D\u884C\u3002\n"]},"198":{"speaker":"\u80DC\u4ED4","dialogue":["\u53EF\u662F\u6211\u770B\u89C1\u7684\u660E\u660E\u5C31\u8FD9\u4E48\u591A\u3002\n"]},"199":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u770B\u89C1\u5F88\u591A\uFF0C\u4E0D\u4EE3\u8868\u4F60\u8981\u5168\u90E8\u4EA4\u4EE3\u3002\n"]},"200":{"dialogue":["\u4ED6\u62AC\u8D77\u624B\uFF0C\u5728\u6211\u955C\u5934\u524D\u65B9\u6BD4\u4E86\u4E00\u4E2A\u7B80\u5355\u7684\u65B9\u6846\u3002\n"]},"201":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u62FF\u8D77\u76F8\u673A\u4E4B\u540E\uFF0C\u7B2C\u4E00\u4EF6\u4E8B\u4E0D\u662F\u6309\u5FEB\u95E8\uFF0C\u662F\u5148\u51B3\u5B9A\u2014\u2014\u4F60\u5230\u5E95\u60F3\u8BA9\u89C2\u4F17\u770B\u4EC0\u4E48\u3002\n"]},"202":{"speaker":"\u80DC\u4ED4","dialogue":["\u62CD\u7167\u561B\uFF0C\u4E0D\u5C31\u662F\u628A\u597D\u770B\u7684\u4E1C\u897F\u62CD\u4E0B\u6765\uFF1F\n\u6211\u80FD\u770B\u5230\u4EC0\u4E48\uFF0C\u4E0D\u5C31\u662F\u89C2\u4F17\u80FD\u770B\u5230\u4EC0\u4E48\u5417\uFF1F"]},"203":{"speaker":"\u5C0F\u6797","dialogue":["\u8FD9\u79CD\u5C31\u662F\u53EB\u4E71\u62CD\u3002\n"]},"204":{"speaker":"\u80DC\u4ED4","dialogue":["\u5582\u5582\uFF0C\u521A\u5F00\u59CB\u5C31\u8FD9\u4E48\u4E25\u683C\u554A\uFF1F\n"]},"205":{"speaker":"\u5C0F\u6797","dialogue":["\u56E0\u4E3A\u4F60\u7684\u95EE\u9898\u5F88\u660E\u663E\u3002\n"]},"206":{"speaker":"\u80DC\u4ED4","dialogue":["\u6BD4\u5982\uFF1F\n"]},"207":{"speaker":"\u5C0F\u6797","dialogue":["\u6BD4\u5982\u4F60\u603B\u559C\u6B22\u628A\u4E1C\u897F\u653E\u6B63\u4E2D\u95F4\u3002\n"]},"208":{"speaker":"\u80DC\u4ED4","dialogue":["\u6B63\u4E2D\u95F4\u4E0D\u597D\u5417\uFF1F\u5F88\u7A33\u5B9A\u8BF6\u3002\n"]},"209":{"speaker":"\u5C0F\u6797","dialogue":["\u6709\u65F6\u5019\u53EF\u4EE5\u3002\u4F46\u4F60\u521A\u624D\u4E0D\u662F\u60F3\u62CD\u201C\u98CE\u91CC\u7684\u6211\u201D\u5417\uFF1F\u90A3\u5C31\u522B\u62CD\u5F97\u50CF\u5927\u5934\u7167\u3002\n"]},"210":{"speaker":"\u80DC\u4ED4","dialogue":["\u5927\u5934\u7167\uFF01\u4F60\u5C45\u7136\u4F1A\u8BF4\u8FD9\u79CD\u8BDD\u3002\n"]},"211":{"speaker":"\u5C0F\u6797","dialogue":["\u8FD9\u624D\u4E0D\u662F\u4E00\u5BF9\u51C6\u5C31\u6309\u5FEB\u95E8\u4E86\u3002\n"]},"212":{"dialogue":["\u6211\u53CD\u590D\u770B\u90A3\u4E24\u5F20\u56FE\uFF0C\u8D8A\u770B\u8D8A\u89C9\u5F97\u4E0D\u670D\u6C14\u3002\n\u660E\u660E\u6211\u53EA\u662F\u89D2\u5EA6\u5DEE\u4E00\u70B9\u800C\u5DF2\u3002"]},"213":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u518D\u6559\u6211\u4E00\u70B9\u3002\n"]},"214":{"speaker":"\u5C0F\u6797","dialogue":["\u4EC0\u4E48\uFF1F\n"]},"215":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u4E5F\u8981\u62CD\u6210\u8FD9\u6837\u554A\u3002\n\u65E2\u7136\u90FD\u88AB\u4F60\u6293\u5230\u4E86\uFF0C\u5C31\u522B\u60F3\u53EA\u9732\u4E00\u624B\u5C31\u8DD1\u3002\u4F60\u5F97\u8D1F\u8D23\u6559\u4F1A\u6211\u3002"]},"216":{"dialogue":["\u5C0F\u6797\u5B89\u9759\u5730\u770B\u4E86\u6211\u4E24\u79D2\u3002\n"]},"217":{"speaker":"\u5C0F\u6797","dialogue":["\u7136\u540E\u5462\uFF1F\n"]},"218":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u8BF7\u4F60\u5403\u597D\u5403\u7684\uFF1F\n"]},"219":{"speaker":"\u5C0F\u6797","dialogue":["\u6211\u5728\u51CF\u80A5\u3002\n"]},"220":{"speaker":"\u80DC\u4ED4","dialogue":["\u4E0D\u7BA1\u600E\u6837\u4F60\u5C31\u8981\u6559\u6211\uFF5E\n"]},"221":{"speaker":"\u5C0F\u6797","dialogue":["\u5B66\u4E0D\u4F1A\u522B\u8D56\u6211\u3002\n"]},"222":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u50CF\u90A3\u79CD\u4EBA\u5417\uFF1F\n"]},"223":{"speaker":"\u5C0F\u6797","dialogue":["\u50CF\u3002\n"]},"224":{"speaker":"\u80DC\u4ED4","dialogue":["\u5582\uFF01\n"]},"225":{"dialogue":["\u4ED6\u5634\u89D2\u5F88\u8F7B\u5730\u52A8\u4E86\u4E00\u4E0B\uFF0C\u50CF\u662F\u7B11\u4E86\uFF0C\u53C8\u50CF\u6CA1\u6709\u3002\n","\u98CE\u4ECE\u6865\u4E0B\u704C\u4E0A\u6765\uFF0C\u8DEF\u8FB9\u6302\u7740\u7684\u65D7\u5E1C\u54D7\u5566\u5566\u54CD\uFF0C\u5E95\u4E0B\u7684\u77F3\u849C\u53F6\u7247\u65E0\u7CBE\u6253\u91C7\u5730\u6447\u52A8\u3002\n\u8FDC\u5904\u7684\u751F\u6D3B\u533A\u6B63\u70ED\u95F9\uFF0C\u5929\u6865\u53E6\u4E00\u5934\u7A81\u7136\u4F20\u6765\u4E00\u9635\u719F\u6089\u7684\u5927\u55D3\u95E8\u3002"]},"226":{"speaker":"\u963F\u9633","dialogue":["\u80DC\u4ED4\u2014\u2014\uFF01\u4F60\u679C\u7136\u5728\u8FD9\u91CC\uFF01\n"]},"227":{"dialogue":["\u6211\u56DE\u5934\u4E00\u770B\uFF0C\u6D69\u7136\u6B63\u62CE\u7740\u7EB8\u888B\u4E00\u8DEF\u5C0F\u8DD1\u8FC7\u6765\uFF0C\u888B\u5B50\u91CC\u8FD8\u63D2\u7740\u4E00\u622A\u753B\u677F\u89D2\u3002\n\u8DDF\u5728\u4ED6\u540E\u9762\u7684\uFF0C\u662F\u6444\u5F71\u793E\u90A3\u4E2A\u603B\u7231\u7B11\u6211\u7684\u72DE\u732B\u5B66\u957F\uFF0C\u963F\u9633\u3002","\u672C\u6765\u6211\u53EA\u662F\u8DEF\u8FC7\u5E03\u544A\u680F\u7684\u65F6\u5019\uFF0C\u770B\u5230\u6709\u4E2A\u201C\u9752\u6625\u5F71\u50CF\u5C55\u201D\uFF0C\u60F3\u7740\u53CD\u6B63\u95F2\u7740\u4E5F\u662F\u95F2\u7740\uFF0C\u53BB\u62CD\u51E0\u5F20\u4E5F\u4E0D\u9519\u3002\n\u7ED3\u679C\u6444\u5F71\u793E\u90A3\u5E2E\u5BB6\u4F19\u4E00\u542C\u8BF4\u6211\u8981\u53C2\u8D5B\uFF0C\u7B11\u5F97\u4E00\u4E2A\u6BD4\u4E00\u4E2A\u5927\u58F0\u3002","\u201C\u80DC\u4ED4\uFF0C\u4F60\u4F1A\u6784\u56FE\u5417\uFF1F\u201D\n","\u201C\u80DC\u4ED4\uFF0C\u4F60\u522B\u5230\u6700\u540E\u53EA\u4EA4\u4E00\u5806\u5E05\u54E5\u7167\u7247\u54E6\u3002\u201D\n","\u201C\u80DC\u4ED4\uFF0C\u4F60\u4E0A\u6B21\u628A\u7136\u5B50\u62CD\u6210\u9006\u5149\u9ED1\u56E2\u5B50\u7684\u4E8B\uFF0C\u6211\u53EF\u8FD8\u8BB0\u5F97\u5462\uFF5E\u201D\n","\u771F\u8FC7\u5206\u3002\u6211\u90A3\u660E\u660E\u662F\u5F88\u6709\u6C14\u52BF\u7684\u526A\u5F71\u3002\n\u4E8E\u662F\u4E3A\u4E86\u8BC1\u660E\u81EA\u5DF1\uFF0C\u6211\u624D\u7406\u76F4\u6C14\u58EE\u5730\u501F\u4E86\u76F8\u673A\uFF0C\u8DD1\u6765\u751F\u6D3B\u533A\u4E0A\u6293\u62CD\u3002","\u73B0\u5728\u6211\u6709\u4E86\u4E0D\u5999\u7684\u9884\u611F\u3002\n"]},"228":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u4EEC\u600E\u4E48\u5728\u8FD9\u91CC\u4E86\uFF1F\n"]},"229":{"speaker":"\u963F\u9633","dialogue":["\u4F60\u501F\u4E86\u793E\u91CC\u7684\u76F8\u673A\u5C31\u8DD1\uFF0C\u5927\u5BB6\u90FD\u5728\u627E\u4F60\u554A\u3002\n\u5927\u5BB6\u90FD\u5728\u731C\u4F60\u662F\u4E0D\u662F\u5DF2\u7ECF\u628A\u53D6\u666F\u6846\u5F53\u88C5\u9970\u7528\u4E86\u5462\u3002\u54E6\uFF0C\u6210\u6797\u4E5F\u5728\u554A\u3002"]},"230":{"dialogue":["\u5C0F\u6797\u70B9\u4E86\u4E0B\u5934\uFF0C\u7B97\u662F\u6253\u62DB\u547C\u3002\n","\u963F\u9633\u7684\u89C6\u7EBF\u5728\u6211\u4EEC\u4E24\u4E2A\u4E4B\u95F4\u8F6C\u4E86\u4E00\u5708\uFF0C\u7B11\u5F97\u610F\u5473\u6DF1\u957F\u3002\n"]},"231":{"speaker":"\u963F\u9633","dialogue":["\u54CE\u5440\uFF0C\u539F\u6765\u5982\u6B64\u3002\n\u80DC\u4ED4\uFF0C\u4F60\u8FD9\u662F\u5DF2\u7ECF\u627E\u5230\u573A\u5916\u6307\u5BFC\u4E86\uFF1F"]},"232":{"speaker":"\u80DC\u4ED4","dialogue":["\u4EC0\u4E48\u53EB\u573A\u5916\u6307\u5BFC\uFF0C\u6211\u8FD9\u662F\u2014\u2014\n"]},"233":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u8FD9\u662F\u7ED9\u81EA\u5DF1\u627E\u4E86\u4F4D\u540D\u5E08\u3002\n"]},"234":{"speaker":"\u6D69\u7136","dialogue":["\u6210\u6797\u54E5\u8FD8\u8981\u5F92\u5F1F\u5417\uFF1F\n"]},"235":{"dialogue":["\u5C0F\u6797\u770B\u7740\u6211\uFF0C\u50CF\u662F\u5728\u8861\u91CF\u4EC0\u4E48\u3002\n"]},"236":{"speaker":"\u80DC\u4ED4","dialogue":["\u603B\u4E4B\u4ECE\u73B0\u5728\u5F00\u59CB\uFF0C\u4ED6\u8981\u6559\u6211\u62CD\u7167\u4E86\u3002\n"]},"237":{"speaker":"\u5C0F\u6797","dialogue":["\u6211\u6CA1\u8BF4\u2014\u2014\n"]},"238":{"speaker":"\u963F\u9633","dialogue":["\u80DC\u4ED4\uFF0C\u4F60\u8FD9\u6839\u672C\u662F\u8D56\u4E0A\u4EBA\u5BB6\u4E86\u5427\u3002\n"]},"239":{"speaker":"\u80DC\u4ED4","dialogue":["\u90A3\u53C8\u600E\u4E48\u6837\uFF1F\n\u53CD\u6B63\u6211\u5DF2\u7ECF\u51B3\u5B9A\u8981\u62FF\u8FD9\u6B21\u5F71\u50CF\u5C55\u7684\u5956\u4E86\u3002"]},"240":{"speaker":"\u80DC\u4ED4","dialogue":["\u65E2\u7136\u8981\u8D62\uFF0C\u5F53\u7136\u5F97\u627E\u6700\u5389\u5BB3\u7684\u6765\u6559\u6211\u3002\n"]},"241":{"speaker":"\u80DC\u4ED4","dialogue":["\u8981\u662F\u5B66\u4E0D\u4F1A\uFF0C\u76F8\u673A\u6211\u5C31\u4E0D\u8FD8\u4E86\uFF01\n"]},"242":{"speaker":"\u963F\u9633","dialogue":["\u54E6\uFF1F\u90A3\u2026\u2026\u4F60\u77E5\u9053\u8FD9\u6B21\u4E3B\u9898\u662F\u4EC0\u4E48\u5417\uFF1F\n"]},"243":{"speaker":"\u80DC\u4ED4","dialogue":["\u5F53\u7136\u77E5\u9053\u2026\u2026\u8046\u542C\u4EF2\u590F\uFF1F\n"]},"244":{"speaker":"\u963F\u9633","dialogue":["\u9519\u4E86\u3002\n"]},"245":{"speaker":"\u80DC\u4ED4","dialogue":["\u6D41\u52A8\u7684\u98CE\uFF1F\n"]},"246":{"speaker":"\u963F\u9633","dialogue":["\u4E0D\u5BF9\u3002\n"]},"247":{"speaker":"\u6D69\u7136","dialogue":["\u662F\u201C\u4E0D\u505C\u7684\u590F\uFF0C\u7559\u7740\u7684\u98CE\u201D\u3002\n"]},"248":{"speaker":"\u80DC\u4ED4","dialogue":["\u5BF9\uFF01\u5C31\u662F\u8FD9\u4E2A\uFF01\n\u6211\u53EA\u662F\u60F3\u8003\u8003\u4F60\u4EEC\u3002"]},"249":{"dialogue":["\u6D69\u7136\u9732\u51FA\u90A3\u79CD\u201C\u6211\u660E\u660E\u4EC0\u4E48\u90FD\u6CA1\u8BF4\u201D\u7684\u65E0\u5948\u8868\u60C5\u3002\n","\u963F\u9633\u5219\u4E00\u526F\u770B\u900F\u4E0D\u8BF4\u900F\u7684\u6837\u5B50\uFF0C\u5C3E\u5DF4\u90FD\u5FEB\u7B11\u5F2F\u4E86\u3002\n"]},"250":{"speaker":"\u963F\u9633","dialogue":["\u65E2\u7136\u8FD9\u6837\uFF0C\u80DC\u4ED4\u2014\u2014\n"]},"251":{"speaker":"\u963F\u9633","dialogue":["\u4F60\u4E0D\u5982\u73B0\u5728\u5C31\u62CD\u4E00\u5F20\u7ED9\u6211\u770B\u770B\u3002\n\u4E3B\u9898\u3001\u4EBA\u7269\u3001\u73AF\u5883\uFF0C\u90FD\u5728\u8FD9\u91CC\u3002"]},"252":{"speaker":"\u963F\u9633","dialogue":["\u8BA9\u6211\u770B\u770B\u4F60\u4ECE\u6210\u6797\u90A3\u91CC\u5B66\u5230\u4E86\u591A\u5C11\u3002\n"]},"253":{"speaker":"\u80DC\u4ED4","dialogue":["\u73B0\u5728\uFF1F\n"]},"254":{"speaker":"\u963F\u9633","dialogue":["\u5C31\u73B0\u5728\u3002\u9650\u65F6\u4E00\u5206\u949F\u3002\n"]},"255":{"dialogue":["\u963F\u9633\u9000\u5F00\u4E24\u6B65\uFF0C\u987A\u624B\u628A\u6D69\u7136\u4E5F\u62C9\u5230\u65C1\u8FB9\n"]},"256":{"speaker":"\u80DC\u4ED4","dialogue":["\u592A\u7A81\u7136\u4E86\u5427\uFF01\n"]},"257":{"speaker":"\u963F\u9633","dialogue":["\u771F\u5B9E\u7684\u597D\u7167\u7247\u5F88\u591A\u65F6\u5019\u5C31\u662F\u7A81\u7136\u6765\u7684\u54E6\uFF5E\n"]},"258":{"dialogue":["\u8FD9\u8BDD\u542C\u8D77\u6765\u5C45\u7136\u8FD8\u6709\u70B9\u9053\u7406\uFF0C\u771F\u8BA8\u538C\u3002\n","\u6211\u62B1\u7D27\u76F8\u673A\uFF0C\u8F6C\u5934\u770B\u5411\u5C0F\u6797\u3002\n"]},"259":{"speaker":"\u80DC\u4ED4","dialogue":["\u6551\u547D~\n"]},"260":{"speaker":"\u5C0F\u6797","dialogue":["\u522B\u770B\u6211\u3002\n\u5148\u770B\u600E\u4E48\u53D6\u666F\u3002"]},"261":{"dialogue":["\u6211\u6DF1\u5438\u4E00\u53E3\u6C14\uFF0C\u91CD\u65B0\u4E3E\u8D77\u76F8\u673A\u3002\n\u521A\u521A\u8FD8\u5634\u786C\u5F97\u5F88\uFF0C\u73B0\u5728\u4E00\u4E3E\u8D77\u76F8\u673A\uFF0C\u8111\u5B50\u53CD\u800C\u7A7A\u4E86\u3002","\u6865\u4E0A\u7684\u98CE\uFF0C\u8DD1\u8FC7\u7684\u5C0F\u5B69\uFF0C\u62CE\u7740\u753B\u677F\u7684\u6D69\u7136\uFF0C\u7B11\u5F97\u50CF\u770B\u597D\u620F\u7684\u963F\u9633\uFF0C\u7AD9\u5728\u4E00\u65C1\u5B89\u9759\u5F97\u50CF\u548C\u6574\u4E2A\u55A7\u95F9\u4E16\u754C\u9694\u4E86\u534A\u6B65\u7684\u5C0F\u6797\n\u2014\u2014\u6240\u6709\u4E1C\u897F\u4E00\u4E0B\u5B50\u53C8\u90FD\u6D8C\u8FDB\u6211\u7684\u773C\u775B\u91CC\u3002","\u624D\u53D1\u73B0\u539F\u6765\u81EA\u5DF1\u8FD8\u4EC0\u4E48\u90FD\u4E0D\u4F1A\uFF0C\u6211\u5DEE\u70B9\u53C8\u60F3\u5168\u90FD\u62CD\u8FDB\u53BB\u3002\n\u7A76\u7ADF\u8981\u600E\u4E48\u6837\u624D\u597D\uFF5E"]},"262":{"dialogue":["\u5148\u5BF9\u7126\uFF0C\u518D\u6784\u56FE\u3002","\u5148\u6784\u56FE\uFF0C\u518D\u5BF9\u7126\u3002"]},"264":{"dialogue":["\u53EF\u5C31\u5728\u6309\u4E0B\u5FEB\u95E8\u524D\uFF0C\u6211\u5FFD\u7136\u60F3\u8D77\u5C0F\u6797\u521A\u624D\u90A3\u53E5\u8BDD\u3002\n\u62FF\u8D77\u76F8\u673A\u4E4B\u540E\uFF0C\u7B2C\u4E00\u4EF6\u4E8B\u4E0D\u662F\u4E00\u5BF9\u7126\u5C31\u6309\u5FEB\u95E8\u3002","\u662F\u5148\u51B3\u5B9A\u2014\u2014\u6211\u5230\u5E95\u60F3\u8BA9\u89C2\u4F17\u770B\u4EC0\u4E48\u3002\n"]},"265":{"dialogue":["\u6211\u6162\u6162\u772F\u8D77\u773C\uFF0C\u900F\u8FC7\u53D6\u666F\u6846\uFF0C\u628A\u4E71\u7CDF\u7CDF\u7684\u4E16\u754C\u4E00\u70B9\u70B9\u6536\u62E2\u8D77\u6765\u3002\n\u7136\u540E\u628A\u6CE8\u610F\u529B\u843D\u5728\u5929\u6865\u5BF9\u9762\u7684\u9A7B\u8DB3\u884C\u4EBA\u4E0A\uFF0C\u5F00\u59CB\u5BF9\u7126\u3002","\u800C\u7AD9\u5728\u6211\u8EAB\u4FA7\u7684\u5C0F\u6797\uFF0C\u6DE1\u6DE1\u5730\u5F00\u53E3\u4E86\u3002\n"]},"266":{"speaker":"\u5C0F\u6797","dialogue":["\u80DC\u4ED4\u3002\n"]},"267":{"speaker":"\u80DC\u4ED4","dialogue":["\u55EF\uFF1F\n"]},"268":{"speaker":"\u5C0F\u6797","dialogue":["\u5148\u5B66\u4F1A\u4E00\u4EF6\u4E8B\u3002\n"]},"269":{"speaker":"\u80DC\u4ED4","dialogue":["\u4EC0\u4E48\uFF1F\n"]},"270":{"speaker":"\u5C0F\u6797","dialogue":["\u4E0D\u8981\u5C45\u4E2D\u6784\u56FE\u3002\n"]},"271":{"speaker":"\u80DC\u4ED4","dialogue":["\u2014\u2014\u554A\uFF1F\n"]},"272":{"dialogue":["\u8BD5\u73A9\u7ED3\u675F\uFF0C\u8FD4\u56DE\u83DC\u5355\n"]}},"en-US":{"1":{"speaker":"Start Menu","dialogue":["Start","Settings"]},"20":{"speaker":"Back Log","dialogue":["BACK","No record"]},"21":{"speaker":"Save Slot","dialogue":["BACK","Empty slot","Save","Load","\u5220\u9664"]},"22":{"speaker":"Check Point","dialogue":["BACK","Empty check point","Load","Delete","Reset"]},"23":{"speaker":"Game Setting","dialogue":["BACK","Typing gap","BGM volume","SE volume","Skip seen only","Auto advance pages","Advancing buffer","Reset","Language select","Follow system"]},"24":{"speaker":"Game Profile","dialogue":["BACK","Overview","Skills","Items","Empty inventory"]},"30":{"speaker":"Gallery","dialogue":["BACK","Empty room","Locked","Return"]},"31":{},"31":{},"40":{"speaker":"H U D","dialogue":["","Day","Time","Money","","Back","","Settings","Auto"]},"100":{},"101":{},"102":{},"103":{},"104":{},"105":{},"106":{},"107":{},"108":{},"109":{},"110":{},"111":{},"112":{},"113":{},"114":{},"115":{},"116":{},"117":{},"118":{},"119":{},"120":{},"121":{},"122":{},"123":{},"124":{},"125":{},"126":{},"127":{},"128":{},"129":{},"130":{},"131":{},"132":{},"133":{},"134":{},"135":{},"136":{},"137":{},"138":{},"139":{},"140":{},"141":{},"142":{},"143":{},"144":{},"145":{},"146":{},"147":{},"148":{},"149":{},"150":{},"151":{},"152":{},"153":{},"154":{},"155":{},"156":{},"157":{},"158":{},"159":{},"160":{},"161":{},"162":{},"163":{},"164":{},"165":{},"166":{},"167":{},"168":{},"169":{},"170":{},"171":{},"172":{},"173":{},"174":{},"175":{},"176":{},"177":{},"178":{},"179":{},"180":{},"181":{},"182":{},"183":{},"184":{},"185":{},"186":{},"187":{},"188":{},"189":{},"190":{},"191":{},"192":{},"193":{},"194":{},"195":{},"196":{},"197":{},"198":{},"199":{},"200":{},"201":{},"202":{},"203":{},"204":{},"205":{},"206":{},"207":{},"208":{},"209":{},"210":{},"211":{},"212":{},"213":{},"214":{},"215":{},"216":{},"217":{},"218":{},"219":{},"220":{},"221":{},"222":{},"223":{},"224":{},"225":{},"226":{},"227":{},"228":{},"229":{},"230":{},"231":{},"232":{},"233":{},"234":{},"235":{},"236":{},"237":{},"238":{},"239":{},"240":{},"241":{},"242":{},"243":{},"244":{},"245":{},"246":{},"247":{},"248":{},"249":{},"250":{},"251":{},"252":{},"253":{},"254":{},"255":{},"256":{},"257":{},"258":{},"259":{},"260":{},"261":{},"262":{},"264":{},"265":{},"266":{},"267":{},"268":{},"269":{},"270":{},"271":{},"272":{}}}
+{"zh-CN":{"1":{"speaker":"\u5F00\u59CB\u83DC\u5355","dialogue":["\u5F00\u59CB\u6E38\u620F","\u6E38\u620F\u8BBE\u7F6E"]},"20":{"speaker":"\u5386\u53F2\u8BB0\u5F55","dialogue":["\u5173\u95ED","\u6682\u65E0\u8BB0\u5F55"]},"21":{"speaker":"\u6E38\u620F\u5B58\u6863","dialogue":["\u5173\u95ED","\u7A7A\u69FD\u4F4D","\u4FDD\u5B58","\u8BFB\u53D6","\u5220\u9664"]},"22":{"speaker":"\u5B58\u6863\u70B9","dialogue":["\u5173\u95ED","\u6682\u65E0\u5B58\u6863\u70B9","\u8BFB\u53D6","\u5220\u9664","\u6E05\u7A7A"]},"23":{"speaker":"\u8BBE\u7F6E","dialogue":["\u5173\u95ED","\u6253\u5B57\u95F4\u9694","BGM \u97F3\u91CF","SE \u97F3\u91CF","\u4EC5\u8DF3\u8FC7\u5DF2\u8BFB","\u81EA\u52A8\u7FFB\u9875","\u7FFB\u9875\u7F13\u51B2","\u6062\u590D\u9ED8\u8BA4","\u8BED\u8A00\u9009\u62E9","\u8DDF\u968F\u7CFB\u7EDF"]},"24":{"speaker":"\u8D44\u6599","dialogue":["\u5173\u95ED","\u6982\u89C8","\u6280\u80FD","\u6301\u6709\u7269","\u6682\u65E0\u6570\u636E"]},"30":{"speaker":"\u56FE\u96C6","dialogue":["\u5173\u95ED","\u6682\u65E0\u5185\u5BB9","\u672A\u89E3\u9501","\u8FD4\u56DE"]},"31":{},"31":{},"40":{"speaker":"\u72B6\u6001\u680F","dialogue":["\u5173\u95ED","\u7B2C,\u5929","","\u65F6\u95F4","\u91D1\u94B1","\u8FD4\u56DE\u83DC\u5355","","\u8BBE\u7F6E","\u81EA\u52A8\u64AD\u653E","\u5F00\u542F","\u6682\u505C"]},"100":{"dialogue":["\u5982\u679C\uFF0C\u80FD\u8BA9\u5E73\u9762\u7684\u53D8\u6210\u7ACB\u4F53\u7684\u662F\u2026\u2026\n\u620F\u6CD5\u2026\u2026","\u80FD\u8BA9\u9759\u6B62\u7684\u53D8\u6210\u8FD0\u52A8\u7684\u662F\u2026\u2026\n\u9B54\u6CD5\u2026\u2026","\u90A3\u4E48\uFF0C\u80FD\u8BA9\u77AC\u95F4\u53D8\u6210\u6C38\u6052\u7684\uFF0C\u662F\u4EC0\u4E48\uFF1F\n","\u4F5B\u2026\u2026\u6CD5\u2026\u2026\uFF1F\n","\u50CF\u6211\u8FD9\u79CD\u6574\u5929\u5728\u5F62\u800C\u4E0A\u5B66\u548C\u65E0\u6CD5\u8BC1\u4F2A\u7684\u8FB9\u7F18\u6253\u8F6C\u7684\u4EBA\uFF0C\u5076\u5C14\u4E5F\u4F1A\u5F00\u59CB\u671F\u5F85\u4E00\u70B9\u8BF4\u4E0D\u6E05\u7684\u5947\u8FF9\u3002\n"]},"101":{"speaker":"\u8001\u5E08","dialogue":["\u4ECA\u5929\u7684\u8BFE\u5C31\u8BB2\u5230\u8FD9\u91CC\uFF0C\u5927\u5BB6\u628A\u4E0A\u6B21\u5E03\u7F6E\u7684\u4F5C\u4E1A\u4EA4\u7ED9\u52A9\u6559\u3002\u4E0B\u8BFE\uFF01\n"]},"102":{"dialogue":["\u8FC7\u4E86\u4E00\u4F1A\u2026\u2026"]},"103":{"dialogue":["\u6700\u96BE\u71AC\u7684\u5927\u5B66\u7269\u7406\u7EC8\u4E8E\u4E0B\u8BFE\u4E86\uFF0C\u63A5\u7740\u8BA9\u4EBA\u7A92\u606F\u7684\u662F\u5348\u540E\u7684\u70ED\u6D6A\u3002\n\u7A97\u5916\u9633\u5149\u767D\u5F97\u53D1\u4EAE\uFF0C\u77F3\u677F\u8DEF\u88AB\u6652\u5F97\u53D1\u70EB\uFF0C\u53EF\u60DC\u4E86\u6CA1\u6709\u8BFE\u7684\u4E0B\u5348\u3002","\u5929\u6865\u8FB9\u4EBA\u6765\u4EBA\u5F80\uFF0C\u51E0\u4E4E\u628A\u90A3\u6643\u773C\u7684\u81EA\u52A8\u552E\u8D27\u673A\u6DF9\u6CA1\u4E86\u3002\n","\u82B1\u8C22\u4E86\u7684\u82E6\u695D\u6811\u5728\u6559\u5B66\u697C\u4E0B\u6295\u4E0B\u7A00\u758F\u7684\u5F71\u5B50\uFF0C\u6321\u4E0D\u4F4F\u5348\u540E\u70BD\u70ED\u7684\u9633\u5149\u3002\n"]},"104":{"dialogue":["\u6211\u4E00\u773C\u5C31\u770B\u89C1\u4E86\uFF0C\u4E00\u4E2A\u719F\u6089\u7684\u8EAB\u5F71\u6B63\u4F4E\u5934\u770B\u624B\u673A\uFF0C\u50CF\u5728\u7B49\u4EC0\u4E48\u3002\n\u65C1\u8FB9\u6709\u4E24\u4E2A\u5C0F\u5B69\u5B50\u4E3E\u7740\u51B0\u68D2\u4ECE\u4ED6\u9762\u524D\u8DD1\u8FC7\u53BB\uFF0C\u5DEE\u70B9\u649E\u5230\u4ED6\u3002"]},"105":{"dialogue":["\u4ED6\u53EA\u5FAE\u5FAE\u4FA7\u4E86\u4E0B\u8EAB\u5C31\u8BA9\u5F00\u4E86\u3002\n"]},"106":{"dialogue":["\u52A8\u4F5C\u5E72\u51C0\uFF0C\u5B89\u9759\u5F97\u50CF\u6C34\u6D41\u7ED5\u8FC7\u77F3\u5934\u3002\n\u6211\u751A\u81F3\u6CA1\u591A\u60F3\uFF0C\u624B\u5DF2\u7ECF\u5148\u628A\u76F8\u673A\u7AEF\u8D77\u6765\u4E86\u2026\u2026"]},"107":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u7AD9\u5728\u90A3\u91CC\u522B\u52A8\u3002\n"]},"108":{"dialogue":["\u7136\u540E\u6211\u5C31\u542C\u5230\u90A3\u4E2A\u4EBA\u62AC\u5934\u5BF9\u6211\u90A3\u4E48\u8BF4\u3002\n","\u90A3\u4E00\u4E0B\u53EF\u771F\u5413\u6211\u4E00\u8DF3\u3002\u4E0D\u662F\u56E0\u4E3A\u88AB\u53D1\u73B0\uFF0C\u800C\u662F\u56E0\u4E3A\u2014\u2014\n\u8FD9\u5BB6\u4F19\u7684\u773C\u795E\uFF0C\u600E\u4E48\u8BF4\u5462\uFF0C\u50CF\u662F\u80FD\u76F4\u63A5\u4ECE\u955C\u5934\u5916\u9762\u53CD\u8FC7\u6765\u770B\u7A7F\u6211\u4E00\u6837\u3002"]},"109":{"speaker":"\u80DC\u4ED4","dialogue":["\u8BF6\u2014\u2014\u4E3A\u4EC0\u4E48\uFF1F\n\u6211\u8FD9\u4E2A\u59FF\u52BF\u4E0D\u662F\u5F88\u5E05\u5417\uFF1F"]},"110":{"speaker":"\u5C0F\u6797","dialogue":["\u5F88\u8822\u3002\n"]},"111":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u8FD9\u5BB6\u4F19\uFF0C\u5E73\u65F6\u8BF4\u8BDD\u90FD\u662F\u8FD9\u6837\u5417\uFF1F\n"]},"112":{"dialogue":["\u6211\u8FD8\u4E3E\u7740\u76F8\u673A\uFF0C\u671D\u4E0D\u8FDC\u5904\u90A3\u53EA\u7070\u72D7\u9F87\u4E86\u9F87\u7259\u3002\n","\u6E5B\u84DD\u7684\u5929\u7A7A\u50CF\u6D17\u8FC7\u4E00\u6837\u660E\u4EAE\uFF0C\u9635\u98CE\u4ECE\u6811\u4E0B\u7A7F\u8FC7\uFF0C\u628A\u4ED6\u9888\u4E0B\u504F\u957F\u7684\u6BDB\u5439\u5F97\u5FAE\u5FAE\u62C2\u8D77\u6765\u3002\n","\u9633\u5149\u521A\u597D\u64E6\u8FC7\u4ED6\u80A9\u7EBF\uFF0C\u843D\u5728\u84DD\u7070\u886C\u886B\u7684\u8FB9\u7F18\uFF0C\u4EAE\u5F97\u50CF\u5200\u950B\u3002\n","\u800C\u4ED6\u8BF4\u5B8C\u90A3\u53E5\u201C\u5F88\u8822\u201D\u4EE5\u540E\uFF0C\u5C31\u7AD9\u5728\u90A3\u91CC\uFF0C\u8FDE\u8868\u60C5\u90FD\u6CA1\u591A\u52A8\u4E00\u4E0B\uFF0C\u50CF\u662F\u6839\u672C\u4E0D\u89C9\u5F97\u81EA\u5DF1\u8BB2\u4E86\u4EC0\u4E48\u8FC7\u5206\u7684\u8BDD\u3002\n"]},"113":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u518D\u7ED9\u4F60\u4E00\u6B21\u7EC4\u7EC7\u8BED\u8A00\u7684\u673A\u4F1A\u54E6\uFF5E\n"]},"114":{"dialogue":["\u6211\u51B2\u4ED6\u6643\u4E86\u6643\u76F8\u673A\u3002\n"]},"115":{"speaker":"\u80DC\u4ED4","dialogue":["\u8FD9\u53EF\u662F\u6211\u4ECA\u5929\u7B2C\u4E00\u6B21\u8BA4\u771F\u60F3\u7ED9\u522B\u4EBA\u62CD\u7167\u5462\u3002\n"]},"116":{"speaker":"\u5C0F\u6797","dialogue":["\u5077\u62CD\u53EF\u4E0D\u662F\u597D\u4E60\u60EF\u3002\n"]},"117":{"dialogue":["\u6211\u5F53\u7136\u4E0D\u53EF\u80FD\u627F\u8BA4\u81EA\u5DF1\u88AB\u5413\u5230\uFF0C\u4E8E\u662F\u7ACB\u523B\u7B11\u4E86\u7B11\u3002\n"]},"118":{"speaker":"\u80DC\u4ED4","dialogue":["\u600E\u4E48\u80FD\u53EB\u5077\u62CD\u5462\uFF1F\u8FD9\u53EB\u7075\u611F\u964D\u4E34\u3002\n"]},"119":{"dialogue":["\u4ED6\u770B\u4E86\u6211\u4E00\u4F1A\u513F\uFF0C\u8D70\u4E86\u8FC7\u6765\u3002\n"]},"120":{"speaker":"\u5C0F\u6797","dialogue":["\u62CD\u5F97\u600E\u4E48\u6837\uFF1F\n"]},"121":{"speaker":"\u80DC\u4ED4","dialogue":["\u55EF\u2026\u2026\n"]},"122":{"dialogue":["\u6211\u4F4E\u5934\u770B\u4E86\u4E00\u773C\u6210\u7247\u3002\n"]},"123":{"speaker":"\u80DC\u4ED4","dialogue":["\u50CF\u8DEF\u8FB9\u7B49\u4EBA\u7684\u5E05\u54E5\u3002\n"]},"124":{"speaker":"\u5C0F\u6797","dialogue":["\u5220\u4E86\u3002\n"]},"125":{"speaker":"\u80DC\u4ED4","dialogue":["\u4E3A\u4EC0\u4E48\uFF01\n"]},"126":{"speaker":"\u5C0F\u6797","dialogue":["\u56E0\u4E3A\u4F60\u628A\u6211\u62CD\u5F97\u50CF\u8DEF\u8FB9\u7B49\u4EBA\u7684\u5E05\u54E5\u3002\n"]},"127":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u672C\u6765\u5C31\u662F\u554A\u3002\n"]},"128":{"speaker":"\u5C0F\u6797","dialogue":["\u6211\u4E0D\u662F\u5728\u7B49\u4EBA\u3002\n"]},"129":{"speaker":"\u80DC\u4ED4","dialogue":["\u90A3\u4F60\u662F\u5728\u7B49\u4EC0\u4E48\uFF1F\n"]},"130":{"speaker":"\u5C0F\u6797","dialogue":["\u5149\u7EBF\u5728\u53D8\u3002\n"]},"131":{"dialogue":["\u5C0F\u6797\u770B\u5411\u5929\u6865\u5916\u4FA7\u3002\n"]},"132":{"speaker":"\u5C0F\u6797","dialogue":["\u521A\u521A\u6BD4\u73B0\u5728\u597D\u4E00\u70B9\u3002\n"]},"133":{"dialogue":["\u6211\u5F53\u65F6\u8FD8\u4EE5\u4E3A\u4ED6\u53C8\u5728\u8BF4\u4EC0\u4E48\u542C\u8D77\u6765\u5F88\u5389\u5BB3\u3001\u5176\u5B9E\u6839\u672C\u6CA1\u6CD5\u9A8C\u8BC1\u7684\u8BDD\u3002\n","\u7ED3\u679C\u6CA1\u8FC7\u591A\u4E45\uFF0C\u592A\u9633\u5C31\u5306\u5FD9\u8EB2\u8FDB\u4E86\u9AD8\u7A7A\u7684\u8584\u4E91\uFF0C\u539F\u672C\u659C\u659C\u843D\u5728\u680F\u6746\u4E0A\u7684\u4E00\u675F\u4EAE\u5149\u4E5F\u6DE1\u4E86\u4E0B\u53BB\u3002\n","\u8FD9\u5BB6\u4F19\u5C31\u662F\u8FD9\u6837\u3002\n","\u660E\u660E\u770B\u8D77\u6765\u51B7\u51B7\u6DE1\u6DE1\u7684\uFF0C\u504F\u504F\u5076\u5C14\u53C8\u4F1A\u4E00\u672C\u6B63\u7ECF\u5730\u8BF4\u51FA\u8BA9\u4EBA\u63A5\u4E0D\u4F4F\u7684\u8BDD\uFF0C\n\u5BB3\u4EBA\u5B8C\u5168\u5206\u4E0D\u6E05\u4ED6\u5230\u5E95\u662F\u5728\u914D\u5408\u4F60\uFF0C\u8FD8\u662F\u5728\u6349\u5F04\u4F60\u3002","\u4E0D\u8FC7\uFF0C\u6BD4\u8D77\u8FD9\u4E2A\uFF0C\u66F4\u8BA9\u6211\u5728\u610F\u7684\u662F\u2014\u2014\n"]},"134":{"speaker":"\u80DC\u4ED4","dialogue":["\u6240\u4EE5\u5230\u5E95\u54EA\u91CC\u4E0D\u5BF9\uFF1F\n"]},"135":{"dialogue":["\u6211\u7FFB\u51FA\u521A\u624D\u62CD\u7684\u90A3\u5F20\u7167\u7247\u7ED9\u4ED6\u3002\n"]},"136":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u89C9\u5F97\u4F60\u7AD9\u5728\u8FD9\u91CC\u5C31\u5DF2\u7ECF\u5F88\u597D\u770B\u4E86\u554A\u3002\n\u817F\u957F\uFF0C\u8138\u4E5F\u597D\uFF0C\u98CE\u4E00\u5439\u6BDB\u8FD8\u4F1A\u98D8\uFF0C\u600E\u4E48\u62CD\u90FD\u4E0D\u4F1A\u96BE\u770B\u5427\uFF1F"]},"137":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u62CD\u7684\u662F\u6211\uFF0C\u4E0D\u662F\u98CE\uFF0C\u4E5F\u4E0D\u662F\u6865\u3002\n"]},"138":{"speaker":"\u80DC\u4ED4","dialogue":["\u53EF\u662F\u8FD9\u4E9B\u653E\u8FDB\u53BB\u4F1A\u6BD4\u8F83\u6709\u6C14\u6C1B\u561B\u3002\n"]},"139":{"speaker":"\u5C0F\u6797","dialogue":["\u6C14\u6C1B\u592A\u591A\u4E86\uFF0C\u4E3B\u89D2\u5C31\u6CA1\u4E86\u3002\n"]},"140":{"dialogue":["\u5C0F\u6797\u4F38\u624B\u6276\u7740\u6211\u7684\u624B\uFF0C\u58F0\u97F3\u4E5F\u538B\u5F97\u5F88\u4F4E\n"]},"141":{"speaker":"\u5C0F\u6797","dialogue":["\u540E\u9762\u90A3\u5757\u5E7F\u544A\u724C\uFF0C\u6B63\u597D\u4ECE\u6211\u5934\u4E0A\u957F\u51FA\u6765\u4E86\u3002\n"]},"142":{"speaker":"\u80DC\u4ED4","dialogue":["\u2026\u2026\u5657\u3002\n"]},"143":{"dialogue":["\u6211\u76EF\u7740\u5C4F\u5E55\u770B\u4E86\u4E24\u79D2\uFF0C\u7EC8\u4E8E\u6CA1\u5FCD\u4F4F\u7B11\u51FA\u4E86\u58F0\u3002\n"]},"144":{"speaker":"\u80DC\u4ED4","dialogue":["\u771F\u7684\u8BF6\uFF0C\u50CF\u4F60\u8111\u888B\u4E0A\u63D2\u4E86\u6839\u68CD\u5B50\u4E00\u6837\u3002\n"]},"145":{"speaker":"\u5C0F\u6797","dialogue":["\u6240\u4EE5\u4F60\u521A\u521A\u89C9\u5F97\u5F88\u5E05\uFF1F\n"]},"146":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u521A\u521A\u4E3B\u8981\u5728\u770B\u4F60\u672C\u4EBA\u561B\u3002\n"]},"147":{"speaker":"\u5C0F\u6797","dialogue":["\u90A3\u4F60\u73B0\u5728\u8FD8\u7B11\u5F97\u51FA\u6765\uFF1F\n"]},"148":{"dialogue":["\u5B8C\u4E86\uFF0C\u611F\u89C9\u6211\u4E0D\u5E94\u8BE5\u9A6C\u4E0A\u7ED9\u4ED6\u770B\u7684\u3002\n"]},"149":{"speaker":"\u5C0F\u6797","dialogue":["\u62CD\u7167\u7684\u65F6\u5019\u522B\u53EA\u770B\u672C\u4EBA\u3002\n\u753B\u9762\u91CC\u6240\u6709\u4E1C\u897F\uFF0C\u90FD\u4F1A\u4E00\u8D77\u7B97\u5230\u4F60\u5934\u4E0A\u3002"]},"150":{"dialogue":["\u6211\u7728\u4E86\u7728\u773C\uFF0C\u770B\u7740\u773C\u524D\u7684\u4ED6\u3002\n"]},"151":{"speaker":"\u80DC\u4ED4","dialogue":["\u6240\u4EE5\u4F60\u662F\u5F88\u4F1A\u62CD\u7167\u7684\u90A3\u79CD\u4EBA\u5417\uFF1F\n"]},"152":{"speaker":"\u5C0F\u6797","dialogue":["\u4F1A\u4E00\u70B9\u3002\n"]},"153":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F1A\u4E00\u70B9\u7684\u8BDD\uFF0C\u53EF\u4E0D\u4F1A\u4E00\u773C\u770B\u51FA\u5E7F\u544A\u724C\u4ECE\u8111\u888B\u4E0A\u957F\u51FA\u6765\u5427\uFF1F\n"]},"154":{"speaker":"\u5C0F\u6797","dialogue":["\u8FD9\u662F\u5E38\u8BC6\u3002\n"]},"155":{"speaker":"\u80DC\u4ED4","dialogue":["\u771F\u7684\u5417\uFF1F\u90A3\u6211\u53EF\u80FD\u6CA1\u4EC0\u4E48\u5E38\u8BC6\u5462\uFF5E\n"]},"156":{"speaker":"\u5C0F\u6797","dialogue":["\u6211\u77E5\u9053\u3002\n"]},"157":{"speaker":"\u80DC\u4ED4","dialogue":["\u5582\uFF01\u90A3\u4F60\u6765\u62CD\u6211\u3002\n"]},"158":{"speaker":"\u5C0F\u6797","dialogue":["\u2026\u2026\n"]},"159":{"dialogue":["\u4ED6\u6CA1\u6709\u8BF4\u8BDD\uFF0C\u53EA\u662F\u4F38\u624B\u793A\u610F\u6211\u628A\u76F8\u673A\u7ED9\u4ED6\u3002\n","\u6211\u8FDF\u7591\u4E86\u4E00\u79D2\uFF0C\u8FD8\u662F\u9012\u8FC7\u53BB\u4E86\u3002\n"]},"160":{"dialogue":["\u4ED6\u63A5\u76F8\u673A\u7684\u52A8\u4F5C\u5F88\u7A33\uFF0C\u624B\u6307\u4FEE\u957F\uFF0C\u638C\u5FC3\u6709\u5C42\u8584\u8584\u7684\u8327\uFF0C\u5927\u6982\u662F\u7ECF\u5E38\u6446\u5F04\u5668\u6750\u7559\u4E0B\u7684\u3002\n","\u4ED6\u4F4E\u5934\u8C03\u4E86\u4E24\u4E0B\uFF0C\u6211\u6CA1\u7EC6\u770B\uFF0C\u53EA\u77E5\u9053\u4ED6\u6CA1\u6298\u817E\u4EC0\u4E48\u590D\u6742\u4E1C\u897F\uFF0C\u50CF\u662F\u53EA\u662F\u628A\u6700\u987A\u624B\u7684\u8BBE\u7F6E\u786E\u8BA4\u4E86\u4E00\u904D\u3002\n"]},"161":{"speaker":"\u5C0F\u6797","dialogue":["\u7AD9\u8FC7\u53BB\u3002\n"]},"162":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u62CD\u5E05\u4E00\u70B9\u54E6\u3002\n"]},"163":{"speaker":"\u5C0F\u6797","dialogue":["\u770B\u4F60\u914D\u4E0D\u914D\u5408\u3002\n"]},"164":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u53EF\u597D\u914D\u5408\u4E86\uFF5E\n"]},"165":{"dialogue":["\u6211\u5634\u4E0A\u8FD9\u4E48\u8BF4\u7740\uFF0C\u8FD8\u662F\u4E56\u4E56\u7AD9\u5230\u4E86\u680F\u6746\u8FB9\u3002\n","\u6865\u4E0B\u7684\u8F66\u8F86\u521A\u597D\u5F00\u8FC7\uFF0C\u9707\u5F97\u811A\u5E95\u90FD\u5FAE\u5FAE\u53D1\u9EBB\u3002\n\u98CE\u628A\u6211\u80CC\u5FC3\u5439\u5F97\u4E71\u6643\uFF0C\u6211\u53CC\u624B\u62B1\u5728\u80F8\u524D\uFF0C\u62AC\u5934\u770B\u4ED6\u3002"]},"166":{"speaker":"\u80DC\u4ED4","dialogue":["\u8981\u6446\u4EC0\u4E48\u59FF\u52BF\uFF1F\n"]},"167":{"speaker":"\u5C0F\u6797","dialogue":["\u522B\u6446\u3002\n"]},"168":{"speaker":"\u80DC\u4ED4","dialogue":["\u554A\uFF1F\n"]},"169":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u4E00\u6446\u5C31\u5F88\u523B\u610F\u3002\n"]},"170":{"dialogue":["\u2026\u2026\n"]},"171":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u4ECA\u5929\u662F\u4E0D\u662F\u6545\u610F\u6765\u6C14\u6211\u7684\uFF1F\n"]},"172":{"speaker":"\u5C0F\u6797","dialogue":["\u4E0B\u5DF4\u6536\u4E00\u70B9\u3002\u770B\u5DE6\u8FB9\uFF0C\u4E0D\u8981\u770B\u955C\u5934\u3002\n"]},"173":{"speaker":"\u80DC\u4ED4","dialogue":["\u50CF\u8FD9\u6837\uFF1F\n"]},"174":{"speaker":"\u5C0F\u6797","dialogue":["\u55EF\uFF0C\u522B\u52A8\u3002\n"]},"175":{"dialogue":["\u201C\u5494\u5693\u3002\u201D\n","\u4ED6\u62CD\u5B8C\u4E00\u5F20\uFF0C\u6362\u4E86\u4E2A\u4F4D\u7F6E\uFF0C\u53C8\u7A0D\u5FAE\u8E72\u4F4E\u4E86\u4E00\u70B9\u3002\n"]},"176":{"speaker":"\u5C0F\u6797","dialogue":["\u80A9\u653E\u677E\u3002\n"]},"177":{"speaker":"\u80DC\u4ED4","dialogue":["\u54E6\u3002\n"]},"178":{"speaker":"\u5C0F\u6797","dialogue":["\u8033\u6735\u7ACB\u8D77\u6765\u4E00\u70B9\u3002\n"]},"179":{"speaker":"\u80DC\u4ED4","dialogue":["\u8FD9\u6211\u63A7\u5236\u4E0D\u4E86\u5427\uFF01\n"]},"180":{"speaker":"\u5C0F\u6797","dialogue":["\u90A3\u5C31\u60F3\u70B9\u9AD8\u5174\u7684\u4E8B\u3002\n"]},"181":{"speaker":"\u80DC\u4ED4","dialogue":["\u6BD4\u5982\u4ECA\u665A\u98DF\u5802\u52A0\u9910\uFF1F\n"]},"182":{"speaker":"\u5C0F\u6797","dialogue":["\u53EF\u4EE5\u3002\n"]},"183":{"dialogue":["\u6211\u4E00\u4E0B\u7B11\u4E86\u51FA\u6765\u3002\n","\u201C\u5494\u5693\u3002\u201D\n"]},"184":{"speaker":"\u5C0F\u6797","dialogue":["\u597D\u4E86\u3002\n"]},"185":{"dialogue":["\u4ED6\u628A\u76F8\u673A\u9012\u56DE\u6765\u3002\n"]},"186":{"speaker":"\u80DC\u4ED4","dialogue":["\u8FD9\u4E48\u5FEB\uFF1F\n"]},"187":{"dialogue":["\u6211\u770B\u4E86\u770B\u6837\u7247\uFF0C\u4E0B\u4E00\u79D2\u5C31\u6C89\u9ED8\u4E86\u3002\n","\u2026\u2026\n"]},"188":{"speaker":"\u5C0F\u6797","dialogue":["\u50BB\u4E86\u5417\uFF1F\n"]},"189":{"speaker":"\u80DC\u4ED4","dialogue":["\u2026\u2026\u4F60\u662F\u4E0D\u662F\u5077\u5077\u628A\u6211\u6362\u6210\u522B\u4EBA\u62CD\u4E86\uFF1F\n"]},"190":{"speaker":"\u5C0F\u6797","dialogue":["\u600E\u4E48\u53EF\u80FD\u3002\n"]},"191":{"speaker":"\u80DC\u4ED4","dialogue":["\u90A3\u4E3A\u4EC0\u4E48\u770B\u8D77\u6765\u2014\u2014\n"]},"192":{"speaker":"\u80DC\u4ED4","dialogue":["\u4E3A\u4EC0\u4E48\u770B\u8D77\u6765\u8FD9\u4E48\u81EA\u7136\uFF1F\n"]},"193":{"dialogue":["\u6211\u76EF\u7740\u5C4F\u5E55\u91CC\u7684\u81EA\u5DF1\uFF0C\u534A\u5929\u624D\u627E\u51FA\u5408\u9002\u7684\u8BCD\u3002\n","\u90A3\u660E\u660E\u5C31\u662F\u6211\u3002\n\u6BDB\u8FD8\u662F\u90A3\u6837\uFF0C\u8033\u6735\u8FD8\u662F\u90A3\u6837\uFF0C\u8863\u670D\u4E5F\u8FD8\u662F\u65E9\u4E0A\u968F\u4FBF\u5957\u7684\u90A3\u4EF6\u3002","\u53EF\u753B\u9762\u91CC\u7684\u6211\u4E0D\u50CF\u5E73\u65F6\u7167\u955C\u5B50\u65F6\u770B\u5230\u7684\u90A3\u4E2A\u6211\u3002\n","\u867D\u7136\u6211\u8DDF\u4ED6\u521A\u624D\u7AD9\u7684\u662F\u540C\u4E00\u4E2A\u4F4D\u7F6E\uFF0C\u4F46\u4ED6\u62CD\u6211\u7684\u65F6\u5019\u7A0D\u5FAE\u6362\u4E86\u4E2A\u89D2\u5EA6\u3002\n"]},"194":{"speaker":"\u80DC\u4ED4","dialogue":["\u4E3A\u4EC0\u4E48\u4F1A\u8FD9\u6837\uFF1F\n"]},"195":{"speaker":"\u5C0F\u6797","dialogue":["\u56E0\u4E3A\u4F60\u521A\u521A\u4EC0\u4E48\u90FD\u60F3\u62CD\u3002\u7ED3\u679C\u6BCF\u4E2A\u90FD\u53EA\u62CD\u5230\u4E00\u70B9\u70B9\u3002\n"]},"196":{"speaker":"\u80DC\u4ED4","dialogue":["\u8D2A\u5FC3\u4E5F\u4E0D\u884C\u5417\uFF1F\n"]},"197":{"speaker":"\u5C0F\u6797","dialogue":["\u62CD\u7167\u7684\u65F6\u5019\u4E0D\u884C\u3002\n"]},"198":{"speaker":"\u80DC\u4ED4","dialogue":["\u53EF\u662F\u6211\u770B\u89C1\u7684\u660E\u660E\u5C31\u8FD9\u4E48\u591A\u3002\n"]},"199":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u770B\u89C1\u5F88\u591A\uFF0C\u4E0D\u4EE3\u8868\u4F60\u8981\u5168\u90E8\u4EA4\u4EE3\u3002\n"]},"200":{"dialogue":["\u4ED6\u62AC\u8D77\u624B\uFF0C\u5728\u6211\u955C\u5934\u524D\u65B9\u6BD4\u4E86\u4E00\u4E2A\u7B80\u5355\u7684\u65B9\u6846\u3002\n"]},"201":{"speaker":"\u5C0F\u6797","dialogue":["\u4F60\u62FF\u8D77\u76F8\u673A\u4E4B\u540E\uFF0C\u7B2C\u4E00\u4EF6\u4E8B\u4E0D\u662F\u6309\u5FEB\u95E8\uFF0C\u662F\u5148\u51B3\u5B9A\u2014\u2014\u4F60\u5230\u5E95\u60F3\u8BA9\u89C2\u4F17\u770B\u4EC0\u4E48\u3002\n"]},"202":{"speaker":"\u80DC\u4ED4","dialogue":["\u62CD\u7167\u561B\uFF0C\u4E0D\u5C31\u662F\u628A\u597D\u770B\u7684\u4E1C\u897F\u62CD\u4E0B\u6765\uFF1F\n\u6211\u80FD\u770B\u5230\u4EC0\u4E48\uFF0C\u4E0D\u5C31\u662F\u89C2\u4F17\u80FD\u770B\u5230\u4EC0\u4E48\u5417\uFF1F"]},"203":{"speaker":"\u5C0F\u6797","dialogue":["\u8FD9\u79CD\u5C31\u662F\u53EB\u4E71\u62CD\u3002\n"]},"204":{"speaker":"\u80DC\u4ED4","dialogue":["\u5582\u5582\uFF0C\u521A\u5F00\u59CB\u5C31\u8FD9\u4E48\u4E25\u683C\u554A\uFF1F\n"]},"205":{"speaker":"\u5C0F\u6797","dialogue":["\u56E0\u4E3A\u4F60\u7684\u95EE\u9898\u5F88\u660E\u663E\u3002\n"]},"206":{"speaker":"\u80DC\u4ED4","dialogue":["\u6BD4\u5982\uFF1F\n"]},"207":{"speaker":"\u5C0F\u6797","dialogue":["\u6BD4\u5982\u4F60\u603B\u559C\u6B22\u628A\u4E1C\u897F\u653E\u6B63\u4E2D\u95F4\u3002\n"]},"208":{"speaker":"\u80DC\u4ED4","dialogue":["\u6B63\u4E2D\u95F4\u4E0D\u597D\u5417\uFF1F\u5F88\u7A33\u5B9A\u8BF6\u3002\n"]},"209":{"speaker":"\u5C0F\u6797","dialogue":["\u6709\u65F6\u5019\u53EF\u4EE5\u3002\u4F46\u4F60\u521A\u624D\u4E0D\u662F\u60F3\u62CD\u201C\u98CE\u91CC\u7684\u6211\u201D\u5417\uFF1F\u90A3\u5C31\u522B\u62CD\u5F97\u50CF\u5927\u5934\u7167\u3002\n"]},"210":{"speaker":"\u80DC\u4ED4","dialogue":["\u5927\u5934\u7167\uFF01\u4F60\u5C45\u7136\u4F1A\u8BF4\u8FD9\u79CD\u8BDD\u3002\n"]},"211":{"speaker":"\u5C0F\u6797","dialogue":["\u8FD9\u624D\u4E0D\u662F\u4E00\u5BF9\u51C6\u5C31\u6309\u5FEB\u95E8\u4E86\u3002\n"]},"212":{"dialogue":["\u6211\u53CD\u590D\u770B\u90A3\u4E24\u5F20\u56FE\uFF0C\u8D8A\u770B\u8D8A\u89C9\u5F97\u4E0D\u670D\u6C14\u3002\n\u660E\u660E\u6211\u53EA\u662F\u89D2\u5EA6\u5DEE\u4E00\u70B9\u800C\u5DF2\u3002"]},"213":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u518D\u6559\u6211\u4E00\u70B9\u3002\n"]},"214":{"speaker":"\u5C0F\u6797","dialogue":["\u4EC0\u4E48\uFF1F\n"]},"215":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u4E5F\u8981\u62CD\u6210\u8FD9\u6837\u554A\u3002\n\u65E2\u7136\u90FD\u88AB\u4F60\u6293\u5230\u4E86\uFF0C\u5C31\u522B\u60F3\u53EA\u9732\u4E00\u624B\u5C31\u8DD1\u3002\u4F60\u5F97\u8D1F\u8D23\u6559\u4F1A\u6211\u3002"]},"216":{"dialogue":["\u5C0F\u6797\u5B89\u9759\u5730\u770B\u4E86\u6211\u4E24\u79D2\u3002\n"]},"217":{"speaker":"\u5C0F\u6797","dialogue":["\u7136\u540E\u5462\uFF1F\n"]},"218":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u8BF7\u4F60\u5403\u597D\u5403\u7684\uFF1F\n"]},"219":{"speaker":"\u5C0F\u6797","dialogue":["\u6211\u5728\u51CF\u80A5\u3002\n"]},"220":{"speaker":"\u80DC\u4ED4","dialogue":["\u4E0D\u7BA1\u600E\u6837\u4F60\u5C31\u8981\u6559\u6211\uFF5E\n"]},"221":{"speaker":"\u5C0F\u6797","dialogue":["\u5B66\u4E0D\u4F1A\u522B\u8D56\u6211\u3002\n"]},"222":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u50CF\u90A3\u79CD\u4EBA\u5417\uFF1F\n"]},"223":{"speaker":"\u5C0F\u6797","dialogue":["\u50CF\u3002\n"]},"224":{"speaker":"\u80DC\u4ED4","dialogue":["\u5582\uFF01\n"]},"225":{"dialogue":["\u4ED6\u5634\u89D2\u5F88\u8F7B\u5730\u52A8\u4E86\u4E00\u4E0B\uFF0C\u50CF\u662F\u7B11\u4E86\uFF0C\u53C8\u50CF\u6CA1\u6709\u3002\n","\u98CE\u4ECE\u6865\u4E0B\u704C\u4E0A\u6765\uFF0C\u8DEF\u8FB9\u6302\u7740\u7684\u65D7\u5E1C\u54D7\u5566\u5566\u54CD\uFF0C\u5E95\u4E0B\u7684\u77F3\u849C\u53F6\u7247\u65E0\u7CBE\u6253\u91C7\u5730\u6447\u52A8\u3002\n\u8FDC\u5904\u7684\u751F\u6D3B\u533A\u6B63\u70ED\u95F9\uFF0C\u5929\u6865\u53E6\u4E00\u5934\u7A81\u7136\u4F20\u6765\u4E00\u9635\u719F\u6089\u7684\u5927\u55D3\u95E8\u3002"]},"226":{"speaker":"\u963F\u9633","dialogue":["\u80DC\u4ED4\u2014\u2014\uFF01\u4F60\u679C\u7136\u5728\u8FD9\u91CC\uFF01\n"]},"227":{"dialogue":["\u6211\u56DE\u5934\u4E00\u770B\uFF0C\u6D69\u7136\u6B63\u62CE\u7740\u7EB8\u888B\u4E00\u8DEF\u5C0F\u8DD1\u8FC7\u6765\uFF0C\u888B\u5B50\u91CC\u8FD8\u63D2\u7740\u4E00\u622A\u753B\u677F\u89D2\u3002\n\u8DDF\u5728\u4ED6\u540E\u9762\u7684\uFF0C\u662F\u6444\u5F71\u793E\u90A3\u4E2A\u603B\u7231\u7B11\u6211\u7684\u72DE\u732B\u5B66\u957F\uFF0C\u963F\u9633\u3002","\u672C\u6765\u6211\u53EA\u662F\u8DEF\u8FC7\u5E03\u544A\u680F\u7684\u65F6\u5019\uFF0C\u770B\u5230\u6709\u4E2A\u201C\u9752\u6625\u5F71\u50CF\u5C55\u201D\uFF0C\u60F3\u7740\u53CD\u6B63\u95F2\u7740\u4E5F\u662F\u95F2\u7740\uFF0C\u53BB\u62CD\u51E0\u5F20\u4E5F\u4E0D\u9519\u3002\n\u7ED3\u679C\u6444\u5F71\u793E\u90A3\u5E2E\u5BB6\u4F19\u4E00\u542C\u8BF4\u6211\u8981\u53C2\u8D5B\uFF0C\u7B11\u5F97\u4E00\u4E2A\u6BD4\u4E00\u4E2A\u5927\u58F0\u3002","\u201C\u80DC\u4ED4\uFF0C\u4F60\u4F1A\u6784\u56FE\u5417\uFF1F\u201D\n","\u201C\u80DC\u4ED4\uFF0C\u4F60\u522B\u5230\u6700\u540E\u53EA\u4EA4\u4E00\u5806\u5E05\u54E5\u7167\u7247\u54E6\u3002\u201D\n","\u201C\u80DC\u4ED4\uFF0C\u4F60\u4E0A\u6B21\u628A\u7136\u5B50\u62CD\u6210\u9006\u5149\u9ED1\u56E2\u5B50\u7684\u4E8B\uFF0C\u6211\u53EF\u8FD8\u8BB0\u5F97\u5462\uFF5E\u201D\n","\u771F\u8FC7\u5206\u3002\u6211\u90A3\u660E\u660E\u662F\u5F88\u6709\u6C14\u52BF\u7684\u526A\u5F71\u3002\n\u4E8E\u662F\u4E3A\u4E86\u8BC1\u660E\u81EA\u5DF1\uFF0C\u6211\u624D\u7406\u76F4\u6C14\u58EE\u5730\u501F\u4E86\u76F8\u673A\uFF0C\u8DD1\u6765\u751F\u6D3B\u533A\u4E0A\u6293\u62CD\u3002","\u73B0\u5728\u6211\u6709\u4E86\u4E0D\u5999\u7684\u9884\u611F\u3002\n"]},"228":{"speaker":"\u80DC\u4ED4","dialogue":["\u4F60\u4EEC\u600E\u4E48\u5728\u8FD9\u91CC\u4E86\uFF1F\n"]},"229":{"speaker":"\u963F\u9633","dialogue":["\u4F60\u501F\u4E86\u793E\u91CC\u7684\u76F8\u673A\u5C31\u8DD1\uFF0C\u5927\u5BB6\u90FD\u5728\u627E\u4F60\u554A\u3002\n\u5927\u5BB6\u90FD\u5728\u731C\u4F60\u662F\u4E0D\u662F\u5DF2\u7ECF\u628A\u53D6\u666F\u6846\u5F53\u88C5\u9970\u7528\u4E86\u5462\u3002\u54E6\uFF0C\u6210\u6797\u4E5F\u5728\u554A\u3002"]},"230":{"dialogue":["\u5C0F\u6797\u70B9\u4E86\u4E0B\u5934\uFF0C\u7B97\u662F\u6253\u62DB\u547C\u3002\n","\u963F\u9633\u7684\u89C6\u7EBF\u5728\u6211\u4EEC\u4E24\u4E2A\u4E4B\u95F4\u8F6C\u4E86\u4E00\u5708\uFF0C\u7B11\u5F97\u610F\u5473\u6DF1\u957F\u3002\n"]},"231":{"speaker":"\u963F\u9633","dialogue":["\u54CE\u5440\uFF0C\u539F\u6765\u5982\u6B64\u3002\n\u80DC\u4ED4\uFF0C\u4F60\u8FD9\u662F\u5DF2\u7ECF\u627E\u5230\u573A\u5916\u6307\u5BFC\u4E86\uFF1F"]},"232":{"speaker":"\u80DC\u4ED4","dialogue":["\u4EC0\u4E48\u53EB\u573A\u5916\u6307\u5BFC\uFF0C\u6211\u8FD9\u662F\u2014\u2014\n"]},"233":{"speaker":"\u80DC\u4ED4","dialogue":["\u6211\u8FD9\u662F\u7ED9\u81EA\u5DF1\u627E\u4E86\u4F4D\u540D\u5E08\u3002\n"]},"234":{"speaker":"\u6D69\u7136","dialogue":["\u6210\u6797\u54E5\u8FD8\u8981\u5F92\u5F1F\u5417\uFF1F\n"]},"235":{"dialogue":["\u5C0F\u6797\u770B\u7740\u6211\uFF0C\u50CF\u662F\u5728\u8861\u91CF\u4EC0\u4E48\u3002\n"]},"236":{"speaker":"\u80DC\u4ED4","dialogue":["\u603B\u4E4B\u4ECE\u73B0\u5728\u5F00\u59CB\uFF0C\u4ED6\u8981\u6559\u6211\u62CD\u7167\u4E86\u3002\n"]},"237":{"speaker":"\u5C0F\u6797","dialogue":["\u6211\u6CA1\u8BF4\u2014\u2014\n"]},"238":{"speaker":"\u963F\u9633","dialogue":["\u80DC\u4ED4\uFF0C\u4F60\u8FD9\u6839\u672C\u662F\u8D56\u4E0A\u4EBA\u5BB6\u4E86\u5427\u3002\n"]},"239":{"speaker":"\u80DC\u4ED4","dialogue":["\u90A3\u53C8\u600E\u4E48\u6837\uFF1F\n\u53CD\u6B63\u6211\u5DF2\u7ECF\u51B3\u5B9A\u8981\u62FF\u8FD9\u6B21\u5F71\u50CF\u5C55\u7684\u5956\u4E86\u3002"]},"240":{"speaker":"\u80DC\u4ED4","dialogue":["\u65E2\u7136\u8981\u8D62\uFF0C\u5F53\u7136\u5F97\u627E\u6700\u5389\u5BB3\u7684\u6765\u6559\u6211\u3002\n"]},"241":{"speaker":"\u80DC\u4ED4","dialogue":["\u8981\u662F\u5B66\u4E0D\u4F1A\uFF0C\u76F8\u673A\u6211\u5C31\u4E0D\u8FD8\u4E86\uFF01\n"]},"242":{"speaker":"\u963F\u9633","dialogue":["\u54E6\uFF1F\u90A3\u2026\u2026\u4F60\u77E5\u9053\u8FD9\u6B21\u4E3B\u9898\u662F\u4EC0\u4E48\u5417\uFF1F\n"]},"243":{"speaker":"\u80DC\u4ED4","dialogue":["\u5F53\u7136\u77E5\u9053\u2026\u2026\u8046\u542C\u4EF2\u590F\uFF1F\n"]},"244":{"speaker":"\u963F\u9633","dialogue":["\u9519\u4E86\u3002\n"]},"245":{"speaker":"\u80DC\u4ED4","dialogue":["\u6D41\u52A8\u7684\u98CE\uFF1F\n"]},"246":{"speaker":"\u963F\u9633","dialogue":["\u4E0D\u5BF9\u3002\n"]},"247":{"speaker":"\u6D69\u7136","dialogue":["\u662F\u201C\u4E0D\u505C\u7684\u590F\uFF0C\u7559\u7740\u7684\u98CE\u201D\u3002\n"]},"248":{"speaker":"\u80DC\u4ED4","dialogue":["\u5BF9\uFF01\u5C31\u662F\u8FD9\u4E2A\uFF01\n\u6211\u53EA\u662F\u60F3\u8003\u8003\u4F60\u4EEC\u3002"]},"249":{"dialogue":["\u6D69\u7136\u9732\u51FA\u90A3\u79CD\u201C\u6211\u660E\u660E\u4EC0\u4E48\u90FD\u6CA1\u8BF4\u201D\u7684\u65E0\u5948\u8868\u60C5\u3002\n","\u963F\u9633\u5219\u4E00\u526F\u770B\u900F\u4E0D\u8BF4\u900F\u7684\u6837\u5B50\uFF0C\u5C3E\u5DF4\u90FD\u5FEB\u7B11\u5F2F\u4E86\u3002\n"]},"250":{"speaker":"\u963F\u9633","dialogue":["\u65E2\u7136\u8FD9\u6837\uFF0C\u80DC\u4ED4\u2014\u2014\n"]},"251":{"speaker":"\u963F\u9633","dialogue":["\u4F60\u4E0D\u5982\u73B0\u5728\u5C31\u62CD\u4E00\u5F20\u7ED9\u6211\u770B\u770B\u3002\n\u4E3B\u9898\u3001\u4EBA\u7269\u3001\u73AF\u5883\uFF0C\u90FD\u5728\u8FD9\u91CC\u3002"]},"252":{"speaker":"\u963F\u9633","dialogue":["\u8BA9\u6211\u770B\u770B\u4F60\u4ECE\u6210\u6797\u90A3\u91CC\u5B66\u5230\u4E86\u591A\u5C11\u3002\n"]},"253":{"speaker":"\u80DC\u4ED4","dialogue":["\u73B0\u5728\uFF1F\n"]},"254":{"speaker":"\u963F\u9633","dialogue":["\u5C31\u73B0\u5728\u3002\u9650\u65F6\u4E00\u5206\u949F\u3002\n"]},"255":{"dialogue":["\u963F\u9633\u9000\u5F00\u4E24\u6B65\uFF0C\u987A\u624B\u628A\u6D69\u7136\u4E5F\u62C9\u5230\u65C1\u8FB9\n"]},"256":{"speaker":"\u80DC\u4ED4","dialogue":["\u592A\u7A81\u7136\u4E86\u5427\uFF01\n"]},"257":{"speaker":"\u963F\u9633","dialogue":["\u771F\u5B9E\u7684\u597D\u7167\u7247\u5F88\u591A\u65F6\u5019\u5C31\u662F\u7A81\u7136\u6765\u7684\u54E6\uFF5E\n"]},"258":{"dialogue":["\u8FD9\u8BDD\u542C\u8D77\u6765\u5C45\u7136\u8FD8\u6709\u70B9\u9053\u7406\uFF0C\u771F\u8BA8\u538C\u3002\n","\u6211\u62B1\u7D27\u76F8\u673A\uFF0C\u8F6C\u5934\u770B\u5411\u5C0F\u6797\u3002\n"]},"259":{"speaker":"\u80DC\u4ED4","dialogue":["\u6551\u547D~\n"]},"260":{"speaker":"\u5C0F\u6797","dialogue":["\u522B\u770B\u6211\u3002\n\u5148\u770B\u600E\u4E48\u53D6\u666F\u3002"]},"261":{"dialogue":["\u6211\u6DF1\u5438\u4E00\u53E3\u6C14\uFF0C\u91CD\u65B0\u4E3E\u8D77\u76F8\u673A\u3002\n\u521A\u521A\u8FD8\u5634\u786C\u5F97\u5F88\uFF0C\u73B0\u5728\u4E00\u4E3E\u8D77\u76F8\u673A\uFF0C\u8111\u5B50\u53CD\u800C\u7A7A\u4E86\u3002","\u6865\u4E0A\u7684\u98CE\uFF0C\u8DD1\u8FC7\u7684\u5C0F\u5B69\uFF0C\u62CE\u7740\u753B\u677F\u7684\u6D69\u7136\uFF0C\u7B11\u5F97\u50CF\u770B\u597D\u620F\u7684\u963F\u9633\uFF0C\u7AD9\u5728\u4E00\u65C1\u5B89\u9759\u5F97\u50CF\u548C\u6574\u4E2A\u55A7\u95F9\u4E16\u754C\u9694\u4E86\u534A\u6B65\u7684\u5C0F\u6797\n\u2014\u2014\u6240\u6709\u4E1C\u897F\u4E00\u4E0B\u5B50\u53C8\u90FD\u6D8C\u8FDB\u6211\u7684\u773C\u775B\u91CC\u3002","\u624D\u53D1\u73B0\u539F\u6765\u81EA\u5DF1\u8FD8\u4EC0\u4E48\u90FD\u4E0D\u4F1A\uFF0C\u6211\u5DEE\u70B9\u53C8\u60F3\u5168\u90FD\u62CD\u8FDB\u53BB\u3002\n\u7A76\u7ADF\u8981\u600E\u4E48\u6837\u624D\u597D\uFF5E"]},"262":{"dialogue":["\u5148\u5BF9\u7126\uFF0C\u518D\u6784\u56FE\u3002","\u5148\u6784\u56FE\uFF0C\u518D\u5BF9\u7126\u3002"]},"264":{"dialogue":["\u53EF\u5C31\u5728\u6309\u4E0B\u5FEB\u95E8\u524D\uFF0C\u6211\u5FFD\u7136\u60F3\u8D77\u5C0F\u6797\u521A\u624D\u90A3\u53E5\u8BDD\u3002\n\u62FF\u8D77\u76F8\u673A\u4E4B\u540E\uFF0C\u7B2C\u4E00\u4EF6\u4E8B\u4E0D\u662F\u4E00\u5BF9\u7126\u5C31\u6309\u5FEB\u95E8\u3002","\u662F\u5148\u51B3\u5B9A\u2014\u2014\u6211\u5230\u5E95\u60F3\u8BA9\u89C2\u4F17\u770B\u4EC0\u4E48\u3002\n"]},"265":{"dialogue":["\u6211\u6162\u6162\u772F\u8D77\u773C\uFF0C\u900F\u8FC7\u53D6\u666F\u6846\uFF0C\u628A\u4E71\u7CDF\u7CDF\u7684\u4E16\u754C\u4E00\u70B9\u70B9\u6536\u62E2\u8D77\u6765\u3002\n\u7136\u540E\u628A\u6CE8\u610F\u529B\u843D\u5728\u5929\u6865\u5BF9\u9762\u7684\u9A7B\u8DB3\u884C\u4EBA\u4E0A\uFF0C\u5F00\u59CB\u5BF9\u7126\u3002","\u800C\u7AD9\u5728\u6211\u8EAB\u4FA7\u7684\u5C0F\u6797\uFF0C\u6DE1\u6DE1\u5730\u5F00\u53E3\u4E86\u3002\n"]},"266":{"speaker":"\u5C0F\u6797","dialogue":["\u80DC\u4ED4\u3002\n"]},"267":{"speaker":"\u80DC\u4ED4","dialogue":["\u55EF\uFF1F\n"]},"268":{"speaker":"\u5C0F\u6797","dialogue":["\u5148\u5B66\u4F1A\u4E00\u4EF6\u4E8B\u3002\n"]},"269":{"speaker":"\u80DC\u4ED4","dialogue":["\u4EC0\u4E48\uFF1F\n"]},"270":{"speaker":"\u5C0F\u6797","dialogue":["\u4E0D\u8981\u5C45\u4E2D\u6784\u56FE\u3002\n"]},"271":{"speaker":"\u80DC\u4ED4","dialogue":["\u2014\u2014\u554A\uFF1F\n"]},"272":{"dialogue":["\u8BD5\u73A9\u7ED3\u675F\uFF0C\u8FD4\u56DE\u83DC\u5355\n"]}},"en-US":{"1":{"speaker":"Start Menu","dialogue":["Start","Settings"]},"20":{"speaker":"Back Log","dialogue":["BACK","No record"]},"21":{"speaker":"Save Slot","dialogue":["BACK","Empty slot","Save","Load","\u5220\u9664"]},"22":{"speaker":"Check Point","dialogue":["BACK","Empty check point","Load","Delete","Reset"]},"23":{"speaker":"Game Setting","dialogue":["BACK","Typing gap","BGM volume","SE volume","Skip seen only","Auto advance pages","Advancing buffer","Reset","Language select","Follow system"]},"24":{"speaker":"Game Profile","dialogue":["BACK","Overview","Skills","Items","Empty inventory"]},"30":{"speaker":"Gallery","dialogue":["BACK","Empty room","Locked","Return"]},"31":{},"31":{},"40":{"speaker":"H U D","dialogue":["","Day","Time","Money","","Back","","Settings","Auto"]},"100":{},"101":{},"102":{},"103":{},"104":{},"105":{},"106":{},"107":{},"108":{},"109":{},"110":{},"111":{},"112":{},"113":{},"114":{},"115":{},"116":{},"117":{},"118":{},"119":{},"120":{},"121":{},"122":{},"123":{},"124":{},"125":{},"126":{},"127":{},"128":{},"129":{},"130":{},"131":{},"132":{},"133":{},"134":{},"135":{},"136":{},"137":{},"138":{},"139":{},"140":{},"141":{},"142":{},"143":{},"144":{},"145":{},"146":{},"147":{},"148":{},"149":{},"150":{},"151":{},"152":{},"153":{},"154":{},"155":{},"156":{},"157":{},"158":{},"159":{},"160":{},"161":{},"162":{},"163":{},"164":{},"165":{},"166":{},"167":{},"168":{},"169":{},"170":{},"171":{},"172":{},"173":{},"174":{},"175":{},"176":{},"177":{},"178":{},"179":{},"180":{},"181":{},"182":{},"183":{},"184":{},"185":{},"186":{},"187":{},"188":{},"189":{},"190":{},"191":{},"192":{},"193":{},"194":{},"195":{},"196":{},"197":{},"198":{},"199":{},"200":{},"201":{},"202":{},"203":{},"204":{},"205":{},"206":{},"207":{},"208":{},"209":{},"210":{},"211":{},"212":{},"213":{},"214":{},"215":{},"216":{},"217":{},"218":{},"219":{},"220":{},"221":{},"222":{},"223":{},"224":{},"225":{},"226":{},"227":{},"228":{},"229":{},"230":{},"231":{},"232":{},"233":{},"234":{},"235":{},"236":{},"237":{},"238":{},"239":{},"240":{},"241":{},"242":{},"243":{},"244":{},"245":{},"246":{},"247":{},"248":{},"249":{},"250":{},"251":{},"252":{},"253":{},"254":{},"255":{},"256":{},"257":{},"258":{},"259":{},"260":{},"261":{},"262":{},"264":{},"265":{},"266":{},"267":{},"268":{},"269":{},"270":{},"271":{},"272":{}}}
   </script>
 <script id="vn-engine-bundle">
 (function (global) {
@@ -347,24 +346,20 @@ defs: source.defs && typeof source.defs === "object"
 ? (this.cloneData(source.defs) ?? source.defs)
 : Object.create(null)
 };
-
 return this.modesRegistry;
 },
 setLayouts(layouts) {
 this.layouts = layouts && typeof layouts === "object"
 ? layouts
 : Object.create(null);
-
 },
 setActors(actors) {
 this.actors = actors && typeof actors === "object"
 ? actors
 : Object.create(null);
-
 },
 setGameConfig(cfg) {
 this.gameConfig = cfg || {};
-
 return this;
 },
 setAudioRegistry(audioRegistry = {}) {
@@ -379,21 +374,18 @@ setPanelContentRegistry(registry) {
 this.panelContentRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-
 return this.panelContentRegistry;
 },
 setShowroomContentRegistry(registry) {
 this.showroomContentRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-
 return this.showroomContentRegistry;
 },
 setHudContentRegistry(registry) {
 this.hudContentRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-
 return this.hudContentRegistry;
 },
 setEntryRegistry(registry) {
@@ -402,7 +394,6 @@ this.entryRegistry = normalized || Object.create(null);
 this.ensureGameData?.();
 this.applyEntryRegistryDefaultsToRunData?.();
 this.applyEntryRegistryDefaultsToMetaData?.();
-
 return this.entryRegistry;
 },
 setEventsRegistry(registry) {
@@ -414,7 +405,6 @@ setGraphsRegistry(registry) {
 this.graphsRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-
 },
 initializeI18n() {
 const available =
@@ -424,7 +414,6 @@ this.setAvailableLangs?.(available);
 const browserResolved = this.detectBrowserLang?.();
 this.setDefaultLang?.(browserResolved || "zh-CN");
 const resolved = this.resolveCurrentLang?.();
-
 return resolved;
 },
 getResolvedLang() {
@@ -458,7 +447,6 @@ defs: Object.create(null)
 if (!this.modesRegistry.defs || typeof this.modesRegistry.defs !== "object") {
 this.modesRegistry.defs = Object.create(null);
 }
-
 return this.modesRegistry;
 },
 normalizeModeDef(key, def = {}) {
@@ -526,7 +514,6 @@ return def;
 setBusy(flag){
 if(!this.cache) {
 this.createCache();
-
 }
 this.cache.input.busy = !!flag;
 },
@@ -567,14 +554,12 @@ actorsChanged: !prevState || !sameArray(prevState.actors, nextState.actors),
 prevState,
 nextState
 };
-
 return diff;
 },
 commitRenderState(diff = null) {
 if (!diff?.nextState) return;
 this.currentRenderState =
 this.cloneData(diff.nextState) || diff.nextState;
-
 },
 applyModeUiProfile(modeDef) {
 if (!this.root || !modeDef) return false;
@@ -597,7 +582,6 @@ const className = `ui-${shell}`;
 const active = shells.includes(shell);
 this.root.classList.toggle(className, active);
 });
-
 return true;
 },
 preparePassageScene(context) {
@@ -680,7 +664,6 @@ cache.input.pointer=def.input.pointer;
 cache.input.keyboard=def.input.keyboard;
 cache.input.wheel=def.input.wheel;
 cache.profile = def.text;
-
 const commands = this.normalizeCommands(code.commands || []);
 const actions = this.normalizeActions(code.actions || []);
 this.preparePassageScene?.(code);
@@ -688,7 +671,6 @@ this.runPassageActions?.(actions, "inject");
 this.syncSceneStateToView?.();
 const diff = this.compareRenderState?.(current.main, code) || {};
 this.syncStaticLayers?.(current.main, code, diff);
-
 this.runPassageCommands?.(commands, "inject", cache);
 this.resolveNextTarget(current.main.index, cache);
 const word = this.requireWord(index, current.main.lang, story)
@@ -996,7 +978,6 @@ choiceFocusIndex : -1,
 selectionMode : null,
 activeTriggers : null,
 }
-
 return this.cache;
 },
 getCache(){return this.cache;},
@@ -1158,7 +1139,6 @@ roleplayState: this.createRoleplayState()
 ensureRuntimeState() {
 if (!this.runtime || typeof this.runtime !== "object") {
 this.runtime = this.createRuntimeState();
-
 return this.runtime;
 }
 if (!this.runtime.overviewState) {
@@ -1216,7 +1196,6 @@ resetI18nState() {
 const runtime = this.getRuntime?.();
 if (!runtime) return null;
 runtime.i18nState = this.createI18nState();
-
 return runtime.i18nState;
 },
 setAvailableLangs(langs = []) {
@@ -1225,7 +1204,6 @@ if (!state) return [];
 state.availableLangs = Array.isArray(langs)
 ? langs.map(item => String(item || "").trim()).filter(Boolean)
 : [];
-
 return state.availableLangs;
 },
 getAvailableLangs() {
@@ -1262,14 +1240,12 @@ global.navigator?.languages?.[0] ||
 "";
 const normalized = this.pickSupportedLang?.(raw);
 this.setBrowserLang?.(String(raw || "").trim());
-
 return normalized;
 },
 setBrowserLang(lang = "") {
 const state = this.getI18nState?.();
 if (!state) return "";
 state.browserLang = String(lang || "").trim();
-
 return state.browserLang;
 },
 getBrowserLang() {
@@ -1280,7 +1256,6 @@ const state = this.getI18nState?.();
 if (!state) return "zh-CN";
 const safeLang = this.pickSupportedLang?.(lang || "zh-CN") || "zh-CN";
 state.defaultLang = safeLang;
-
 return state.defaultLang;
 },
 getDefaultLang() {
@@ -1294,7 +1269,6 @@ state.userLang = safeLang && this.hasLanguage?.(safeLang)
 ? safeLang
 : "";
 this.resolveCurrentLang?.();
-
 return state.userLang;
 },
 getUserLang() {
@@ -1311,7 +1285,6 @@ const overview = this.getOverviewState?.();
 if (overview) {
 overview.lang = resolved;
 }
-
 return resolved;
 },
 setPreferredLanguage(lang = "") {
@@ -1381,10 +1354,10 @@ this.currentPassageContext =
 context && typeof context === "object"
 ? (this.cloneData(context) ?? context)
 : null;
-
 return this.currentPassageContext;
 },
 getCurrentPassageContext() {
+console.warn("CurrentPassageContext :", this.currentPassageContext );
 return this.currentPassageContext || null;
 },
 getOverviewState() {
@@ -1392,7 +1365,6 @@ return this.getRuntimeState().overviewState;
 },
 resetOverviewState() {
 this.getRuntimeState().overviewState = this.createOverviewState();
-
 return this.getOverviewState();
 },
 setCurrentPassageOverview(data = {}) {
@@ -1403,25 +1375,21 @@ data.passageIndex || state.passageIndex || ""
 if (data.lang != null) {
 state.lang = String(data.lang || "").trim() || state.lang || "zh-CN";
 }
-
 return state;
 },
 setInteractionReady(flag = false) {
 const state = this.getOverviewState();
 state.interactionReady = !!flag;
-
 return state.interactionReady;
 },
 setOverviewBlocked(flag = false) {
 const state = this.getOverviewState();
 state.blocked = !!flag;
-
 return state.blocked;
 },
 setOverviewTransitioning(flag = false) {
 const state = this.getOverviewState();
 state.transitioning = !!flag;
-
 return state.transitioning;
 },
 enterEventOverview(eventId = "", returnTarget = "") {
@@ -1429,7 +1397,6 @@ const state = this.getOverviewState();
 state.inEvent = true;
 state.currentEventId = String(eventId || "").trim();
 state.eventReturnTarget = String(returnTarget || "").trim();
-
 return state;
 },
 leaveEventOverview() {
@@ -1437,13 +1404,11 @@ const state = this.getOverviewState();
 state.inEvent = false;
 state.currentEventId = "";
 state.eventReturnTarget = "";
-
 return state;
 },
 setOverviewGraph(graphId = "") {
 const state = this.getOverviewState();
 state.graphId = String(graphId || "").trim();
-
 return state.graphId;
 },
 getPerformanceState() {
@@ -1451,19 +1416,16 @@ return this.getRuntimeState().performanceState;
 },
 resetPerformanceState() {
 this.getRuntimeState().performanceState = this.createPerformanceState();
-
 return this.getPerformanceState();
 },
 setFadeActive(flag = false) {
 const state = this.getPerformanceState();
 state.fade.active = !!flag;
-
 return state.fade.active;
 },
 setFadeDone(flag = true) {
 const state = this.getPerformanceState();
 state.fade.done = !!flag;
-
 return state.fade.done;
 },
 getInteractionState() {
@@ -1471,19 +1433,16 @@ return this.getRuntimeState().interactionState;
 },
 resetInteractionState() {
 this.getRuntimeState().interactionState = this.createInteractionState();
-
 return this.getInteractionState();
 },
 setInteractionGraph(graphId = "") {
 const state = this.getInteractionState();
 state.graphId = String(graphId || "").trim();
-
 return state.graphId;
 },
 setInteractionInteractivesSpec(spec = null) {
 const state = this.getInteractionState();
 state.interactivesSpec = spec ?? null;
-
 return state.interactivesSpec;
 },
 getMapState() {
@@ -1499,7 +1458,6 @@ state.movement = "free";
 state.speed = 2;
 state.currentNodeId = "";
 state.lockMovement = false;
-
 return state;
 },
 getInputState() {
@@ -1578,7 +1536,6 @@ this.host?.getCurrentPassageKey?.() ||
 );
 if (runtime.passageIndex !== currentIndex) {
 temp.currentPassageRuntime = this.createCurrentPassageRuntime(currentIndex);
-
 return temp.currentPassageRuntime;
 }
 return runtime;
@@ -1589,7 +1546,6 @@ return this.getCurrentPassageRuntime().activeTriggers || [];
 pushCurrentPassageActiveTrigger(trigger) {
 const runtime = this.getCurrentPassageRuntime();
 runtime.activeTriggers.push(this.cloneData(trigger) ?? trigger);
-
 return true;
 },
 getCurrentPassageCheckpointTitle() {
@@ -1600,7 +1556,6 @@ const runtime = this.ensureCurrentPassageRuntime();
 runtime.checkpointTitle = title != null
 ? String(title).trim() || "Checkpoint"
 : null;
-
 return runtime.checkpointTitle;
 },
 isInputLocked() {
@@ -1611,7 +1566,6 @@ resetStateMachines() {
 this.resetOverviewState?.();
 this.resetPerformanceState?.();
 this.resetInteractionState?.();
-
 return true;
 },
 getActorState() {
@@ -1621,7 +1575,6 @@ resetActorState() {
 return this.resetInteractionState();
 },
 setActorScene(sceneId = "") {
-
 return String(sceneId || "");
 },
 setActorGraph(graphId = "") {
@@ -1889,14 +1842,12 @@ if (!def) return;
 output[def.id] = def;
 });
 });
-
 return output;
 },
 initializeNewRunData() {
 this.ensureGameData?.();
 this.gameData.run = this.normalizeRunData(this.getDefaultRunData());
 this.applyEntryRegistryDefaultsToRunData?.();
-
 return this.gameData.run;
 },
 getEntryRegistry() {
@@ -1922,7 +1873,6 @@ const next = this.coerceEntryValue?.(def, def.defaultValue);
 this.setValueByPath?.(run, path, next);
 }
 });
-
 return run;
 },
 resolveEntryId(aliasOrId = "") {
@@ -2041,7 +1991,6 @@ const next = this.coerceEntryValue?.(def, def.defaultValue);
 this.setValueByPath?.(meta, path, next);
 }
 });
-
 return meta;
 },
 setSkillsRegistry(registry) {
@@ -2684,7 +2633,6 @@ return false;
 const resolved = this.resolveEchoSourceToFieldValue?.( source, field );
 cache.payload[field] = resolved;
 cache.profile[field] = { container, effect };
-
 return true;
 },
 resolveTextContainerEl(container = "") {
@@ -2697,7 +2645,6 @@ return null;
 setModeContentHtml(html) {
 if (!this.modeContentEl) return;
 const source = String(html || "").trim();
-
 if (!source) {
 this.modeContentEl.innerHTML = "";
 this.modeContentEl.style.display = "none";
@@ -2765,7 +2712,6 @@ this.nameboxEl.classList.add("show");
 this.nameboxEl.textContent = "";
 this.nameboxEl.classList.remove("show");
 }
-
 },
 renderSpeakerField(speaker = "", container = "speaker", effect = "appear") {
 const safeContainer = String(container || "").trim();
@@ -2897,13 +2843,11 @@ const currentIndex = Number(cache?.pageIndex || 0);
 const nextIndex = currentIndex + 1;
 if (nextIndex >= pages.length) return false;
 cache.pageIndex = nextIndex;
-
 return this.renderPayloadFieldToDom?.( "pages", cache );
 },
 advanceText(options = {}) {
 const { ignoreInputLock = false } = options;
 if (!ignoreInputLock && this.isInputLocked?.()) {
-
 return false;
 }
 const cache = this.getCache?.();
@@ -2913,7 +2857,6 @@ this.lockInput?.(160);
 }
 if (this.skipTyping?.()) return true;
 if (this.advanceLocalPage?.(cache)) return true;
-
 this.playPassage?.(cache.nextTurnTo);
 setTimeout(() => {
 }, 200);
@@ -2928,18 +2871,15 @@ clearAutoTimer() {
 const textRuntime = this.getTextRuntime();
 clearTimeout(textRuntime.autoTimer);
 textRuntime.autoTimer = null;
-
 },
 isAutoPlaybackEnabled() {return !!this.userConfig?.autoPlay;},
 enableAutoPlayback() {
 this.updateUserConfig?.({ autoPlay: true });
-
 return true;
 },
 disableAutoPlayback() {
 this.updateUserConfig?.({ autoPlay: false });
 this.clearAutoTimer?.();
-
 return true;
 },
 toggleAutoPlayback() {
@@ -2986,7 +2926,6 @@ return true;
 if (this.isAnyPanelOpen?.()) {return false;}
 this.advanceText?.({ ignoreInputLock: true });
 }, delayMs);
-
 return true;
 },
 scheduleTextPlayback() {
@@ -3009,7 +2948,6 @@ const state = this.getTypingState?.();
 state.active = false;
 state.timer = null;
 state.html = "";
-
 },
 buildTypingTokens(html) {
 const container = document.createElement("div");
@@ -3042,7 +2980,6 @@ tokens.push({type: "close", tag});
 }
 };
 Array.from(container.childNodes).forEach(node => walk(node));
-
 return tokens;
 },
 renderTypingTokens(tokens, count) {
@@ -3084,7 +3021,6 @@ if (!this.getTypingState?.()) return;
 const state = this.getTypingState();
 const finalHtml = String(html || "").trim();
 const tokens = this.buildTypingTokens(finalHtml);
-
 if (!tokens.length) {
 this.textEl.innerHTML = finalHtml;
 this.textEl.classList.add("done");
@@ -3111,7 +3047,6 @@ this.textEl.innerHTML = this.renderTypingTokens(tokens, index);
 if (index >= tokens.length) {
 this.textEl.innerHTML = finalHtml;
 this.textEl.classList.add("done");
-
 this.resetTypingState();
 setTimeout(() => {
 this.scheduleTextPlayback?.();
@@ -3125,7 +3060,6 @@ step();
 skipTyping() {
 const state = this.getTypingState?.();
 if (!state?.active) return false;
-
 clearTimeout(state.timer);
 if (this.textEl) {
 this.textEl.innerHTML = state.html || "";
@@ -3139,7 +3073,6 @@ return true;
 },
 resumeTyping(){
 const state = this.getTypingState?.();
-
 if(state?.active){
 this.startTyping(state.html, state.typingIndex);
 }
@@ -3193,7 +3126,6 @@ text,
 target
 });
 });
-
 return true;
 },
 clearChoices() {
@@ -3211,7 +3143,6 @@ now = Math.max(-1, Math.min(choices.length - 1, now));
 now = -1;
 }
 cache.choiceFocusIndex = now;
-
 this.syncChoiceVisualState?.();
 return now;
 },
@@ -3230,7 +3161,6 @@ next = step >= 0 ? 0 : count - 1;
 next = (current + step + count) % count;
 }
 cache.choiceFocusIndex = next;
-
 this.syncChoiceVisualState?.();
 return next;
 },
@@ -3247,7 +3177,6 @@ const active = index === selectedIndex;
 el.classList.toggle("selected", active);
 el.setAttribute("aria-selected", active ? "true" : "false");
 });
-
 },
 renderChoicesElement(choices){
 const finalChoices = choices;
@@ -3267,7 +3196,6 @@ this.setChoiceFocus?.(-1);
 });
 this.choicesEl?.appendChild(button);
 });
-
 },
 renderChoices(choicesAndTargets = [], container = "branch", effect = "appear") {
 const choices = Array.isArray(choicesAndTargets)
@@ -3323,12 +3251,10 @@ this.recordBranchChoice?.(label, target);
 const triggered =
 this.tryExecuteActiveTriggers?.("branch-confirm") === true;
 if (triggered) {
-
 this.lockInput?.(200);
 return true;
 }
 this.lockInput?.(200);
-
 this.playPassage?.(target);
 return true;
 },
@@ -3444,7 +3370,6 @@ amount: 0,
 expanded: false
 }
 };
-
 },
 resetSceneViewState() {
 this.sceneViewState = {
@@ -3462,7 +3387,6 @@ amount: 0,
 expanded: false
 }
 };
-
 },
 buildSceneSnapshot() {
 const state = this.sceneState || {};
@@ -3525,7 +3449,6 @@ this.sceneState.prop = defaults.prop;
 this.sceneState.npc = defaults.npc;
 this.sceneState.camera = { effect: null };
 this.sceneState.actors = Object.create(null);
-
 }
 if (!nextLayout && this.sceneState.layout == null) {
 this.sceneState.layout = null;
@@ -3542,7 +3465,6 @@ this.setStageScene(this.sceneState.layout || "");
 if (this.setStageActorSet) {
 this.setStageActorSet(this.sceneState.actorSet || []);
 }
-
 return this.sceneState;
 },
 resolveSceneBgUrl() {
@@ -3635,7 +3557,6 @@ url,
 this._bgTokenRef,
 "Background image"
 );
-
 },
 showForeground(url) {
 if (!this.fgA || !this.fgB) return;
@@ -3649,7 +3570,6 @@ url,
 this._fgTokenRef,
 "Foreground image"
 );
-
 },
 createActorElement(actorName) {
 const actorEl = document.createElement("div");
@@ -3666,7 +3586,6 @@ actorEl.appendChild(img);
 this.charLayer?.appendChild(actorEl);
 this.characters = this.characters || Object.create(null);
 this.characters[actorName] = actorEl;
-
 return actorEl;
 },
 getActorLayerTokenKey(actorName, layerName) {
@@ -3731,7 +3650,6 @@ this.updateActorLayerImage?.(actorName, layerName, img, url);
 const visible = (Number.isFinite(opacity) ? opacity : 0) > 0;
 actorEl.classList.toggle("show", visible);
 actorEl.classList.toggle("hide", !visible);
-
 },
 equalActorSnapshot(a, b) {
 if (!a && !b) return true;
@@ -3787,7 +3705,6 @@ this.propEls[name] = el;
 this.npcLayer?.appendChild(el);
 this.npcEls[name] = el;
 }
-
 return el;
 },
 updateSceneItemImage(type, name, el, url) {
@@ -3852,7 +3769,6 @@ this.sceneState.camera.effect = null;
 this.root.classList.remove("camera-shake");
 }, 350);
 }
-
 },
 syncSceneStateToView() {
 if (!this.sceneState) {
@@ -3886,7 +3802,6 @@ this.syncCameraEffect?.(next.cameraEffect);
 }
 this.sceneViewState = next;
 this.renderDisplayBox?.();
-
 }
 });
 return core;
@@ -4063,7 +3978,6 @@ actorState.z = this.resolveActionNumberOrKeep?.(args[3], actorState.z);
 actorState.scaleX = this.resolveActionNumberOrKeep?.(args[4], actorState.scaleX);
 actorState.scaleY = this.resolveActionNumberOrKeep?.(args[5], actorState.scaleY);
 actorState.opacity = this.resolveActionNumberOrKeep?.(args[6], actorState.opacity);
-
 return true;
 },
 change(raw = "") {
@@ -4089,7 +4003,6 @@ this.resolveActionValueOrKeep?.(args[3], this.sceneState.prop) ?? this.sceneStat
 this.sceneState.npc = String(
 this.resolveActionValueOrKeep?.(args[4], this.sceneState.npc) ?? this.sceneState.npc
 ).trim() || this.sceneState.npc;
-
 return true;
 } else if (this.sceneState.actorSet.includes(target)) {
 this.sceneState.actors[target] = this.getActorDefaultState?.(target);
@@ -4106,7 +4019,6 @@ this.resolveActionValueOrKeep?.(args[3], actorState.arms) ?? actorState.arms
 actorState.footwear = String(
 this.resolveActionValueOrKeep?.(args[4], actorState.footwear) ?? actorState.footwear
 ).trim() || actorState.footwear;
-
 return true;
 } else {
 console.warn("[VNAction] no match", {
@@ -4128,7 +4040,6 @@ this.playBackgroundMusic?.(bgmId, {
 loop,
 volume
 });
-
 return true;
 },
 registerDefaultActions() {
@@ -4143,7 +4054,6 @@ return this.getActionRegistry?.();
 }
 });
 core.registerDefaultActions?.();
-
 return core;
 }
 global.installVNActionModule = installVNActionModule;
@@ -4524,8 +4434,7 @@ label: "Auto",
 render(core) {
 const def = core.getHudDef?.(this.key);
 const label = core.getHudResolvedLabel?.(def, this.label);
-const labelA  = core.getHudResolvedLabel?.({
-index:def.index,
+const labelA  = core.getHudResolvedLabel?.({ index:def.index,
 position:String(Number(def.position) + 1)
 }, this.label);
 const labelB  = core.getHudResolvedLabel?.({
@@ -4604,7 +4513,6 @@ setHudRegistry(registry) {
 this.hudRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-
 return this.hudRegistry;
 },
 getHudRegistry() {
@@ -4680,9 +4588,7 @@ return def.render(this, flag) || "";
 const label = this.getHudResolvedLabel?.(def, def.label || def.key) || def.key;
 if (def.type === "hud-action") {
 return `
-<button
-class="vn-topbar-btn"
-type="button"
+<button class="vn-topbar-btn" type="button"
 data-hud-action-key="${this.escapeHtml?.(def.key) || def.key}">
 ${this.escapeHtml?.(label) || label}
 </button>
@@ -4692,10 +4598,17 @@ if (def.type === "hud-widget") {
 const value = typeof def.getValue === "function"
 ? def.getValue(this)
 : "";
+const labelArray = label.split(",");
 return `
 <div class="vn-hud-chip" data-hud-key="${this.escapeHtml?.(def.key) || def.key}">
+${ labelArray.length == 1 ? `
 <span class="vn-hud-label">${this.escapeHtml?.(label) || label}</span>
 <span class="vn-hud-value">${this.escapeHtml?.(value) || value}</span>
+` : `
+<span class="vn-hud-label">${this.escapeHtml?.(labelArray[0])}</span>
+<span class="vn-hud-value">${this.escapeHtml?.(value) || value}</span>
+<span class="vn-hud-label">${this.escapeHtml?.(labelArray[1])}</span>
+` }
 </div>
 `;
 }
@@ -4802,7 +4715,6 @@ current.expanded =
 source.expanded !== undefined
 ? !!source.expanded
 : current.expanded;
-
 return this.displayBoxState;
 },
 getDisplayBoxLabel(def = null) {
@@ -5081,7 +4993,6 @@ const container = this.getAuxiliaryContainer?.();
 if (container) {
 container.style.display = flag ? "block" : "";
 }
-
 return true;
 },
 syncAuxiliaryOverlayById(activeOverlayId = "") {
@@ -5133,7 +5044,6 @@ setPanelRegistry(registry) {
 this.panelRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-
 return this.panelRegistry;
 },
 getPanelRegistry() {
@@ -5147,7 +5057,6 @@ setShowroomRegistry(registry) {
 this.showroomRegistry = registry && typeof registry === "object"
 ? registry
 : Object.create(null);
-
 return this.showroomRegistry;
 },
 getShowroomRegistry() {
@@ -5241,7 +5150,6 @@ closeAction: "return-main-menu"
 }
 }
 };
-
 return normalized;
 },
 getPanelDef(key) {
@@ -5258,7 +5166,6 @@ merged.content = content;
 merged.content = null;
 }
 const normalized = this.normalizePanelDef?.(key, merged);
-
 return normalized;
 },
 getShowroomDef(key) {
@@ -5334,7 +5241,6 @@ lang: this.getPanelLangEntry?.(safeKey),
 openContext: String(openContext || "ingame").trim() || "ingame",
 meta: meta && typeof meta === "object" ? meta : this.getPanelMeta?.(safeKey)
 };
-
 return result;
 },
 resolveShowroomRenderContext(key, openContext = "menu-route", meta = null) {
@@ -5374,7 +5280,6 @@ const panelKey = String(key || state.activeKey || "");
 if (!panelKey) return {};
 const meta = this.getPanelMeta?.(panelKey);
 Object.assign(meta, patch || {});
-
 return meta;
 },
 getPanelContextDef(panelDef, openContext = "ingame") {
@@ -5391,7 +5296,6 @@ openContext: safeContext
 return null;
 }
 const result = contexts[safeContext] || null;
-
 return result;
 },
 openPanel(key, options = {}) {
@@ -5430,7 +5334,6 @@ this.applyAuxiliaryPanelShellState?.(true);
 this.renderActivePanel?.();
 this.syncPanelOverlays?.(panelKey);
 this.renderHud?.();
-
 return true;
 },
 closePanel() {
@@ -5443,7 +5346,6 @@ panelDef?.onClose?.(this, openContext);
 const closeAction =
 this.getPanelContextDef?.(panelDef, openContext)?.closeAction ||
 "resume-game";
-
 state.open = false;
 state.activeKey = "";
 state.context = "ingame";
@@ -5455,18 +5357,15 @@ this.applyAuxiliaryPanelShellState?.(false);
 this.renderHud?.();
 this.resumeTyping?.();
 if (openContext === "menu-route" || closeAction === "return-main-menu") {
-
 this.returnToMainMenu?.({
 autoSave: false
 });
 }
-
 return true;
 },
 isPanelEnabledInContext(panelDef, openContext = "ingame") {
 const contextDef = this.getPanelContextDef?.(panelDef, openContext);
 const enabled = !!contextDef && contextDef.enabled !== false;
-
 return enabled;
 },
 switchPanelTab(key) {
@@ -5499,7 +5398,6 @@ panelDef.onOpen?.(this, currentContext, { switchOnly: true });
 this.renderActivePanel?.();
 this.syncPanelOverlays?.(panelKey);
 this.renderHud?.();
-
 return true;
 },
 closeAllPanels() {
@@ -5527,7 +5425,6 @@ syncPanelOverlays(activeKey = "") {
 const panelDef = this.getPanelDef?.(activeKey);
 const overlayId = String(panelDef?.overlayId || "").trim();
 this.syncAuxiliaryOverlayById?.(overlayId);
-
 },
 applyAuxiliaryPanelShellState(open = false) {
 return this.setAuxiliaryShellOpen?.(!!open) || false;
@@ -5552,7 +5449,6 @@ const items = Array.isArray(contentDef?.items) ? contentDef.items : [];
 const max = Math.max(0, items.length - 1);
 const next = Math.max(0, Math.min(max, Number(index) || 0));
 state.selectedIndex = next;
-
 return next;
 },
 moveShowroomSelection(delta = 0) {
@@ -5569,7 +5465,6 @@ state.fullscreen = force;
 } else {
 state.fullscreen = !state.fullscreen;
 }
-
 this.renderActiveShowroom?.();
 return state.fullscreen;
 },
@@ -5583,7 +5478,6 @@ console.warn("[VNAuxiliary] openShowroom aborted: empty key.");
 return false;
 }
 const forceRouteOpen = options.forceRouteOpen === true;
-
 if (!forceRouteOpen && !this.canOpenShowroomInCurrentContext?.()) {
 console.warn("[VNAuxiliary] Showroom can only be opened in menu context.", {
 showroomKey
@@ -5613,7 +5507,6 @@ state.selectedIndex = Math.max(0, Number(options.selectedIndex || 0));
 this.applyAuxiliaryPanelShellState?.(true);
 this.renderActiveShowroom?.();
 this.renderHud?.();
-
 return true;
 },
 closeShowroom() {
@@ -5627,7 +5520,6 @@ state.fullscreen = false;
 this.clearActiveShowroom?.();
 this.applyAuxiliaryPanelShellState?.(false);
 this.renderHud?.();
-
 return true;
 },
 getShowroomRenderContainer() {
@@ -5766,7 +5658,6 @@ e.preventDefault();
 e.stopPropagation();
 const key = String(button.dataset.panelTab || "").trim();
 if (!key) return;
-
 this.switchPanelTab?.(key);
 });
 });
@@ -6179,7 +6070,6 @@ if (!source.data || typeof source.data !== "object") {
 source.data = {};
 }
 source.data = this.normalizeSnapshotData(source.data, source.passage || "");
-
 return source;
 },
 normalizeSnapshot(snapshot) {
@@ -6281,7 +6171,6 @@ this.textEl?.innerHTML ||
 ""
 );
 const normalized = this.normalizeSnapshot(snapshot);
-
 return normalized;
 },
 normalizeHudRuntimeState(hudRuntimeState) {
@@ -6335,7 +6224,6 @@ const runtime = this.getRuntime ? this.getRuntimeState() : null;
 if (runtime) {
 runtime.overviewState = state;
 }
-
 return state;
 },
 applyRestoredPerformanceState(performanceState) {
@@ -6392,13 +6280,11 @@ if (this.setCurrentTextPageCommitted) {
 this.setCurrentTextPageCommitted(true);
 }
 }
-
 return state;
 },
 applyRestoredHudRuntimeState(hudRuntimeState) {
 const state = this.normalizeHudRuntimeState?.(hudRuntimeState);
 this.hudRuntimeState = state;
-
 return state;
 },
 applyRestoredInteractionState(interactionState) {
@@ -6407,7 +6293,6 @@ const runtime = this.getRuntime ? this.getRuntimeState() : null;
 if (runtime) {
 runtime.interactionState = state;
 }
-
 return state;
 },
 restoreSnapshot(snapshot) {
@@ -6464,7 +6349,6 @@ if (restoring) {
 restoring.pendingSnapshot = this.cloneData(normalized);
 }
 this.resetSceneViewState?.();
-
 setTimeout(() => {
 this.playPassage(passage);
 }, 0);
@@ -6498,7 +6382,6 @@ if (Number.isInteger(sectionIndex) && sectionIndex >= 0) {
 this.markSectionSeen?.(sectionIndex);
 }
 this.saveCheckpointsToStorage?.();
-
 return snapshot;
 },
 getLatestCheckpoint() {
@@ -6576,7 +6459,6 @@ this.isAnyPanelOpen?.() &&
 this.canSwitchPanelTabs?.() &&
 this.getPanelOpenContext?.() === "ingame"
 );
-
 return result;
 },
 getWheelState() {
@@ -6604,7 +6486,6 @@ handleShowroomKeyDown(e) {
 if (!this.canHandleShowroomInput?.()) {
 return false;
 }
-
 switch (e.code) {
 case "Escape":
 e.preventDefault();
@@ -6674,17 +6555,14 @@ return true;
 },
 canAdvanceByProfile() {
 if (this.isAnyPanelOpen?.()) {
-
 return false;
 }
 if (this.isInputLocked?.()) {
-
 return false;
 }
 if (this.isBusy())return false;
 const profile = this.getResolvedInputProfile?.();
 const result = profile === "advance";
-
 return result;
 },
 canAcceptChoiceByProfile() {
@@ -6835,7 +6713,6 @@ if (unlock) {
 input.locked = false;
 this.cache.input.locked = false;
 }
-
 },
 routePanelPointerDown(target, pointerId = null) {
 const input = this.getInputState?.();
@@ -6858,12 +6735,10 @@ return true;
 routeChoicePointerDown(target, pointerId = null) {
 const input = this.getInputState?.();
 if (!this.canAcceptChoiceByProfile?.()) {
-
 return true;
 }
 if (this.isBranchChoiceTarget?.(target)) {
 const index = this.getBranchChoiceIndexFromTarget?.(target);
-
 if (index >= 0) {
 input.pointerDownValid = true;
 input.activePointerId = pointerId;
@@ -6886,7 +6761,6 @@ return true;
 },
 routeModePointerDown(target, pointerId = null) {
 const pointerProfile = this.getResolvedPointerProfile?.();
-
 switch (pointerProfile) {
 case "advance":
 return this.routeAdvancePointerDown?.(target, pointerId);
@@ -7002,26 +6876,22 @@ return true;
 }
 const index = this.getBranchChoiceIndexFromTarget?.(target);
 if (index !== action.index) return true;
-
 this.advanceChoiceTarget?.(index);
 return true;
 }
 if (action.type === "text-advance") {
 if (!this.isSequenceAdvanceTarget?.(target)) return true;
-
 this.advanceText?.();
 return true;
 }
 if (action.type === "map-confirm") {
 if (!this.isSequenceAdvanceTarget?.(target)) return true;
-
 this.confirmCurrentMapNode?.();
 return true;
 }
 return false;
 },
 handlePointerDown(e) {
-
 if (!this.isPrimaryPointer?.(e)) {
 this.clearPointerIntent?.();
 return;
@@ -7040,7 +6910,6 @@ return;
 this.routeModePointerDown?.(target, pointerId);
 },
 handlePointerUp(e) {
-
 const input = this.getInputState?.();
 if (!input?.pointerDownValid) return;
 const target = e.target;
@@ -7110,7 +6979,6 @@ routePanelKeyDown(e) {
 if (!this.isAnyPanelOpen?.()) {
 return false;
 }
-
 if (e.code === "Escape" || e.code === "KeyE") {
 e.preventDefault();
 this.closePanel?.();
@@ -7119,11 +6987,9 @@ return true;
 const shortcutMap = this.getAuxiliaryPanelShortcutMap?.() || {};
 const targetPanelKey = shortcutMap[e.code];
 if (targetPanelKey) {
-
 if (this.canSwitchAuxiliaryTabsByHotkey?.()) {
 e.preventDefault();
 const switched = this.switchPanelTab?.(targetPanelKey);
-
 return true;
 }
 e.preventDefault();
@@ -7185,7 +7051,6 @@ routeAdvanceKeyDown(e) {
 const input = this.getInputState?.();
 if (!this.canAdvanceByProfile?.()) return false;
 if (e.code !== "Space" && e.code !== "Enter") return false;
-
 if (e.repeat) {
 e.preventDefault();
 return true;
@@ -7198,7 +7063,6 @@ routeAdvanceKeyUp(e) {
 const input = this.getInputState?.();
 if (!this.canAdvanceByProfile?.()) return false;
 if (e.code !== "Space" && e.code !== "Enter") return false;
-
 e.preventDefault();
 if (!input.keyPressed[e.code]) {
 return true;
@@ -7233,7 +7097,6 @@ routeChoiceKeyUp(e) {
 if (!this.canAcceptChoiceByProfile?.()) return false;
 const input = this.getInputState?.();
 const selectedIndex = this.getCache?.()?.choiceFocusIndex ?? -1;
-
 if (e.code === "ArrowUp" || e.code === "ArrowLeft") {
 e.preventDefault();
 return true;
@@ -7256,7 +7119,6 @@ return true;
 routeMapKeyDown(e) {
 const input = this.getInputState?.();
 if (!this.canAcceptMapByProfile?.()) return false;
-
 input.keyPressed[e.code] = true;
 switch (e.code) {
 case "ArrowLeft":
@@ -7308,13 +7170,11 @@ e.preventDefault();
 if (!e.repeat) input.keyPressed[e.code] = true;
 return true;
 }
-
 return false;
 },
 routeMenuKeyUp(e) {
 const input = this.getInputState?.();
 const selectedIndex = this.getCache?.()?.choiceFocusIndex ?? -1;
-
 if (e.code === "ArrowUp" || e.code === "ArrowLeft") {
 e.preventDefault();
 return true;
@@ -7335,17 +7195,13 @@ this.advanceChoiceTarget?.(selectedIndex);
 return true;
 },
 handleKeyDown(e) {
-
 if (this.routeGlobalHotkeyDown?.(e)) {
-
 return;
 }
 if (this.routePanelKeyDown?.(e)) {
-
 return;
 }
 if (this.handleShowroomKeyDown?.(e)) {
-
 return;
 }
 const keyboardProfile = this.getResolvedKeyboardProfile?.();
@@ -7368,26 +7224,21 @@ break;
 }
 },
 handleKeyUp(e) {
-
 if (this.routeGlobalHotkeyUp?.(e)) {
-
 return;
 }
 if (this.routePanelKeyUp?.(e)) {
-
 return;
 }
 const keyboardProfile = this.getResolvedKeyboardProfile?.();
 switch (keyboardProfile) {
 case "advance":
 if (this.routeAdvanceKeyUp?.(e)) {
-
 return;
 }
 break;
 case "choice":
 if (this.routeChoiceKeyUp?.(e)) {
-
 return;
 }
 break;
@@ -7395,7 +7246,6 @@ case "map":
 break;
 case "menu":
 if (this.routeMenuKeyUp?.(e)) {
-
 return;
 }
 break;
@@ -7491,7 +7341,6 @@ return false;
 },
 routeModeWheel(e) {
 const wheelProfile = this.getResolvedWheelProfile?.();
-
 switch (wheelProfile) {
 case "advance":
 return this.routeAdvanceWheel?.(e);
@@ -7766,7 +7615,6 @@ this.saveAutoSnapshot?.(autoSaveTitle);
 }
 this.closeAllPanels?.();
 this.playPassage?.(target);
-
 return true;
 },
 restoreStateVariables(data) {
@@ -7811,7 +7659,6 @@ typeof this.captureSnapshot === "function" &&
 typeof this.normalizeSnapshot === "function" &&
 typeof this.restoreSnapshot === "function"
 );
-
 return result;
 },
 getDefaultUserConfig() {
@@ -7867,7 +7714,6 @@ localStorage.setItem(
 this.getUserConfigStorageKey?.(),
 JSON.stringify(this.normalizeUserConfig?.(this.userConfig))
 );
-
 return true;
 } catch (e) {
 console.warn("[VNStorage] Failed to save user config.", e);
@@ -7879,7 +7725,6 @@ this.userConfig = this.normalizeUserConfig?.(this.userConfig);
 if (this.audio?.bgm?.el) {
 this.audio.bgm.el.volume = this.userConfig.bgmVolume;
 }
-
 return this.userConfig;
 },
 updateUserConfig(patch = {}) {
@@ -7923,7 +7768,6 @@ return false;
 }
 const seenMap = this.getSeenSectionMap?.();
 seenMap[String(sectionIndex)] = true;
-
 return true;
 },
 isSectionSeen(sectionIndex) {
@@ -7940,7 +7784,6 @@ return this.isSectionSeen?.(sectionIndex);
 clearBacklog() {
 const storage = this.ensureStorageState?.();
 storage.backlogEntries = [];
-
 },
 getBacklogEntries() {
 return this.ensureStorageState?.().backlogEntries;
@@ -7953,7 +7796,6 @@ const max = Number(200);
 if (storage.backlogEntries.length > max) {
 storage.backlogEntries.splice(0, storage.backlogEntries.length - max);
 }
-
 },
 getCheckpointStorageKey() {
 return "vn_checkpoints";
@@ -7966,7 +7808,6 @@ localStorage.setItem(
 this.getCheckpointStorageKey?.(),
 JSON.stringify(data)
 );
-
 return true;
 } catch (e) {
 console.warn("[VNStorage] Failed to save checkpoints to localStorage.", e);
@@ -7985,7 +7826,6 @@ const data = JSON.parse(raw);
 storage.checkpoints = Array.isArray(data)
 ? data.map(item => this.normalizeSnapshot?.(item)).filter(Boolean)
 : [];
-
 return storage.checkpoints;
 } catch (e) {
 console.warn("[VNStorage] Failed to load checkpoints from localStorage.", e);
@@ -8012,14 +7852,12 @@ return false;
 }
 list.splice(index, 1);
 this.saveCheckpointsToStorage?.();
-
 return true;
 },
 clearCheckpoints() {
 const storage = this.ensureStorageState?.();
 storage.checkpoints = [];
 this.saveCheckpointsToStorage?.();
-
 },
 restoreCheckpoint(id) {
 const checkpoint = this.findCheckpointById?.(id);
@@ -8051,7 +7889,6 @@ localStorage.setItem(
 this.getAutoSaveStorageKey?.(),
 JSON.stringify(snapshot)
 );
-
 return snapshot;
 } catch (e) {
 console.warn("[VNStorage] Failed to save auto snapshot.", e);
@@ -8080,7 +7917,6 @@ return this.restoreSnapshot?.(snapshot) || false;
 clearAutoSnapshot() {
 try {
 localStorage.removeItem(this.getAutoSaveStorageKey?.());
-
 return true;
 } catch (e) {
 console.warn("[VNStorage] Failed to clear auto snapshot.", e);
@@ -8102,7 +7938,6 @@ const data = JSON.parse(raw);
 storage.saveSlots = Array.isArray(data)
 ? data.map(item => this.normalizeSnapshot?.(item)).filter(Boolean)
 : [];
-
 return storage.saveSlots;
 } catch (e) {
 console.warn("[VNStorage] Failed to load save slots from localStorage.", e);
@@ -8118,7 +7953,6 @@ localStorage.setItem(
 this.getSaveSlotStorageKey?.(),
 JSON.stringify(data)
 );
-
 return true;
 } catch (e) {
 console.warn("[VNStorage] Failed to save save slots to localStorage.", e);
@@ -8184,7 +8018,6 @@ storage.saveSlots[existingIndex] = snapshot;
 storage.saveSlots.push(snapshot);
 }
 this.saveSaveSlotsToStorage?.();
-
 return true;
 },
 loadFromSlot(index) {
@@ -8202,7 +8035,6 @@ if (!entry) {
 console.warn(`[VNStorage] Save slot is empty: ${slotIndex}`);
 return false;
 }
-
 return this.restoreSnapshot?.(entry) || false;
 },
 clearSlot(index) {
@@ -8220,7 +8052,6 @@ const before = storage.saveSlots.length;
 storage.saveSlots = storage.saveSlots.filter(entry => entry?.slotIndex !== slotIndex);
 if (storage.saveSlots.length !== before) {
 this.saveSaveSlotsToStorage?.();
-
 return true;
 }
 return false;
@@ -8252,7 +8083,6 @@ const safeDiff = diff || {};
 const layers = modeDef?.layers || {};
 if (layers.graph) {
 if (safeDiff.initial || safeDiff.graphChanged || safeDiff.modeChanged || safeDiff.layersChanged) {
-
 this.setInteractionGraph?.(safeContext.graph || "");
 this.setOverviewGraph?.(safeContext.graph || "");
 if (safeContext.graph) {
@@ -8271,7 +8101,6 @@ this.setOverviewGraph?.("");
 }
 if (layers.interactives) {
 if (safeDiff.initial || safeDiff.interactivesChanged || safeDiff.modeChanged || safeDiff.layersChanged) {
-
 this.setInteractionInteractivesSpec?.(safeContext.interactives || null);
 }
 } else {
@@ -8432,22 +8261,18 @@ tryExecuteActiveTriggers(stage = "") {
 const triggers = this.getCurrentPassageActiveTriggers?.() || [];
 if (!triggers.length) return false;
 const currentPassage = this.host?.getCurrentPassageName?.() || "";
-
 for (const command of triggers) {
 const eventId = String(command?.eventId || "").trim();
 const weight = Number(command?.weight ?? 1);
 if (!eventId) continue;
 if (!this.canStartEvent?.(eventId)) {
-
 continue;
 }
 const hit = this.rollTriggerWeight?.(weight);
-
 if (!hit) continue;
 const started = this.startEvent?.(eventId, {
 returnTarget: currentPassage
 });
-
 if (started) {
 return true;
 }
@@ -8553,7 +8378,6 @@ state.y = Math.max(0, Math.min(100, Number(state.y || 0)));
 },
 moveMapPlayer(dx = 0, dy = 0) {
 const state = this.getMapState?.();
-
 if (!state || !state.active || state.lockMovement) return false;
 const movement = String(state.movement || "free");
 const input = this.getInputState?.();
@@ -8648,7 +8472,6 @@ currentNode.hint ||
 "按 Enter 或 Space 进入";
 }
 }
-
 },
 getCurrentMapNode() {
 const state = this.getMapState?.();
@@ -8658,7 +8481,6 @@ return overlay.nodes.find(node => node.id === state.currentNodeId) || null;
 },
 confirmCurrentMapNode() {
 const node = this.getCurrentMapNode?.();
-
 if (!node) return false;
 return this.activateMapNode?.(node) || false;
 },
@@ -8684,7 +8506,6 @@ return overlay.nodes.find(node => this.isPointInsideMapNode(x, y, node)) || null
 activateMapNode(node) {
 const state = this.getMapState?.();
 if (!state || !node || !node.id) return false;
-
 state.lockMovement = true;
 const finish = () => {
 setTimeout(() => {
@@ -8697,7 +8518,6 @@ currentState.lockMovement = false;
 const targetType = String(node.targetType || "passage").toLowerCase();
 const target = String(node.target || "").trim();
 const currentPassage = this.host?.getCurrentPassageName?.() || "";
-
 if (!target) {
 finish();
 return false;
@@ -8707,7 +8527,6 @@ const started = this.startEvent?.(target, {
 returnTarget: currentPassage,
 preserveScene: !!node.preserveScene
 });
-
 finish();
 return !!started;
 }
@@ -8717,7 +8536,6 @@ targetType === "passage" ||
 targetType === "menu"
 ) {
 if (this.hasPassage?.(target)) {
-
 this.playPassage(target);
 finish();
 return true;
@@ -8790,7 +8608,6 @@ const trueBranch = Array.isArray(branch.true) ? branch.true : [];
 const falseBranch = Array.isArray(branch.false) ? branch.false : [];
 const passed = !!this.evaluateSimpleCondition?.(test);
 const selected = passed ? trueBranch : falseBranch;
-
 return selected;
 },
 expandCommands(commands = []) {
@@ -8963,7 +8780,6 @@ checkpoint(raw = "") {
 const args = this.splitCommandArgs?.(raw) || [];
 const title = this.resolveTextReference?.(args[0], "Checkpoint") || "Checkpoint";
 this.setCurrentPassageCheckpointTitle?.(title);
-
 return true;
 },
 display(raw = "") {
@@ -8971,7 +8787,6 @@ const args = this.splitCommandArgs?.(raw.trim()) || [];
 const first = String(args[0] || "").trim();
 if (!first || first === "hide" || first === "none") {
 this.showDisplayBox?.("hide");
-
 return true;
 }
 const entryId = this.resolveEntryId?.(first) || first;
@@ -9000,7 +8815,6 @@ amount = Number.isFinite(parsed)
 }
 if (channel === "box") {
 this.showDisplayBox?.(amount,entryId );
-
 return true;
 }
 console.warn("[VNRuntime] display unsupported channel", {
@@ -9051,7 +8865,6 @@ console.warn("[VNPrint]", payload);
 return true;
 }
 if (level === "log") {
-
 return true;}
 return false;
 }
@@ -9064,7 +8877,6 @@ console.warn("[VNRuntime] turnto missing target", { raw });
 return false;
 }
 cache.nextTurnTo = target;
-
 return true;
 },
 obtain(raw = "") {
@@ -9075,7 +8887,6 @@ console.warn("[VNGameData] obtain missing expression", { raw });
 return false;
 }
 const result = this.applyObtainExpression?.(expression);
-
 return result !== false;
 },
 assign(raw = "") {
@@ -9098,7 +8909,6 @@ return false;
 }
 const value = this.parseLiteralValue?.(second);
 const next = this.setEntryValue?.(entryId, value);
-
 return true;
 },
 time(raw = "") {
@@ -9110,13 +8920,11 @@ return false;
 }
 if (first === "advance") {
 const next = this.advanceTime?.();
-
 return true;
 }
 const allowedSlots = ["morning", "noon", "afternoon", "evening", "night"];
 if (allowedSlots.includes(first)) {
 const next = this.advanceTime?.(first);
-
 return true;
 }
 console.warn("[VNGameData] time unsupported argument", {
@@ -9134,20 +8942,17 @@ console.warn("[VNRoleplay] encounter missing eventId", { raw });
 return false;
 }
 if (!this.canStartEvent?.(eventId)) {
-
 return false;
 }
 const weight = this.evaluateNumericExpression?.(weightExpr, { weight: 1 }) ?? 1;
 const hit = this.rollTriggerWeight?.(weight);
 if (!hit) {
-
 return false;
 }
 const currentIndex = this.getCurrentPassageContext?.()?.index || "";
 const started = this.startEvent?.(eventId, {
 returnTarget: currentIndex
 });
-
 return started === true;
 },
 trigger(raw = "") {
@@ -9164,7 +8969,6 @@ raw,
 weightExpr,
 eventId
 });
-
 return true;
 },
 registerDefaultCommands() {
@@ -9213,7 +9017,6 @@ return this.getCommandRegistry?.();
 }
 });
 core.registerDefaultCommands?.();
-
 return core;
 }
 global.installVNCommandModule = installVNCommandModule;
@@ -9361,9 +9164,7 @@ this.bindInputHandlers(core);
 this.ensureRoot(core);
 core.story = this.createStory(data.baseBundle, data.langBundle);
 core.startEngine(data.config.start);
-global.core = core;
-}
-};
+global.core = core;}};
 try {
 Bootstrap.boot();
 } catch (err) {
@@ -9371,8 +9172,5 @@ console.error("[Bootstrap] boot failed", err);
 }
 })(window);
 </script>
-  <script id="bootstrap">
- 
-  </script>
 </body>
 </html>
